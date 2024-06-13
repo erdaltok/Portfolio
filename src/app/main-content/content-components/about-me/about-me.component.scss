@@ -1,0 +1,56 @@
+@import '../../../../styles.scss';
+
+
+
+.about-me-section {
+    margin-top: 100px;
+    padding: 40px 80px;
+    height: 70vh;
+  
+
+    
+}
+
+.about-me-wrapper {
+    display: flex;
+    z-index: 2 !important;
+      position: absolute;
+}
+
+.about-me-left-side {
+    margin-right: 115px;
+    display: flex;
+
+    flex-direction: column;
+
+    h1 {
+        font-weight: 700;
+        font-size: 90px;
+        line-height: 108px;
+        margin: 0;
+        margin-bottom: 40px;
+    }
+}
+
+.about-me-soft-skills {
+    display: flex;
+    align-items: center;
+
+
+    img {
+        width: 40px;
+        height: 40px;
+        margin-right: 40px;
+            &:hover {
+                transform: scale(1.2) ;
+            }
+        
+
+
+    }
+}
+
+// p {
+//     background-color: #141D2F;
+   
+// }

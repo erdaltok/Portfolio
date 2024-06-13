@@ -1,0 +1,54 @@
+@import '../../../styles.scss';
+
+header {
+    @include dFlex;
+    background-color: #141d2f;
+    max-height: 30px;
+    height: 100%;
+    padding: 40px 80px;
+    width: 100vw;
+    max-width: calc(100vw - 160px);
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 99;
+}
+
+nav {
+    @include dFlex($jc: space-between);
+    background-color: #141d2f;
+    width: 100%;
+    max-width: 1920px;   
+
+    a {
+        @include dFlex;
+
+        img {
+            width: 280px;
+
+            &:hover {
+                cursor: pointer;
+            }
+        }
+
+    }
+}
+
+.nav-links {
+    @include dFlex($g: 20px);
+    font-size: 23px;
+    a {
+        color: whitesmoke;
+        text-decoration: none;
+        padding-bottom: 4px;
+
+          &:hover {
+             color: #00BEE8;
+    }
+    }
+  
+}
+
+.select-language {
+    @include dFlex($g: 3px);
+}
