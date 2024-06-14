@@ -1,7 +1,7 @@
 @import "./../../../../styles.scss";
 
 .landing-page-center {
-    height: calc(100vh - 30vh);
+    max-height: calc(100vh - 30px);
     margin-top: 230px;
     max-width: calc(100vw - 160px);
     padding: 40px 80px;
@@ -19,7 +19,7 @@
     // z-index: -9;
     width: 100%;
     object-fit: cover;
-    height: 100vh;
+    max-height: calc(100vh - 30px);
 }
 
 .me-section-left-side {
@@ -106,7 +106,7 @@ button {
 
 .shape-landing-page-section {
     position: absolute;
-    top: 360px;
+    top: 355px;
     left: 0;
     right: 0;
     max-width: 100vw;
