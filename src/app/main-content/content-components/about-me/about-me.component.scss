@@ -8,6 +8,7 @@
     min-height: 70vh;
     display: flex;
     justify-content: center;
+   
     // margin-left: 80px;
 
     .shadow-about-me {
@@ -43,13 +44,15 @@
 .about-me-soft-skills {
     display: flex;
     align-items: center;
+    margin-top: 40px;
 
     img {
-        width: 40px;
-        height: 40px;
+        width: 60px;
+        height: 60px;
         margin-right: 40px;
+        transition: transform 125ms ease-in-out;
         &:hover {
-            transform: scale(1.2);
+            transform: scale(1.4);
         }
     }
 }
@@ -66,6 +69,7 @@
         right: -473px;
         top: -394px;
         height: 780px;
+        z-index: 11;
     }
 
     // background-color: #141d2f;
@@ -77,11 +81,10 @@
         overflow: hidden;
         height: 500px;
         width: 500px;
-        border: 1px solid #00bee8;
+        border: 2px solid #00bee8;
 
         .circle-border {
             width: 300px;
-            outline: 1px solid yellow;
             width: 674px;
             position: relative;
             left: -58px;
@@ -89,7 +92,7 @@
         }
     }
     .about-me-line-icon {
-        height: 1px;
+        height: 2px;
         width: 267px;
         margin: 0;
         // overflow: hidden;
