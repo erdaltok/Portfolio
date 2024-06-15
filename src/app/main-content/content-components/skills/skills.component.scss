@@ -1,32 +1,29 @@
-@import '../../../../styles.scss';
+@import "../../../../styles.scss";
 
 .skills-section {
-    margin-top: 100px;
+    margin-top: 160px;
     max-width: 1920px;
     width: 100vw;
     // padding: 40px 80px 40px 80px;
     min-height: 70vh;
-    // display: flex;
-    // justify-content: center;
+    
 }
-
 
 .skills-wrapper {
     display: flex;
     justify-content: space-evenly;
     max-width: 1920px;
     gap: 100px;
-
 }
 
 .skills-left-side {
-   
     max-width: 527px;
     // outline: 2px solid yellow;
     display: flex;
     flex-wrap: wrap;
     gap: 75px;
     height: 500px;
+    position: relative;
 
     .skill-logos {
         flex-direction: column;
@@ -37,17 +34,47 @@
         width: 70px;
         height: 70px;
 
-            img {
-                width: 65px;
-                // margin: 0;
+        img {
+            width: 65px;
+            &:hover {
+            animation: jump 1s ease infinite;
+
+                
+        }
+
+        p {
+            margin: 0;
+            margin-top: 16px;
+        }
+    }
+}
+}
+
+@keyframes jump {
+                0%,
+                50%,
+                100% {
+                    transform: translateY(0);
+                }
+
+                40% {
+                    transform: translateY(-30px);
+                }
+
+                80% {
+                    transform: translateY(-15px);
+                }
             }
 
-            p {
-                margin: 0;
-                margin-top: 16px;
-            }
-        
-    }
+
+.shadow-skills-section {
+    position: absolute;
+    left: -390px;
+    z-index: -10;
+    rotate: 45deg;
+    width: 800px;
+    height: 800px;
+    top: 148px;
 }
 
 .skills-right-side {
@@ -70,33 +97,31 @@
     }
 
     button {
-    width: 191px;
-    height: 58px;
-    border-radius: 10px;
-    padding: 15px 30px 15px 30px;
-    border: none;
-    color: whitesmoke;
-    background-color: #00bee8;
-    font-size: 400;
-    font-size: 23px;
-    margin-top: 25px;
-    transition: all 125ms ease-out;
+        width: 191px;
+        height: 58px;
+        border-radius: 10px;
+        padding: 15px 30px 15px 30px;
+        border: none;
+        color: whitesmoke;
+        background-color: #00bee8;
+        font-size: 400;
+        font-size: 23px;
+        margin-top: 25px;
+        transition: all 125ms ease-out;
 
         &:hover {
-         cursor: pointer;
-         transform: scale(1.1);
-         transition: all 125ms ease-in;
-         background-color: #4b47ff;
+            cursor: pointer;
+            transform: scale(1.1);
+            transition: all 125ms ease-in;
+            background-color: #4b47ff;
         }
+    }
 }
-}
-
 
 .skills-line {
-        position: absolute;
+    position: absolute;
     right: 0;
     margin-top: -159px;
     width: 85px;
     margin-left: 30px;
 }
-
