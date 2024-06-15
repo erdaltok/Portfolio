@@ -6,14 +6,14 @@
     width: 100vw;
     // padding: 40px 80px 40px 80px;
     min-height: 70vh;
-    display: flex;
-    justify-content: center;
+    // display: flex;
+    // justify-content: center;
 }
 
 
 .skills-wrapper {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     max-width: 1920px;
     gap: 100px;
 
@@ -34,9 +34,12 @@
         justify-content: center;
         align-items: center;
         text-align: center;
+        width: 70px;
+        height: 70px;
 
             img {
                 width: 65px;
+                // margin: 0;
             }
 
             p {
@@ -55,9 +58,10 @@
     text-align: center;
     max-width: 611px;
     height: 500px;
+    margin-right: 40px;
     // outline: 2px solid yellow;
 
-    h1 {
+    h2 {
         font-weight: 700;
         font-size: 8rem;
         line-height: 108px;
@@ -88,4 +92,11 @@
 }
 
 
+.skills-line {
+        position: absolute;
+    right: 0;
+    margin-top: -159px;
+    width: 85px;
+    margin-left: 30px;
+}
 
