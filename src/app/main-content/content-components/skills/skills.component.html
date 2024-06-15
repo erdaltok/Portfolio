@@ -1,82 +1,24 @@
 <div class="skills-section">
 
-<!-- Here shadow -->
+    <div class="skills-wrapper">
 
-<div class="skills-wrapper">
+        <div class="skills-left-side">
 
-<div class="skills-left-side">
+            <div *ngFor="let logo of logos" class="skill-logos">
+                <img [src]="logo.path" alt="skill-logos">
+                <p>{{ logo.name }}</p>
+            </div>             
+            <img class="shadow-skills-section" src="../../../../assets/img/shadows/green-shadow-skills.png" alt="">
+        </div>
 
-    <div class="skill-logos">
-        <img src="../../../../assets/img/icons/Angular.png" alt="">
-        <p>Angular</p>
+        <div class="skills-right-side">
+
+            <h2>My skills</h2>
+            <span>I have grown my frontend developments skills that have allowed me to create different real projects.</span>
+            <button>Get in touch</button>
+            <img class="skills-line" src="../../../../assets/img/dividing-lines/dividing-line-skills.png" alt="">
+        </div>      
     </div>
-
-    <div class="skill-logos">
-        <img src="../../../../assets/img/icons/Typescript.png" alt="">
-        <p>Typescript</p>
-    </div>
-
-    <div class="skill-logos">
-        <img src="../../../../assets/img/icons/Javascript.png" alt="">
-        <p>Javascript</p>
-    </div>
-
-    <div class="skill-logos">
-        <img src="../../../../assets/img/icons/html.png" alt="">
-        <p>HTML</p>
-    </div>
-
-    <div class="skill-logos">
-        <img src="../../../../assets/img/icons/Firebase.png" alt="">
-        <p>Firebase</p>
-    </div>
-    <div class="skill-logos">
-        <img src="../../../../assets/img/icons/Git.png" alt="">
-        <p>GIT</p>
-    </div>
-    <div class="skill-logos">
-        <img src="../../../../assets/img/icons/CSS.png" alt="">
-        <p>CSS</p>
-    </div>
-    <div class="skill-logos">
-        <img src="../../../../assets/img/icons/Api.png" alt="">
-        <p>Rest-Api</p>
-    </div>
-    <div class="skill-logos">
-        <img src="../../../../assets/img/icons/scrum.png" alt="">
-        <p>Scrum</p>
-    </div>
-    <div class="skill-logos">
-        <img src="../../../../assets/img/icons/Material-design.png" alt="">
-        <p>Material design</p>
-    </div>
-    
-    <img class="shadow-skills-section" src="../../../../assets/img/shadows/green-shadow-skills.png" alt="">
-
-</div>
-
-<div class="skills-right-side">
-
-    <!-- <div class="skills-title-and-line">
-    <h2>My skills</h2>
-    <img src="../../../../assets/img/dividing-lines/dividing-line-skills.png" alt="">
-    </div> -->
-
-        <h2>My skills</h2>
-        <span>I have grown my frontend developments skills that have allowed me to create different real projects.</span>
-        
-        <button>Get in touch</button>
-        <img class="skills-line" src="../../../../assets/img/dividing-lines/dividing-line-skills.png" alt="">
-</div>      
-
-
-
-
-
-</div>
-
-
-
 
 </div>
 
