@@ -1,20 +1,24 @@
+@import "../../../../styles.scss";
+
 .portfolio-section {
     margin-top: 57px;
-    max-width: 1920px;
+    max-width: 1920px !important;
     width: 100%;
-    min-height: 70vh;
+    min-height: 80vh;
     display: flex;
+    justify-content: center;
     position: relative;
     // outline: 2px solid yellow;
     align-items: center;
     flex-direction: column;
 
-        p {
-            font-weight: 400;
-            font-size: 16px;
-            line-height: 19.2px;
-            text-align: center;
-        }
+    p {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 19.2px;
+        text-align: center;
+        color: whitesmoke;
+    }
 }
 
 .portfolio-headline {
@@ -29,6 +33,7 @@ h2 {
     font-weight: 700;
     font-size: 90px;
     line-height: 108px;
+    color: whitesmoke;
     margin: 0;
     padding-left: 40px;
     padding-right: 40px;
@@ -55,4 +60,106 @@ h2 {
     flex: 1;
     position: absolute;
     left: 423px;
+}
+
+.portfolio-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    max-width: 1920px;
+    width: 100%;
+    margin-top: 54px;
+    position: relative;
+
+    .projects-left-side {
+        max-width: 500px;
+
+        img {
+            object-fit: cover;
+            margin: 0;
+            width: 601px;
+            height: 600px;
+        }
+    }
+    .projects-right-side {
+        max-width: 500px;
+        display: flex;
+        flex-direction: column;
+        justify-content: left;
+
+        .shadow-portfolio {
+            position: absolute;
+            right: -378px;
+            bottom: -849px;
+            z-index: -20;
+        }
+
+        h3 {
+            font-weight: 700;
+            font-size: 32px;
+            line-height: 38.4px;
+            color: #4b47ff;
+            margin-bottom: 16px;
+        }
+
+        span {
+            font-weight: 400;
+            font-size: 23px;
+            line-height: 27.6px;
+            color: #00bee8;
+        }
+
+        p {
+            margin: 0;
+            margin-top: 16px;
+            text-align: start;
+            color: whitesmoke;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 19.2px;
+        }
+    }
+}
+
+.wrapper-position {
+    flex-direction: row-reverse;
+    // display: flex;
+    // justify-content: space-evenly;
+}
+
+.projects-right-side-buttons {
+    display: flex;
+    gap: 80px;
+
+    button {
+        width: 191px;
+        height: 58px;
+        border-radius: 10px;
+        padding: 15px 30px 15px 30px;
+        border: none;
+        color: whitesmoke;
+        background-color: #4b47ff;
+        font-size: 400;
+        font-size: 23px;
+        margin-top: 25px;
+        transition: all 125ms ease-out;
+
+        &:hover {
+            cursor: pointer;
+            transform: scale(1.1);
+            transition: all 125ms ease-in;
+            background-color: #00bee8;
+        }
+    }
+
+    .button-github {
+        background-color: transparent;
+        border: 1px solid #00bee8;
+        &:hover {
+            cursor: pointer;
+            transform: scale(1.1);
+            transition: all 125ms ease-in;
+            background-color: #00bee8;
+        }
+    }
 }

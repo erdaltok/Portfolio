@@ -11,7 +11,7 @@
 
 .skills-wrapper {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
     max-width: 1920px;
     gap: 100px;
 }
@@ -86,7 +86,7 @@
     max-width: 611px;
     height: 500px;
     margin-right: 40px;
-    // outline: 2px solid yellow;
+    margin-top: -100px;
 
     h2 {
         font-weight: 700;
