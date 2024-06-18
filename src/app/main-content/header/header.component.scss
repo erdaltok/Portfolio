@@ -12,13 +12,15 @@ header {
     left: 0;
     top: 0;
     z-index: 99;
+    
 }
 
 nav {
     @include dFlex($jc: space-between);
     background-color: #141d2f;
     width: 100%;
-    max-width: 1920px;   
+    max-width: 1920px; 
+     
 
     a {
         @include dFlex;
