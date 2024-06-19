@@ -1,0 +1,57 @@
+@import '../../../styles.scss';
+
+.border-top {
+    border-top: 1px solid #00BEE8;
+}
+
+.footer-section {
+    max-width: 1920px;
+    min-height: 200px;
+    margin-left: 80px;
+    margin-right: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+
+    span {
+        color: whitesmoke;
+        font-weight: 400;
+        font-size: 24px;
+    }
+}
+
+.logo-imprint-div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    img {
+        width: 200px
+    };
+
+    a {
+        text-decoration: none;
+        color: whitesmoke;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}
+
+
+.references-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+
+    a {
+        transition: transform 125ms ease-in-out;
+        color: #00BEE8;
+        
+        &:hover {
+            transform: scale(1.2);
+        }
+    }
+}
