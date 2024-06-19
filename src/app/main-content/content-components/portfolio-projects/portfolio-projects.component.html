@@ -16,14 +16,18 @@
 
     <p>Explore a selection of my work here - Interact with projects to see my skills in action.</p>
 
-    <div *ngFor="let project of projects; let i = index"  [ngStyle]="{'flex-direction': i % 2 === 0 ? 'row' : 'row-reverse'}" class="portfolio-wrapper ">
+    <div *ngFor="let project of projects; let i = index" 
+     [ngStyle]="{'flex-direction': i % 2 === 0 ? 'row' : 'row-reverse'}"
+     class="portfolio-wrapper ">
 
         <div class="projects-left-side">
             <img src="{{ project.image }}" alt="">
         </div>
 
         <div class="projects-right-side">
-                <img class="shadow-portfolio" src="../../../../assets/img/shadows/purple-shadow-portfolio.png" alt="">
+                <img class="shadow-portfolio"
+                 [ngClass]="{'shadow-portfolio': i % 2 === 0, 'shadow-portfolio-left': i % 2 !== 0}"
+                 [src]="i % 2 === 0 ? '../../../../assets/img/shadows/purple-shadow-portfolio.png' : '../../../../assets/img/shadows/green-shadow-portfolio-left.png'" alt="">
             <h3>{{ project.name }}</h3>
             <span>{{ project.skills }}</span>
             <p>{{ project.description }}</p>

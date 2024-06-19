@@ -59,7 +59,7 @@ h2 {
     background-color: #4b47ff;
     flex: 1;
     position: absolute;
-    left: 423px;
+    left: 369px;
 }
 
 .portfolio-wrapper {
@@ -95,6 +95,14 @@ h2 {
             rotate: -90deg;
         }
 
+        .shadow-portfolio-left {
+            position: absolute;
+            bottom: -453px;
+            z-index: -20;
+            rotate: -90deg;
+            left: -156px;
+        }
+
         h3 {
             font-weight: 700;
             font-size: 32px;
@@ -122,11 +130,11 @@ h2 {
     }
 }
 
-.wrapper-position {
-    flex-direction: row-reverse;
-    // display: flex;
-    // justify-content: space-evenly;
-}
+// .wrapper-position {
+//     flex-direction: row-reverse;
+//     // display: flex;
+//     // justify-content: space-evenly;
+// }
 
 .projects-right-side-buttons {
     display: flex;
