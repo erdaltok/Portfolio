@@ -8,11 +8,12 @@ body {
     background-color: #141D2F;
     color: whitesmoke;
     overflow-x: hidden;
-    max-width: 1920px;
+    // max-width: 1920px;
     // max-width: 1920px !important;
     // overflow-y: scroll;
     // scroll-snap-type: y mandatory;
-    
+    display: flex;
+    justify-content: center;
     
 }
 

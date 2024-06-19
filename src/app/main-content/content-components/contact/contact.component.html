@@ -1,6 +1,6 @@
 <div class="contact-section">
 
-<div class="contacts-headline">
+<div class="contacts-headline" id="contact">
     <div class="small-line-contact"></div>
     <h2>Contact</h2>
 </div>
@@ -22,21 +22,43 @@
 
     <div class="contacts-right-side">
 
-        <form>
+        <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
             <div class="form-group">
-        <input type="text" class="form-control" name="name-contact"
-                    placeholder="Your name" required="required">
+               
+                <input
+                 #name="ngModel" 
+                [(ngModel)]="contactData.name"
+                type="text" class="form-control" id="name" name="name-contact"
+                placeholder="Your name" required>
+                @if (!name.valid && name.touched && !name.disabled) {
+                <span>Please enter your name</span>
+                }
+
             </div>
         
             <div class="form-group">
-            <input type="email" class="form-control" name="email_contact"
-                    placeholder="Your email">
+                <input 
+                #email="ngModel"
+                [(ngModel)]="contactData.email"
+                type="email" class="form-control" id="email" name="email_contact"
+                placeholder="Your email" required pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}">
+                @if (!email.valid && email.touched && !email.disabled) {
+                <span>Please enter a email adress</span>
+                }
             </div>
         
-            <div class="form-group">
-                
-                <textarea class="form-control" name="message-contact" placeholder="Your message" rows="10" required="required"></textarea>
+            <div class="form-group">                
+                <textarea
+                #message="ngModel"
+                    [(ngModel)]="contactData.message" 
+                    class="form-control" name="message-contact" 
+                    placeholder="Your message" rows="10" required>
+                </textarea>
+                @if (!message.valid && message.touched && !message.disabled) {
+                    <span>Please enter a message</span>
+                }
             </div>
+
             <div class="privacy-check-info">
                 <input class="checkbox" type="checkbox" name="my-checkbox" id="opt-in" />
                 <label for="opt-in">I've read the <a href="">privacy policy</a> and agree to the processing of my data as outlined.</label>

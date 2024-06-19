@@ -4,14 +4,13 @@
     max-width: 1920px;
     width: 100%;
     min-height: 80vh;
-    // display: flex;
     position: relative;
     margin-top: 150px;
 }
 
 .contacts-wrapper {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
 }
 
 .contacts-headline {
@@ -22,7 +21,7 @@
     margin-bottom: 200px;
 
     .small-line-contact {
-        width: 10%;
+        width: 5%;
         height: 4px;
         background-color: #4b47ff;
     }
@@ -43,6 +42,14 @@
         color: whitesmoke;
         opacity: 1;
     }
+
+    span {
+        margin-top: 8px;
+        margin-left: 8px;
+        color: red;
+        font-size: 16px;
+        font-weight: 400;
+    }
 }
 
 .form-control {
@@ -52,6 +59,13 @@
     border-radius: 10px;
     background-color: transparent;
 }
+
+input[type=text], [type=email], textarea {
+    color: whitesmoke;
+    background-color: transparent !important;
+}
+
+
 
 /* Labels for checked inputs */
 input:checked + label {
@@ -119,7 +133,7 @@ input[type="checkbox"]:checked::before {
 }
 
 .contacts-left-side {
-    width: 600px;
+    width: 40%;
     margin-left: 80px;
 
     h3 {
@@ -138,7 +152,7 @@ input[type="checkbox"]:checked::before {
 }
 
 .contacts-right-side {
-    width: 600px;
+    width: 40%;
     margin-right: 80px;
 }
 

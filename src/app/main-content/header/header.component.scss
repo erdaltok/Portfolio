@@ -6,8 +6,8 @@ header {
     max-height: 30px;
     height: 100%;
     padding: 40px 80px;
-    width: 100vw;
-    max-width: calc(100vw - 160px);
+    margin: 0 auto;
+    width: 95%;
     position: fixed;
     left: 0;
     top: 0;
@@ -39,6 +39,7 @@ nav {
 .nav-links {
     @include dFlex($g: 20px);
     font-size: 23px;
+    margin-right: 80px;
     a {
         color: whitesmoke;
         text-decoration: none;

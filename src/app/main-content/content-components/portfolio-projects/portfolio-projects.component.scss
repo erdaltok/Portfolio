@@ -1,16 +1,17 @@
 @import "../../../../styles.scss";
 
 .portfolio-section {
-    margin-top: 57px;
+    margin-top: 121px;
     max-width: 1920px !important;
     width: 100%;
-    min-height: 80vh;
+   min-height: calc(100vh - 30px);
     display: flex;
     justify-content: center;
     position: relative;
     // outline: 2px solid yellow;
     align-items: center;
     flex-direction: column;
+    overflow: hidden;
 
     p {
         font-weight: 400;
