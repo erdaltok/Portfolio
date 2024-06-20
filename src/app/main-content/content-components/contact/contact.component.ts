@@ -1,7 +1,8 @@
 import { CommonModule } from '@angular/common';
 import { HttpClient } from '@angular/common/http';
-import { Component, inject } from '@angular/core';
+import { Component, inject, HostListener } from '@angular/core';
 import { FormsModule, NgForm } from '@angular/forms';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-contact',
@@ -11,6 +12,16 @@ import { FormsModule, NgForm } from '@angular/forms';
   styleUrl: './contact.component.scss'
 })
 export class ContactComponent {
+
+  goUpBtn: HTMLElement | null = null;
+  currentImgSrc = "../../../../assets/img/icons/go-up-btn-white.png";
+
+
+  constructor(private router: Router) {}
+
+   ngOnInit() {
+    this.goUpBtn = document.getElementById("goUpBtn");
+  }
 
   http = inject(HttpClient);
 
@@ -52,4 +63,36 @@ export class ContactComponent {
       ngForm.resetForm();
     }
   }
+
+
+  scrollUpPage() {
+  document.body.scrollTop = 0; // For Safari
+  document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+  }
+  
+  @HostListener('window:scroll', [])
+  onWindowScroll() {
+    if (this.goUpBtn) {
+      if (window.pageYOffset > 50) {
+        this.goUpBtn.style.display = "block";
+      } else {
+        this.goUpBtn.style.display = "none";
+      }
+    }
+  }
+  
+  onMouseEnter() {
+    this.currentImgSrc = "../../../../assets/img/icons/go-up-btn-green.png";
+  }
+
+  onMouseLeave() {
+    this.currentImgSrc = "../../../../assets/img/icons/go-up-btn-white.png";
+  }
+
+    scrollToTopPrivacy(){ 
+    this.router.navigate(['/privacy']); 
+  }
+
 }
+
+

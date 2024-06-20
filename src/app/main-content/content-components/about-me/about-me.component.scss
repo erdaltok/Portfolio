@@ -5,11 +5,12 @@
     max-width: 1920px;
     width: 100vw;
     // min-height: 70vh;
-    min-height: calc(100vh - 30px);
+    // min-height: calc(100vh - 30px);
     display: flex;
     justify-content: center;
     position: relative;
     overflow-x: clip;
+    height: 100vh;
 }
 
 .shadow-about-me {
@@ -23,6 +24,7 @@
 
 .about-me-wrapper {
     display: flex;
+    justify-content: space-between;
     align-items: center;
     z-index: 15 !important;
     // position: absolute;
@@ -32,7 +34,7 @@
     margin-right: 115px;
     display: flex;
     margin-left: 80px;
-
+    max-width: 40%;
     flex-direction: column;
 
     h1 {
@@ -63,6 +65,7 @@
 .about-me-right-side {
     display: flex;
     align-items: center;
+    max-width: 50%;
     // position: relative;
 
     .circle {

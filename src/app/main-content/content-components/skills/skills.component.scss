@@ -1,7 +1,7 @@
 @import "../../../../styles.scss";
 
 .skills-section {
-    // margin-top: 160px;
+    margin-top: 160px;
     max-width: 1920px;
     width: 100vw;
     min-height: 100vh;
@@ -16,7 +16,7 @@
     display: flex;
     justify-content: space-evenly;
     max-width: 1920px;
-    gap: 100px;
+    // gap: 100px;
 }
 
 .skills-left-side {

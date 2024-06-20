@@ -1,12 +1,12 @@
-<div class="contact-section">
+<div class="contact-section" id="contact">
 
-<div class="contacts-headline" id="contact">
+<div class="contacts-headline" >
     <div class="small-line-contact"></div>
     <h2>Contact</h2>
 </div>
 
 
-<div class="contacts-wrapper">
+<div class="contacts-wrapper" >
 
 
     <div class="contacts-left-side">
@@ -20,7 +20,7 @@
     </div>
 
 
-    <div class="contacts-right-side">
+    <div class="contacts-right-side" >
 
         <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
             <div class="form-group">
@@ -61,28 +61,18 @@
 
             <div class="privacy-check-info">
                 <input class="checkbox" type="checkbox" name="my-checkbox" id="opt-in" />
-                <label for="opt-in">I've read the <a href="">privacy policy</a> and agree to the processing of my data as outlined.</label>
+                <label for="opt-in">I've read the <a (click)="scrollToTopPrivacy()" href="privacy">privacy policy</a> and agree to the processing of my data as outlined.</label>
             </div>
 
             <input type="submit" value="Send message" [disabled]="">
 
-            
         </form>
+
+            <div class="go-up-btn" id="goUpBtn" (click)="scrollUpPage()"
+            (mouseenter)="onMouseEnter()" (mouseleave)="onMouseLeave()">
+                <img [src]="currentImgSrc" alt="">
+            </div>
     </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 </div>
 

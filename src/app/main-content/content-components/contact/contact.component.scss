@@ -3,9 +3,10 @@
 .contact-section {
     max-width: 1920px;
     width: 100%;
-    min-height: 80vh;
+    // min-height: 80vh;
     position: relative;
     margin-top: 150px;
+    height: 100vh;
 }
 
 .contacts-wrapper {
@@ -16,9 +17,10 @@
 .contacts-headline {
     display: flex;
     align-items: center;
-    max-height: 50px;
+    /* max-height: 50px; */
     gap: 40px;
-    margin-bottom: 200px;
+    margin-bottom: 59px;
+    padding-top: 100px;
 
     .small-line-contact {
         width: 5%;
@@ -178,3 +180,22 @@ input[type="submit"] {
         transition: all 125ms ease-in;
     }
 }
+
+.go-up-btn {
+    display: none;
+    position: fixed; /* Fixed/sticky position */
+    bottom: 20px; /* Place the button at the bottom of the page */
+    right: 80px; /* Place the button 30px from the right */
+    z-index: 99; /* Make sure it does not overlap */
+    cursor: pointer;
+
+    
+}
+
+// .go-up-btn > img:not(:only-child):nth-child(1) { 
+//   position:absolute;
+//   z-index:3
+// }
+
+// .go-up-btn:hover>img:nth-child(1){z-index:1}
+// .go-up-btnr>img:nth-child(2){position:relative;z-index:2}
