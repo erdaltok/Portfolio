@@ -42,7 +42,7 @@
                 #email="ngModel"
                 [(ngModel)]="contactData.email"
                 type="email" class="form-control" id="email" name="email_contact"
-                placeholder="Your email" required >
+                placeholder="Your email" required pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$">
                 @if (!email.valid && email.touched && !email.disabled) {
                 <span>Your email is required</span>
                 <img class="not-valid-img" src="../../../../assets/img/icons/not-valid-img.png" alt="">
