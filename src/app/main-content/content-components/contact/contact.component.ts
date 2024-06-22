@@ -1,7 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { HttpClient } from '@angular/common/http';
-import { Component, inject, HostListener } from '@angular/core';
-import { FormsModule, NgForm } from '@angular/forms';
+import { Component, inject, HostListener} from '@angular/core';
+import { FormsModule, NgForm} from '@angular/forms';
 import { Router } from '@angular/router';
 
 @Component({
@@ -16,6 +16,9 @@ export class ContactComponent {
   goUpBtn: HTMLElement | null = null;
   currentImgSrc = "../../../../assets/img/icons/go-up-btn-white.png";
 
+  isChecked: boolean = false;
+  showPrivacyWarning: boolean = false;
+  showSuccessMailMessage: boolean = false;
 
   constructor(private router: Router) {}
 
@@ -44,23 +47,54 @@ export class ContactComponent {
     },
   };
 
-  onSubmit(ngForm: NgForm) {
-    if (ngForm.submitted && ngForm.form.valid && !this.mailTest) {
-      this.http.post(this.post.endPoint, this.post.body(this.contactData))
-        .subscribe({
-          next: (response) => {
-            // here place what ever you want
-            ngForm.resetForm();
-          },
-          error: (error) => {
-            console.error(error);
-          },
-          complete: () => console.info('send post complete'),
-        });
-    } else if (ngForm.submitted && ngForm.form.valid && this.mailTest) {
 
-      // here place what ever you want for testing
-      ngForm.resetForm();
+  // ORIGINAL
+  // onSubmit(ngForm: NgForm) {
+  //   if (ngForm.submitted && ngForm.form.valid && !this.mailTest) {
+  //     this.http.post(this.post.endPoint, this.post.body(this.contactData))
+  //       .subscribe({
+  //         next: (response) => {
+  //           // here place what ever you want
+  //           ngForm.resetForm();
+  //         },
+  //         error: (error) => {
+  //           console.error(error);
+  //         },
+  //         complete: () => console.info('send post complete'),
+  //       });
+  //   } else if (ngForm.submitted && ngForm.form.valid && this.mailTest) {
+
+  //     // here place what ever you want for testing
+  //     ngForm.resetForm();
+  //   }
+  // }
+
+onSubmit(ngForm: NgForm) {
+    // Checkbox activated?
+    if (!this.isChecked) {
+      this.showPrivacyWarning = true; 
+    } else {
+      this.showPrivacyWarning = false;
+
+      // logic, if form-submit activated after checkbox is checked
+      if (ngForm.form.valid && !this.mailTest) {
+        this.http.post(this.post.endPoint, this.post.body(this.contactData))
+          .subscribe({
+            next: (response) => {
+             
+              // here code of your choise, what should be happen after...
+              ngForm.resetForm();
+            },
+            error: (error) => {
+              console.error(error);
+            },
+            complete: () => console.info('send post complete'),
+          });
+      } else if (ngForm.form.valid && this.mailTest) {
+          this.showSuccessMailMessage = true;
+        // here code for testing
+        ngForm.resetForm();
+      }
     }
   }
 
@@ -91,6 +125,13 @@ export class ContactComponent {
 
     scrollToTopPrivacy(){ 
     this.router.navigate(['/privacy']); 
+    }
+    
+  checkCheckBoxvalue(event: any) {
+    this.isChecked = event.target.checked;
+    if (this.isChecked) {
+      this.showPrivacyWarning = false;
+    }
   }
 
 }

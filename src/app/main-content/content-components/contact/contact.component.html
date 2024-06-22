@@ -22,16 +22,17 @@
 
     <div class="contacts-right-side" >
 
-        <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
+        <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm" autocomplete="off">
             <div class="form-group">
                
                 <input
                  #name="ngModel" 
                 [(ngModel)]="contactData.name"
                 type="text" class="form-control" id="name" name="name-contact"
-                placeholder="Your name" required>
+                placeholder="Your name" required >
                 @if (!name.valid && name.touched && !name.disabled) {
-                <span>Please enter your name</span>
+                    <img class="not-valid-img" src="../../../../assets/img/icons/not-valid-img.png" alt="">
+                <span>Your name is required</span>
                 }
 
             </div>
@@ -41,9 +42,10 @@
                 #email="ngModel"
                 [(ngModel)]="contactData.email"
                 type="email" class="form-control" id="email" name="email_contact"
-                placeholder="Your email" required pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}">
+                placeholder="Your email" required >
                 @if (!email.valid && email.touched && !email.disabled) {
-                <span>Please enter a email adress</span>
+                <span>Your email is required</span>
+                <img class="not-valid-img" src="../../../../assets/img/icons/not-valid-img.png" alt="">
                 }
             </div>
         
@@ -55,16 +57,42 @@
                     placeholder="Your message" rows="10" required>
                 </textarea>
                 @if (!message.valid && message.touched && !message.disabled) {
-                    <span>Please enter a message</span>
+                    <span>Your message is empty</span>
+                    <img class="not-valid-img" src="../../../../assets/img/icons/not-valid-img.png" alt="">
+                    
                 }
             </div>
-
-            <div class="privacy-check-info">
-                <input class="checkbox" type="checkbox" name="my-checkbox" id="opt-in" />
+                <!-- ORIGINAL -->
+            <!-- <div class="privacy-check-info">                
+                <input #checkbox="ngModel" class="checkbox" type="checkbox" name="my-checkbox" id="opt-in" ngModel required/>
                 <label for="opt-in">I've read the <a (click)="scrollToTopPrivacy()" href="privacy">privacy policy</a> and agree to the processing of my data as outlined.</label>
             </div>
+                    @if (!checkbox.valid && checkbox.touched && !checkbox.disabled) {
+                        <span id="privacyRequest" class="privacy-request">Please accept the privacy policy</span>
+                    }
+            <button type="submit" [disabled]="!contactForm.valid " >Send message</button> -->
 
-            <input type="submit" value="Send message" [disabled]="">
+
+            <div class="privacy-check-info">
+                <input (change)="checkCheckBoxvalue($event)" #myCheckbox class="checkbox" type="checkbox" name="my-checkbox"
+                    id="opt-in" ngModel required />
+                <label for="opt-in">I've read the <a (click)="scrollToTopPrivacy()" href="privacy">privacy policy</a> and agree to
+                    the processing of my data as outlined.</label>
+            </div>
+
+            <span *ngIf="showPrivacyWarning" id="privacyRequest" class="privacy-request">Please accept the privacy policy</span>
+
+            <button type="submit" [ngClass]="{
+                    'inactive-button': !contactForm.valid || !isChecked,
+                    'active-button': contactForm.valid && isChecked
+                    }" (click)="onSubmit(contactForm)">
+                Send message
+            </button>
+
+                  <div *ngIf="showSuccessMailMessage" class="show-success-mail-message">
+                    Thank you for your message!! 
+                  </div>  
+
 
         </form>
 

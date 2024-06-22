@@ -17,7 +17,6 @@
 .contacts-headline {
     display: flex;
     align-items: center;
-    /* max-height: 50px; */
     gap: 40px;
     margin-bottom: 59px;
     padding-top: 100px;
@@ -39,6 +38,7 @@
     display: flex;
     flex-direction: column;
     margin-bottom: 25px;
+    position: relative;
 
     ::placeholder {
         color: whitesmoke;
@@ -57,21 +57,55 @@
 .form-control {
     gap: 20px;
     padding: 15px 25px 15px 25px;
-    border: 1px solid #9747ff;
+    border: 1px solid #00bee8;
     border-radius: 10px;
     background-color: transparent;
 }
 
-input[type=text], [type=email], textarea {
+input[type="text"],
+[type="email"],
+textarea {
     color: whitesmoke;
-    background-color: transparent !important;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
 }
 
+/* Show red borders when filled, but invalid */
+input:not(:placeholder-shown) {
+    border-color: hsl(0, 76%, 50%);
+}
 
+/* Show green borders when valid */
+input:valid:not(.checkbox) {
+    border-color: hsl(120, 76%, 50%);
+    background-image: url('../../../../assets/img/icons/valid-img.png');
+    background-repeat: no-repeat;
+    background-position: center right 10px;
+}
+textarea:valid {
+    border-color: hsl(120, 76%, 50%);
+     background-image: url('../../../../assets/img/icons/valid-img.png');
+    background-repeat: no-repeat;
+    background-position: top 10px right 10px;
+}
 
-/* Labels for checked inputs */
-input:checked + label {
-    color: #9747ff;
+input:-webkit-autofill,
+input:-webkit-autofill:focus {
+    transition:
+        background-color 0s 600000s,
+        color 0s 600000s !important;
+}
+
+textarea:focus {
+    outline: none !important;
+    border-color: #719ece;
+    box-shadow: 0 0 10px #719ece;
+}
+
+input:focus {
+    outline: none !important;
+    border-color: #719ece;
+    box-shadow: 0 0 10px #719ece;
 }
 
 .checkbox {
@@ -91,7 +125,7 @@ input[type="checkbox"] {
     -moz-appearance: none;
     background-color: transparent;
     border-radius: 2px;
-    border: 1px solid #9747ff;
+    border: 1px solid #00bee8;
     min-width: 20px;
     height: 20px;
     outline: none;
@@ -99,7 +133,8 @@ input[type="checkbox"] {
 }
 
 input[type="checkbox"]:checked {
-    border-color: green;
+    border-color: #70e61c;
+    background-image: '';
 }
 
 input[type="checkbox"]:checked::before {
@@ -107,12 +142,20 @@ input[type="checkbox"]:checked::before {
     display: inline-block;
     width: 6px;
     height: 12px;
-    border: solid green;
+    border: solid #70e61c;
     border-width: 0 2px 2px 0;
     transform: rotate(45deg);
     position: relative;
     top: -1px;
     left: 5px;
+}
+
+.not-valid-img {
+    width: 25px;
+    position: absolute;
+    right: 0;
+    margin-top: 10px;
+    margin-right: 10px;
 }
 
 .privacy-check-info {
@@ -122,6 +165,7 @@ input[type="checkbox"]:checked::before {
 
     a {
         text-decoration: none;
+        color: #00bee8;
 
         &:hover {
             text-decoration: underline;
@@ -158,7 +202,30 @@ input[type="checkbox"]:checked::before {
     margin-right: 80px;
 }
 
-input[type="submit"] {
+.inactive-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0px;
+    padding: 15px 30px;
+    border-radius: 10px;
+    border: 0;
+    font-size: 28px;
+    font-family: Poppins, sans-serif;
+    background-color: #cccccc;
+    color: #666666;
+    cursor: pointer;
+    margin-left: 150px;
+    margin-top: 25px;
+    transition: all 125ms ease-out;
+
+    &:hover {
+        transform: scale(1);
+        cursor: not-allowed;
+    }
+}
+
+.active-button {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -181,21 +248,72 @@ input[type="submit"] {
     }
 }
 
-.go-up-btn {
-    display: none;
-    position: fixed; /* Fixed/sticky position */
-    bottom: 20px; /* Place the button at the bottom of the page */
-    right: 80px; /* Place the button 30px from the right */
-    z-index: 99; /* Make sure it does not overlap */
-    cursor: pointer;
-
-    
+.privacy-request {
+    margin-top: 8px;
+    margin-left: 8px;
+    color: red;
+    font-size: 16px;
+    font-weight: 400;
 }
 
-// .go-up-btn > img:not(:only-child):nth-child(1) { 
-//   position:absolute;
-//   z-index:3
+.show-success-mail-message {
+    color: rgb(35, 34, 34);
+    background-color: #70e61c;
+    padding: 10px;
+    margin-top: 16px;
+    border-radius: 10px;
+    width: 242px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 150px;
+    visibility: visible;
+    // -webkit-animation: fadeIn 2s;
+    // animation: fadeIn 2s;
+
+   animation: successMessageFadeIn 2s ease-in-out 0s 1 normal forwards;
+   animation: successMessageFadeOut 2s ease-in-out 3s 1 normal forwards;
+}
+
+@keyframes successMessageFadeIn {
+	0% {
+		opacity: 0;
+		transform: translateX(-50px);
+	}
+
+	100% {
+		opacity: 1;
+		transform: translateX(0);
+	}
+}
+
+@keyframes successMessageFadeOut {
+	0% {
+		opacity: 1;
+		transform: translateX(0);
+	}
+
+	100% {
+		opacity: 0;
+		transform: translateX(50px);
+	}
+}
+
+// @-webkit-keyframes fadeIn {
+//   from {opacity: 0;}
+//   to {opacity: 1;}
 // }
 
-// .go-up-btn:hover>img:nth-child(1){z-index:1}
-// .go-up-btnr>img:nth-child(2){position:relative;z-index:2}
+// @keyframes fadeIn {
+//   from {opacity: 0;}
+//   to {opacity:1 ;}
+// }
+
+.go-up-btn {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 80px;
+    z-index: 99;
+    cursor: pointer;
+}
