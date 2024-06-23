@@ -5,9 +5,7 @@
     <h2>Contact</h2>
 </div>
 
-
 <div class="contacts-wrapper" >
-
 
     <div class="contacts-left-side">
             <h3>Got a problem to solve?</h3>
@@ -15,26 +13,24 @@
             <span>Contact me through this form, I am interested in hearing from you, knowing your ideas and contributing to your projects
             with my work.</span><br>
             <br>
-
             <span>Need a Frontend developer? Contact me!</span>
     </div>
-
 
     <div class="contacts-right-side" >
 
         <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm" autocomplete="off">
-            <div class="form-group">
-               
+            <div class="form-group">               
                 <input
                  #name="ngModel" 
                 [(ngModel)]="contactData.name"
                 type="text" class="form-control" id="name" name="name-contact"
-                placeholder="Your name" required >
+                placeholder="Your name"
+                minlength="3" required 
+                [ngClass]="{'negative' : !name.valid && name.touched}">
                 @if (!name.valid && name.touched && !name.disabled) {
                     <img class="not-valid-img" src="../../../../assets/img/icons/not-valid-img.png" alt="">
-                <span>Your name is required</span>
+                    <span>Your name is required</span>
                 }
-
             </div>
         
             <div class="form-group">
@@ -42,7 +38,9 @@
                 #email="ngModel"
                 [(ngModel)]="contactData.email"
                 type="email" class="form-control" id="email" name="email_contact"
-                placeholder="Your email" required pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$">
+                placeholder="Your email" required pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$"
+                [ngClass]="{'negative' : !email.valid && email.touched}"
+                >
                 @if (!email.valid && email.touched && !email.disabled) {
                 <span>Your email is required</span>
                 <img class="not-valid-img" src="../../../../assets/img/icons/not-valid-img.png" alt="">
@@ -50,33 +48,24 @@
             </div>
         
             <div class="form-group">                
-                <textarea
+                <textarea               
                 #message="ngModel"
                     [(ngModel)]="contactData.message" 
                     class="form-control" name="message-contact" 
-                    placeholder="Your message" rows="10" required>
+                    placeholder="Your message" 
+                    minlength="3" rows="10" required
+                    [ngClass]="{'negative': !message.valid && message.touched}">                    
                 </textarea>
-                @if (!message.valid && message.touched && !message.disabled) {
+                @if (!message.valid && message.touched && !message.disabled) {                    
                     <span>Your message is empty</span>
-                    <img class="not-valid-img" src="../../../../assets/img/icons/not-valid-img.png" alt="">
-                    
+                    <img class="not-valid-img" src="../../../../assets/img/icons/not-valid-img.png" alt="">                    
                 }
             </div>
-                <!-- ORIGINAL -->
-            <!-- <div class="privacy-check-info">                
-                <input #checkbox="ngModel" class="checkbox" type="checkbox" name="my-checkbox" id="opt-in" ngModel required/>
-                <label for="opt-in">I've read the <a (click)="scrollToTopPrivacy()" href="privacy">privacy policy</a> and agree to the processing of my data as outlined.</label>
-            </div>
-                    @if (!checkbox.valid && checkbox.touched && !checkbox.disabled) {
-                        <span id="privacyRequest" class="privacy-request">Please accept the privacy policy</span>
-                    }
-            <button type="submit" [disabled]="!contactForm.valid " >Send message</button> -->
-
-
+           
             <div class="privacy-check-info">
                 <input (change)="checkCheckBoxvalue($event)" #myCheckbox class="checkbox" type="checkbox" name="my-checkbox"
-                    id="opt-in" ngModel required />
-                <label for="opt-in">I've read the <a (click)="scrollToTopPrivacy()" href="privacy">privacy policy</a> and agree to
+                    id="checkboxId" ngModel required />
+                <label for="checkboxId">I've read the <a (click)="scrollToTopPrivacy()" href="privacy">privacy policy</a> and agree to
                     the processing of my data as outlined.</label>
             </div>
 
@@ -86,18 +75,16 @@
                     'inactive-button': !contactForm.valid || !isChecked,
                     'active-button': contactForm.valid && isChecked
                     }" (click)="onSubmit(contactForm)">
-                Send message
+                    Send message
             </button>
 
                   <div *ngIf="showSuccessMailMessage" class="show-success-mail-message">
                     Thank you for your message!! 
                   </div>  
-
-
         </form>
 
             <div class="go-up-btn" id="goUpBtn" (click)="scrollUpPage()"
-            (mouseenter)="onMouseEnter()" (mouseleave)="onMouseLeave()">
+                (mouseenter)="onMouseEnter()" (mouseleave)="onMouseLeave()">
                 <img [src]="currentImgSrc" alt="">
             </div>
     </div>

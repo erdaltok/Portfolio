@@ -1,9 +1,11 @@
 @import "./../../../../styles.scss";
 
 .landing-page-center {
-    max-height: calc(100vh - 30px);
+    // max-height: calc(100vh - 30px);
+    height: 80vh;
     margin-top: 230px;
-    max-width: calc(100vw - 160px);
+    // max-width: calc(100vw - 160px);
+    
     padding: 40px 80px;
     width: 100%;
     display: flex;
@@ -17,9 +19,9 @@
     // max-width: 1000px;
     position: relative;
     // z-index: -9;
-    width: 100%;
-    object-fit: cover;
-    max-height: calc(100vh - 30px);
+    // width: 100%;
+    // object-fit: cover;
+    // max-height: calc(100vh - 30px);
 }
 
 .me-section-left-side {
@@ -77,6 +79,24 @@ h2 {
     height: 70px;
     color: #4b47ff;
 }
+
+
+.animation-h2 {
+    border-right: 5px solid;
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    animation: typing 2s steps(18), cursor .4s step-end infinite alternate;
+}
+
+@keyframes cursor {
+    50% { border-color: transparent;}
+}
+
+@keyframes typing  {
+    from { width: 0;}
+}
+
 
 .me-section-title {
     flex-direction: column;

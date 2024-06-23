@@ -4,14 +4,14 @@
     margin-top: 121px;
     max-width: 1920px !important;
     width: 100%;
-    min-height: calc(100vh - 30px);
+    // min-height: calc(100vh - 30px);
     display: flex;
     justify-content: center;
     position: relative;
     // outline: 2px solid yellow;
     align-items: center;
     flex-direction: column;
-    overflow: hidden;
+    overflow-x: clip;
 
     p {
         font-weight: 400;
@@ -99,10 +99,10 @@ h2 {
 
         .shadow-portfolio-left {
             position: absolute;
-            bottom: -453px;
+            bottom: -1309px;
             z-index: -20;
-            rotate: -90deg;
-            left: -156px;
+            /* rotate: -92deg; */
+            left: -218px;
         }
 
         h3 {

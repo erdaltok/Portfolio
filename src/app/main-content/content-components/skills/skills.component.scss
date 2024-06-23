@@ -1,14 +1,15 @@
 @import "../../../../styles.scss";
 
 .skills-section {
-    margin-top: 160px;
+    // margin-top: 163px;
     max-width: 1920px;
     width: 100vw;
-    min-height: 100vh;
+    // min-height: 100vh;
     display: flex;
     align-items: center;
     justify-content: space-between;
     position: relative;
+    height: 80vh;
     
 }
 
@@ -16,6 +17,7 @@
     display: flex;
     justify-content: space-evenly;
     max-width: 1920px;
+    padding-top: 300px;
     // gap: 100px;
 }
 

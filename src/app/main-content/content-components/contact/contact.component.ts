@@ -70,7 +70,7 @@ export class ContactComponent {
   // }
 
 onSubmit(ngForm: NgForm) {
-    // Checkbox activated?
+    // Checkbox privacy policy activated?
     if (!this.isChecked) {
       this.showPrivacyWarning = true; 
     } else {
