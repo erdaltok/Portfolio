@@ -1,25 +1,29 @@
 <header>
     <nav>
-        <a href="#">
+        <a href="#landingPage">
             <img src="../../../assets/img/logo-white-edit.png" alt="">
         </a>
 
+            <div class="burger-icon" (click)="openMenu()">
+                <img src="{{currentImgSrc}}" alt="">
+
+            </div>
 
 
-        <div class="nav-links">
+        <div class="nav-links" [class.mobile-menu]="menuValue">
 
             <section>
-                <a href="#aboutMe">About me</a>
+                <a (click)="closeMenu()" href="#aboutMe">About me</a>
                 <!-- Here underlined if this page is currently open (a tag wrapped in div)-->
             </section>
 
             <section>
-                <a href="#skills">Skills</a>
+                <a (click)="closeMenu()" href="#skills">Skills</a>
                 <!-- Here underlined if this page is currently open (a tag wrapped in div)-->
             </section>
 
             <section>
-                <a href="#portfolio">Portfolio</a>
+                <a (click)="closeMenu()" href="#portfolio">Portfolio</a>
                 <!-- Here underlined if this page is currently open (a tag wrapped in div)-->
             </section>
 
@@ -31,6 +35,7 @@
                 <a href="#">DE</a>
                 <!-- Here underlined if this page is currently open (<a> tag wrapped in div-->
             </section>
+
 
 
         </div>

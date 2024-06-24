@@ -3,10 +3,11 @@
 .landing-page-center {
     // max-height: calc(100vh - 30px);
     height: 80vh;
-    margin-top: 230px;
+    // margin-top: 230px;
     // max-width: calc(100vw - 160px);
-    
-    padding: 40px 80px;
+    // padding-top: 269px;
+    padding: 269px 80px 40px 80px;
+    max-width: 1920px;
     width: 100%;
     display: flex;
     justify-self: center;
@@ -16,12 +17,14 @@
 .me-section {
     @include dFlex;
     margin-left: 5%;
+    max-width: 1920px;
     // max-width: 1000px;
     position: relative;
     // z-index: -9;
     // width: 100%;
     // object-fit: cover;
     // max-height: calc(100vh - 30px);
+    // padding-top: 100px;
 }
 
 .me-section-left-side {
@@ -47,6 +50,7 @@
 .picture-of-me {
     position: absolute;
     bottom: -100px;
+    width: 550px
 }
 
 .me-section-title-center {
@@ -129,7 +133,8 @@ button {
     top: 606px;
     left: 0;
     right: 0;
-    width: 1920px;
+    max-width: 1920px;
+    width: 100%;
     height: 600px;
     margin: 0 auto;
     z-index: 1;
