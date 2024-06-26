@@ -4,12 +4,13 @@ header {
     @include dFlex;
     background-color: #141d2f;
     max-height: 30px;
+    max-width: 1920px;
     height: 100%;
     padding: 40px 80px;
     margin: 0 auto;
-    width: 95%;
+    width: 97%;
     position: fixed;
-    left: 0;
+    // left: 0;
     top: 0;
     z-index: 99;
 }
