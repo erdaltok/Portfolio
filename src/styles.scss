@@ -14,8 +14,12 @@ body {
     color: whitesmoke;
     overflow-x: hidden;
     display: flex;
-    justify-content: center;
-    
+    justify-content: center;    
+}
+
+app-root {
+  width: 100%;
+  max-width: 1920px;
 }
 
 body::-webkit-scrollbar {
