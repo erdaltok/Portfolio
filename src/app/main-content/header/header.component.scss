@@ -19,16 +19,18 @@ nav {
     background-color: #141d2f;
     width: 100%;
     max-width: 1920px;
+    max-height: 30px;
 
     a {
         @include dFlex;
+        transition: 0.3s;
+    }
 
-        img {
-            width: 280px;
+    img {
+        width: 280px;
 
-            &:hover {
-                cursor: pointer;
-            }
+        &:hover {
+            cursor: pointer;
         }
     }
 }
@@ -36,6 +38,7 @@ nav {
 .burger-icon {
     display: none;
     padding-right: 80px;
+
     img {
         width: 32px;
         &:hover {
@@ -48,21 +51,40 @@ nav {
     @include dFlex($g: 20px);
     font-size: 23px;
     margin-right: 80px;
+    position: relative;
     a {
         color: whitesmoke;
         text-decoration: none;
-        padding-bottom: 4px;
+        padding-bottom: 3px;        
 
         &:hover {
             color: #00bee8;
         }
     }
+
+    .active {
+        position: relative;
+    }
+
+    .active::before {
+        content: '';
+        height: 2px;
+        width: 60%;
+        background-color: #00bee8;
+        position: absolute;
+        left: calc (50% - 10%);
+        bottom: 0;
+    }
 }
 
 .select-language {
-    @include dFlex($g: 3px);
+    @include dFlex($g: 5px);
+
+    .color-current-language {
+        color: #00bee8;
+    }
     p {
-        font-size: 48px;
+        font-size: 43px;
         color: #4b47ff;
     }
 }

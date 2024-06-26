@@ -4,42 +4,30 @@
             <img src="../../../assets/img/logo-white-edit.png" alt="">
         </a>
 
-            <div class="burger-icon" (click)="openMenu()">
-                <img src="{{currentImgSrc}}" alt="">
+        <div class="burger-icon" (click)="openMenu()">
+            <img src="{{ currentImgSrc }}" alt="">
+        </div>
 
+        <div class="nav-links" [class.mobile-menu]="menuValue">
+            <div>
+                <a (click)="closeMenu()" [class.active]="currentSection === 'aboutMe'" href="#aboutMe">About me</a>
+            </div>
+            <div>
+                <a (click)="closeMenu()" [class.active]="currentSection === 'skills'" href="#skills">Skills</a>
+            </div>
+            <div>
+                <a (click)="closeMenu()" [class.active]="currentSection === 'portfolio'" href="#portfolio">Portfolio</a>
+            </div>
+            <div>
+                <a (click)="closeMenu()" [class.active]="currentSection === 'contact'" href="#contact">Contact</a>
             </div>
 
 
-        <div class="nav-links" [class.mobile-menu]="menuValue">
-
-            <section>
-                <a (click)="closeMenu()" href="#aboutMe">About me</a>
-                <!-- Here underlined if this page is currently open (a tag wrapped in div)-->
-            </section>
-
-            <section>
-                <a (click)="closeMenu()" href="#skills">Skills</a>
-                <!-- Here underlined if this page is currently open (a tag wrapped in div)-->
-            </section>
-
-            <section>
-                <a (click)="closeMenu()" href="#portfolio">Portfolio</a>
-                <!-- Here underlined if this page is currently open (a tag wrapped in div)-->
-            </section>
-
-        
-            <section class="select-language">
-                <a href="#">EN</a>
-                <!-- Here underlined if this page is currently open (a tag wrapped in div)-->
+            <div class="select-language">
+                <a (click)="changeLanguage('EN')" [class.color-current-language]="currentLanguage === 'EN'" href="#">EN</a>
                 <p>|</p>
-                <a href="#">DE</a>
-                <!-- Here underlined if this page is currently open (<a> tag wrapped in div-->
-            </section>
-
-
-
+                <a (click)="changeLanguage('DE')" [class.color-current-language]="currentLanguage === 'DE'" href="#">DE</a>
+            </div>
         </div>
-
-        
     </nav>
 </header>

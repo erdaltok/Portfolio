@@ -1,11 +1,7 @@
 @import "./../../../../styles.scss";
 
 .landing-page-center {
-    // max-height: calc(100vh - 30px);
     height: 80vh;
-    // margin-top: 230px;
-    // max-width: calc(100vw - 160px);
-    // padding-top: 269px;
     padding: 269px 80px 40px 80px;
     max-width: 1920px;
     width: 100%;
@@ -18,13 +14,7 @@
     @include dFlex;
     margin-left: 5%;
     max-width: 1920px;
-    // max-width: 1000px;
     position: relative;
-    // z-index: -9;
-    // width: 100%;
-    // object-fit: cover;
-    // max-height: calc(100vh - 30px);
-    // padding-top: 100px;
 }
 
 .me-section-left-side {
@@ -144,6 +134,5 @@ button {
         width: 100%;
         max-height: 677px;
         max-width: 1920px;
-        // height: 76%;
     }
 }

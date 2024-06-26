@@ -14,6 +14,9 @@ import { ContactComponent } from './contact/contact.component';
   templateUrl: './content-components.component.html',
   styleUrl: './content-components.component.scss'
 })
-export class ContentComponentsComponent {
+export class ContentComponentsComponent  {
 
+   
 }
+
+

@@ -123,9 +123,9 @@ onSubmit(ngForm: NgForm) {
     this.currentImgSrc = "../../../../assets/img/icons/go-up-btn-white.png";
   }
 
-    scrollToTopPrivacy(){ 
+  scrollToTopPrivacy(){ 
     this.router.navigate(['/privacy']); 
-    }
+  }
     
   checkCheckBoxvalue(event: any) {
     this.isChecked = event.target.checked;
