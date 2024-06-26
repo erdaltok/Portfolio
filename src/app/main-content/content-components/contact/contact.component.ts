@@ -3,6 +3,10 @@ import { HttpClient } from '@angular/common/http';
 import { Component, inject, HostListener} from '@angular/core';
 import { FormsModule, NgForm} from '@angular/forms';
 import { Router } from '@angular/router';
+import { ToastrService } from 'ngx-toastr';
+
+
+
 
 @Component({
   selector: 'app-contact',
@@ -18,7 +22,7 @@ export class ContactComponent {
 
   isChecked: boolean = false;
   showPrivacyWarning: boolean = false;
-  showSuccessMailMessage: boolean = false;
+  // showSuccessMailMessage: boolean = false;
 
   constructor(private router: Router) {}
 
@@ -27,6 +31,7 @@ export class ContactComponent {
   }
 
   http = inject(HttpClient);
+  toastr = inject(ToastrService);
 
   contactData = {
     name: "",
@@ -47,6 +52,9 @@ export class ContactComponent {
     },
   };
 
+  // showSuccess() {
+  //   this.toastr.success('Hello world!', 'Toastr fun!');
+  // }
 
   // ORIGINAL
   // onSubmit(ngForm: NgForm) {
@@ -91,8 +99,11 @@ onSubmit(ngForm: NgForm) {
             complete: () => console.info('send post complete'),
           });
       } else if (ngForm.form.valid && this.mailTest) {
-          this.showSuccessMailMessage = true;
-        // here code for testing
+
+        
+        this.toastr.success('Your message is on its way.', 'Success!');
+          // this.showSuccessMailMessage = true;
+  
         ngForm.resetForm();
       }
     }

@@ -1,17 +1,18 @@
+@import 'ngx-toastr/toastr';
+
+
 html {
     scroll-behavior: smooth;
 }
 
 body {
     margin: 0;
+    padding: 0;
+    box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
     background-color: #141D2F;
     color: whitesmoke;
     overflow-x: hidden;
-    // max-width: 1920px;
-    // max-width: 1920px !important;
-    // overflow-y: scroll;
-    // scroll-snap-type: y mandatory;
     display: flex;
     justify-content: center;
     
