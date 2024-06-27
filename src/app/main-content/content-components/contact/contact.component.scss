@@ -1,266 +1,236 @@
 @import "../../../../styles.scss";
 
 .contact-section {
-    max-width: 1920px;
-    width: 100%;
-    position: relative;
-    height: 100vh;
-    padding-bottom: 20px;
-    
+  max-width: 1920px;
+  width: 100%;
+  position: relative;
+  height: 100vh;
+  padding-bottom: 20px;
 }
 
 .contacts-wrapper {
-    display: flex;
-    justify-content: space-between;
+  @include dFlex(space-between, $ai: null);
 }
 
 .contacts-headline {
-    display: flex;
-    align-items: center;
-    gap: 40px;
-    margin-bottom: 59px;
-    padding-top: 100px;
+  @include dFlex($jc: null, $ai: center, $g: 40px);
+  margin-bottom: 59px;
+  padding-top: 100px;
 
-    .small-line-contact {
-        width: 5%;
-        height: 4px;
-        background-color: #4b47ff;
-    }
+  .small-line-contact {
+    width: 5%;
+    height: 4px;
+    background-color: $primary-color;
+  }
 
-    h2 {
-        font-weight: 700;
-        font-size: 90px;
-        line-height: 108px;
-    }
+  h2 {
+    @include heading(700, 90px, 108px);
+  }
 }
 
 .form-group {
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 25px;
-    position: relative;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 25px;
+  position: relative;
 
-    ::placeholder {
-        color: whitesmoke;
-        opacity: 1;
-    }
+  ::placeholder {
+    color: $font-color;
+    opacity: 1;
+  }
 
-    span {
-        margin-top: 8px;
-        margin-left: 8px;
-        color: red;
-        font-size: 16px;
-        font-weight: 400;
-    }
-}
-
-.form-control {
-    gap: 20px;
-    padding: 15px 25px 15px 25px;
-    border: 1px solid #00bee8;
-    border-radius: 10px;
-    background-color: transparent;
-}
-
-input[type="text"],
-[type="email"],
-textarea {
-    color: whitesmoke;
-    -webkit-transition: 0.5s;
-    transition: 0.5s;
-}
-
-input:not(:placeholder-shown) {
-    border-color: hsl(0, 76%, 50%);
-}
-
-input:valid:not(.checkbox) {
-    border-color: hsl(120, 76%, 50%);
-    background-image: url('../../../../assets/img/icons/valid-img.png');
-    background-repeat: no-repeat;
-    background-position: center right 10px;
-}
-textarea:valid {
-    border-color: hsl(120, 76%, 50%);
-    background-image: url('../../../../assets/img/icons/valid-img.png');
-    background-repeat: no-repeat;
-    background-position: top 10px right 10px;
-}
-
-input:-webkit-autofill,
-input:-webkit-autofill:focus {
-    transition:
-        background-color 0s 600000s,
-        color 0s 600000s !important;
-}
-
-textarea:focus {
-    outline: none !important;
-    border-color: #719ece;
-    box-shadow: 0 0 10px #719ece;
-}
-
-.negative {
-    border-color: red;
-}
-
-input:focus {
-    outline: none !important;
-    border-color: #719ece;
-    box-shadow: 0 0 10px #719ece;
-}
-
-.checkbox {
-    width: 16px;
-    height: 16px;
-
-    &:hover {
-        cursor: pointer;
-    }
-}
-
-input[type="checkbox"] {
-    appearance: none;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    background-color: transparent;
-    border-radius: 2px;
-    border: 1px solid #00bee8;
-    min-width: 20px;
-    height: 20px;
-    outline: none;
-    cursor: pointer;
-}
-
-input[type="checkbox"]:checked {
-    border-color: #70e61c;
-    background-image: '';
-}
-
-input[type="checkbox"]:checked::before {
-    content: "";
-    display: inline-block;
-    width: 6px;
-    height: 12px;
-    border: solid #70e61c;
-    border-width: 0 2px 2px 0;
-    transform: rotate(45deg);
-    position: relative;
-    top: -1px;
-    left: 5px;
-}
-
-.not-valid-img {
-    width: 25px;
-    position: absolute;
-    right: 0;
-    margin-top: 10px;
-    margin-right: 10px;
-}
-
-.privacy-check-info {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-
-    a {
-        text-decoration: none;
-        color: #00bee8;
-
-        &:hover {
-            text-decoration: underline;
-        }
-    }
-
-    label {
-        font-size: 14px;
-        line-height: 16.8px;
-    }
-}
-
-.contacts-left-side {
-    width: 40%;
-    margin-left: 80px;
-
-    h3 {
-        font-weight: 700;
-        font-size: 32px;
-        line-height: 38.4px;
-        margin: 0;
-    }
-
-    span {
-        font-weight: 400;
-        font-size: 16px;
-        line-height: 19.2px;
-        margin-bottom: 40px;
-    }
-}
-
-.contacts-right-side {
-    width: 40%;
-    margin-right: 80px;
-}
-
-.inactive-button {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 0px;
-    padding: 15px 30px;
-    border-radius: 10px;
-    border: 0;
-    font-size: 28px;
-    font-family: Poppins, sans-serif;
-    background-color: #cccccc;
-    color: #666666;
-    cursor: pointer;
-    margin-left: 150px;
-    margin-top: 25px;
-    transition: all 125ms ease-out;
-
-    &:hover {
-        transform: scale(1);
-        cursor: not-allowed;
-    }
-}
-
-.active-button {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 0px;
-    padding: 15px 30px;
-    border-radius: 10px;
-    border: 0;
-    font-size: 28px;
-    font-family: Poppins, sans-serif;
-    background-color: #00bee8;
-    color: #f5f5f5;
-    cursor: pointer;
-    margin-left: 150px;
-    margin-top: 25px;
-    transition: all 125ms ease-out;
-
-    &:hover {
-        transform: scale(1.2);
-        transition: all 125ms ease-in;
-    }
-}
-
-.privacy-request {
+  span {
     margin-top: 8px;
     margin-left: 8px;
     color: red;
     font-size: 16px;
     font-weight: 400;
+  }
+}
+
+.form-control {
+  gap: 20px;
+  padding: 15px 25px;
+  border: 1px solid $secondary-color;
+  border-radius: 10px;
+  background-color: transparent;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+  color: $font-color;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+input:not(:placeholder-shown) {
+  border-color: hsl(0, 76%, 50%);
+}
+
+input:valid:not(.checkbox),
+textarea:valid {
+  border-color: hsl(120, 76%, 50%);
+  background-image: url("../../../../assets/img/icons/valid-img.png");
+  background-repeat: no-repeat;
+  background-position: center right 10px;
+}
+
+input:valid:not(.checkbox) {
+  background-position: center right 10px;
+}
+
+textarea:valid {
+  background-position: top 10px right 10px;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:focus {
+  transition: background-color 0s 600000s, color 0s 600000s !important;
+}
+
+textarea:focus,
+input:focus {
+  outline: none !important;
+  border-color: #719ece;
+  box-shadow: 0 0 10px #719ece;
+}
+
+.negative {
+  border-color: red;
+}
+
+.checkbox {
+  width: 16px;
+  height: 16px;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+input[type="checkbox"] {
+  appearance: none;
+  background-color: transparent;
+  border-radius: 2px;
+  border: 1px solid $secondary-color;
+  min-width: 20px;
+  height: 20px;
+  outline: none;
+  cursor: pointer;
+}
+
+input[type="checkbox"]:checked {
+  border-color: #70e61c;
+  background-image: "";
+}
+
+input[type="checkbox"]:checked::before {
+  content: "";
+  display: inline-block;
+  width: 6px;
+  height: 12px;
+  border: solid #70e61c;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+  position: relative;
+  top: -1px;
+  left: 5px;
+}
+
+.not-valid-img {
+  width: 25px;
+  position: absolute;
+  right: 0;
+  margin-top: 10px;
+  margin-right: 10px;
+}
+
+.privacy-check-info {
+  @include dFlex($jc: null, $ai: center, $g: 8px);
+
+  a {
+    text-decoration: none;
+    color: $secondary-color;
+    scroll-behavior: smooth;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  label {
+    font-size: 14px;
+    line-height: 16.8px;
+  }
+}
+
+.contacts-left-side {
+  width: 40%;
+  margin-left: 80px;
+
+  h3 {
+    @include heading(700, 32px, 38.4px);
+    margin: 0;
+  }
+
+  span {
+    @include heading(400, 16px, 19.2px);
+    margin-bottom: 40px;
+  }
+}
+
+.contacts-right-side {
+  width: 40%;
+  margin-right: 80px;
+}
+
+.inactive-button,
+.active-button {
+  @include dFlex(center, center);
+  padding: 15px 30px;
+  border-radius: 10px;
+  border: 0;
+  font-size: 28px;
+  font-family: 'Poppins', sans-serif;
+  cursor: pointer;
+  margin-left: 150px;
+  margin-top: 25px;
+  transition: all 125ms ease-out;
+}
+
+.inactive-button {
+  background-color: #cccccc;
+  color: #666666;
+
+  &:hover {
+    transform: scale(1);
+    cursor: not-allowed;
+  }
+}
+
+.active-button {
+  background-color: $secondary-color;
+  color: #f5f5f5;
+
+  &:hover {
+    transform: scale(1.2);
+    transition: all 125ms ease-in;
+  }
+}
+
+.privacy-request {
+  margin-top: 8px;
+  margin-left: 8px;
+  color: red;
+  font-size: 16px;
+  font-weight: 400;
 }
 
 .go-up-btn {
-    display: none;
-    position: fixed;
-    bottom: 20px;
-    right: 80px;
-    z-index: 99;
-    cursor: pointer;
+  position: fixed;
+  bottom: 23px;
+  right: 80px;
+  z-index: 99;
+  cursor: pointer;
 }
