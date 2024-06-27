@@ -1,168 +1,124 @@
 @import "../../../../styles.scss";
 
 .portfolio-section {
-    padding-top: 34px;
-    max-width: 1920px;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    position: relative;
-    align-items: center;
-    flex-direction: column;
-    overflow-x: clip;
+  padding-top: 34px;
+  max-width: 1920px;
+  width: 100%;
+  @include dFlex(center, center);
+  flex-direction: column;
+  position: relative;
+  overflow-x: clip;
 
-    p {
-        font-weight: 400;
-        font-size: 16px;
-        line-height: 19.2px;
-        text-align: center;
-        color: whitesmoke;
-    }
+  p {
+    @include heading(400, 16px, 19.2px, $font-color);
+    text-align: center;
+  }
 }
 
 .portfolio-headline {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100px;
-    width: 100%;
-    margin-top: 100px;
+  @include dFlex(center, center);
+  height: 100px;
+  width: 100%;
+  margin-top: 100px;
 }
 
 h2 {
-    font-weight: 700;
-    font-size: 90px;
-    line-height: 108px;
-    color: whitesmoke;
-    margin: 0;
-    padding-left: 40px;
-    padding-right: 40px;
+  @include heading(700, 90px, 108px, $font-color);
+  margin: 0;
+  padding-left: 40px;
+  padding-right: 40px;
 }
 
 .portfolio-big-line-right-side {
-    display: flex;
-    align-items: center;
+  @include dFlex(center, center);
+}
+
+.big-line, .small-line {
+  height: 4px;
+  background-color: $primary-color;
+  flex: 1;
+  position: absolute;
 }
 
 .big-line {
-    height: 4px;
-    width: 35%;
-    background-color: #4b47ff;
-    flex: 1;
-    position: absolute;
-    right: 0;
+  width: 35%;
+  right: 0;
 }
 
 .small-line {
-    height: 4px;
-    width: 10%;
-    background-color: #4b47ff;
-    flex: 1;
-    position: absolute;
-    left: 369px;
+  width: 10%;
+  left: 369px;
 }
 
 .portfolio-wrapper {
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-    max-width: 1920px;
-    width: 100%;
-    margin-top: 54px;
-    position: relative;
+  @include dFlex(space-evenly, center);
+  max-width: 1920px;
+  width: 100%;
+  margin-top: 54px;
+  position: relative;
 
-    .projects-left-side {
-        max-width: 500px;
+  .projects-left-side {
+    max-width: 500px;
 
-        img {
-            object-fit: cover;
-            margin: 0;
-            width: 601px;
-            height: 600px;
-        }
+    img {
+      object-fit: cover;
+      margin: 0;
+      width: 601px;
+      height: 600px;
     }
-    .projects-right-side {
-        max-width: 500px;
-        display: flex;
-        flex-direction: column;
-        justify-content: left;
+  }
 
-        .shadow-portfolio {
-            position: absolute;
-            right: -303px;
-            bottom: -507px;
-            z-index: -20;
-            rotate: -90deg;
-        }
+  .projects-right-side {
+    max-width: 500px;
+    @include dFlex(flex-start, flex-start);
+    flex-direction: column;
+    
 
-        .shadow-portfolio-left {
-            position: absolute;
-            bottom: -1170px;
-            z-index: -20;
-            /* rotate: -92deg; */
-            left: -218px;
-        }
-
-        h3 {
-            font-weight: 700;
-            font-size: 32px;
-            line-height: 38.4px;
-            color: #4b47ff;
-            margin-bottom: 16px;
-        }
-
-        span {
-            font-weight: 400;
-            font-size: 23px;
-            line-height: 27.6px;
-            color: #00bee8;
-        }
-
-        p {
-            margin: 0;
-            margin-top: 16px;
-            text-align: start;
-            color: whitesmoke;
-            font-weight: 400;
-            font-size: 16px;
-            line-height: 19.2px;
-        }
+    .shadow-portfolio {
+      position: absolute;
+      right: -303px;
+      bottom: -507px;
+      z-index: -20;
+      rotate: -90deg;
     }
+
+    .shadow-portfolio-left {
+      position: absolute;
+      bottom: -1170px;
+      z-index: -20;
+      left: -218px;
+    }
+
+    h3 {
+      @include heading(700, 32px, 38.4px, $primary-color);
+      margin-bottom: 16px;
+    }
+
+    span {
+      @include heading(400, 23px, 27.6px, $secondary-color);
+    }
+
+    p {
+      @include heading(400, 16px, 19.2px, $font-color);
+      margin: 0;
+      margin-top: 16px;
+      text-align: start;
+    }
+  }
 }
 
 .projects-right-side-buttons {
-    display: flex;
-    gap: 80px;
+  @include dFlex(flex-start, center, 80px);
 
-    button {
-        width: 191px;
-        height: 58px;
-        border-radius: 10px;
-        padding: 15px 30px 15px 30px;
-        border: none;
-        color: whitesmoke;
-        background-color: #4b47ff;
-        font-size: 400;
-        font-size: 23px;
-        margin-top: 25px;
-        transition: all 125ms ease-out;
+  button {
+    @include button-style($primary-color, $secondary-color);
+    width: 191px;
+    height: 58px;
+    margin-top: 25px;
+  }
 
-        &:hover {
-            cursor: pointer;
-            transform: scale(1.1);
-            transition: all 125ms ease-in;
-            background-color: #00bee8;
-        }
-    }
-
-    .button-github {
-        background-color: transparent;
-        border: 1px solid #00bee8;
-        &:hover {
-            cursor: pointer;
-            transform: scale(1.1);
-            transition: all 125ms ease-in;
-            background-color: #00bee8;
-        }
-    }
+  .button-github {
+    @include button-style(transparent, $secondary-color, $font-color);
+    border: 1px solid $secondary-color;
+  }
 }

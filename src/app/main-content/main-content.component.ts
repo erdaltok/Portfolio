@@ -12,4 +12,7 @@ import { ImprintComponent } from './imprint/imprint.component';
 })
 export class MainContentComponent {
 
+  
+
+
 }

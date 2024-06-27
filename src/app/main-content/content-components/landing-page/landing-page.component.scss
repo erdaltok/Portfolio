@@ -1,142 +1,98 @@
 @import "./../../../../styles.scss";
 
-.landing-page-center {
-    height: 80vh;
-    padding: 269px 80px 40px 80px;
-    max-width: 1920px;
-    width: 100%;
-    display: flex;
-    justify-self: center;
-    align-items: center;
-}
-
 .me-section {
+  @include dFlex;
+  max-width: 1920px;
+  position: relative;
+  min-height: 100vh;
+  margin: 122px 0px 40px 0px;
+
+
+  &-left-side {
     @include dFlex;
-    margin-left: 5%;
-    max-width: 1920px;
-    position: relative;
-}
+    max-width: 40%;
+    margin: -100px 0 0 80px;
+  }
 
-.me-section-left-side {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    max-width: 500px;
-    margin-top: 0px;
-}
-
-.me-section-right-side {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  &-right-side {
+    @include dFlex;
     flex-direction: column;
     z-index: 5;
-    max-width: 800px;
-    margin-left: 10%;
-    margin-top: -388px;
-}
+    margin-top: -320px;
+    max-width: 50%;
+  }
 
-.picture-of-me {
+  .picture-of-me {
     position: absolute;
-    bottom: -139px;
-    width: 589px;
-    height: 1300px;
-}
+  }
 
-.me-section-title-center {
+  &-title-center {
     @include dFlex;
-    margin: 0;
     width: 910px;
-}
+  }
 
-h3 {
+  h3 {
+    @include heading(400, 64px, 76.8px);
     rotate: -90deg;
-    font-weight: 400;
-    font-size: 64px;
-    line-height: 76.8px;
     margin: 0;
     height: 63px;
-}
+  }
 
-h1 {
-    font-weight: 700;
-    font-size: 90px;
+  h1 {
+    @include heading(700, 90px);
     margin: 0;
     height: 108px;
-}
+  }
 
-h2 {
-    font-weight: 400;
-    font-size: 58px;
-    line-height: 69.6px;
+  h2 {
+    @include heading(400, 58px, 69.6px, $primary-color);
     margin: 0;
     height: 70px;
-    color: #4b47ff;
-}
+  }
 
-.animation-h2 {
+  .animation-h2 {
     border-right: 5px solid;
     width: 100%;
     white-space: nowrap;
     overflow: hidden;
-    animation:
-        typing 2s steps(18),
-        cursor 0.4s step-end infinite alternate;
-}
+    animation: typing 2s steps(18), cursor 0.4s step-end infinite alternate;
+  }
 
-@keyframes cursor {
+  @keyframes cursor {
     50% {
-        border-color: transparent;
+      border-color: transparent;
     }
-}
+  }
 
-@keyframes typing {
+  @keyframes typing {
     from {
-        width: 0;
+      width: 0;
     }
-}
+  }
 
-.me-section-title {
+  &-title {
+    display: flex;
     flex-direction: column;
     margin-top: -23px;
-}
+  }
 
-button {
-    width: 165px;
-    height: 58px;
-    border-radius: 10px;
-    padding: 15px 30px 15px 30px;
-    border: none;
-    color: whitesmoke;
-    background-color: #00bee8;
-    font-size: 400;
-    font-size: 23px;
+  button {
+    @include button-style;
     margin-top: 25px;
-    transition: all 125ms ease-out;
-
-    &:hover {
-        cursor: pointer;
-        transform: scale(1.1);
-        transition: all 125ms ease-in;
-        background-color: #4b47ff;
-    }
+  }
 }
 
 .shape-landing-page-section {
-    position: absolute;
-    top: 606px;
-    left: 0;
-    right: 0;
-    max-width: 1920px;
-    width: 100%;
-    height: 600px;
-    margin: 0 auto;
-    z-index: 1;
-    overflow-y: hidden;
+  position: absolute;
+  top: 642px;
+  max-width: 1920px;
+  width: 100%;
+  z-index: 1;
+  overflow-y: hidden;
 
-    img {
-        width: 100%;
-        max-height: 677px;
-        max-width: 1920px;
-    }
+  img {
+    width: 100%;
+    height: 578px;
+    max-width: 1920px;
+  }
 }

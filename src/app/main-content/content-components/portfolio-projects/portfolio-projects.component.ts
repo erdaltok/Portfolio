@@ -13,7 +13,7 @@ export class PortfolioProjectsComponent {
 
   projects = [
     {
-      name: 'join',
+      name: 'Join',
       skills: 'JavaScript | HTML | CSS | Git',
       description: 'Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories.',
       image: '../../../../assets/img/project-images/join-img2.png',

@@ -1,58 +1,46 @@
-@import '../../../styles.scss';
-
-.border-top {
-    border-top: 1px solid #00BEE8;
-    margin-top: 50px;
-}
+@import "../../../styles.scss";
 
 .footer-section {
-    max-width: 1920px;
-    min-height: 200px;
-    margin-left: 80px;
-    margin-right: 80px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    
+  max-width: 1920px;
+  @include dFlex(space-between, center);
+  background-color: $background-color;
+  height: 235px;
+  padding: 0 80px;
+  border-top: 1px solid $secondary-color;
+  margin-top: 50px;
 
-    span {
-        color: whitesmoke;
-        font-weight: 400;
-        font-size: 24px;
-    }
+  span {
+    @include heading(400, 24px, normal, $font-color);
+  }
 }
 
 .logo-imprint-div {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  @include dFlex($jc: null, $ai: center);
+  flex-direction: column;
 
-    img {
-        width: 200px
-    };
+  img {
+    width: 200px;
+  }
 
-    a {
-        text-decoration: none;
-        color: whitesmoke;
+  a {
+    text-decoration: none;
+    color: $font-color;
 
-        &:hover {
-            text-decoration: underline;
-        }
+    &:hover {
+      text-decoration: underline;
     }
+  }
 }
 
-
 .references-wrapper {
-    display: flex;
-    align-items: center;
-    gap: 40px;
+  @include dFlex(center, center, 40px);
 
-    a {
-        transition: transform 125ms ease-in-out;
-        color: #00BEE8;
-        
-        &:hover {
-            transform: scale(1.2);
-        }
+  a {
+    transition: transform 125ms ease-in-out;
+    color: $secondary-color;
+
+    &:hover {
+      transform: scale(1.2);
     }
+  }
 }

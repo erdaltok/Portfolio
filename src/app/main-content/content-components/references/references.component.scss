@@ -1,69 +1,64 @@
 @import '../../../../styles.scss';
 
 div {
-    min-height: 100px;
-    z-index: 10;
-    // background-color: red;
-    position: relative;
-    width: 100vw;
-    margin: 0;
-    left: 0;
-    right: 0;
-    top: -40px;
-        max-width: 1920px;
+  min-height: 100px;
+  z-index: 10;
+  position: relative;
+  width: 100vw;
+  margin: 0;
+  left: 0;
+  right: 0;
+  top: -40px;
+  max-width: 1920px;
 }
 
-
 .references-wrapper {
-    display: flex;
-    align-items: center;
-    gap: 40px;
+  @include dFlex(flex-start, center, 40px);
 
-    a {
-        transition: transform 125ms ease-in-out;
+  a {
+    transition: transform 125ms ease-in-out;
 
-        &:hover {
-            transform: scale(1.2);
-        }
+    &:hover {
+      transform: scale(1.2);
     }
+  }
 }
 
 .references-mail-link {
-    text-decoration: none;
-    color: whitesmoke;
-    font-size: 24px;
-        &:hover {
-            color: #4b47ff;
-        }
+  text-decoration: none;
+  color: $font-color;
+  font-size: 24px;
+
+  &:hover {
+    color: $primary-color;
+  }
 }
 
 .space-between {
-    display: flex;
+  @include dFlex(space-between);
 }
 
 .scroll-down-icon {
-    height: 234px;
-    margin-right: 40px;
-    margin-top: -170px;
-    animation: jump 2s ease infinite;
-
+  height: 234px;
+  margin-right: 40px;
+  margin-top: -247px;
+  animation: jump 2s ease infinite;
 }
 
 @keyframes jump {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    transform: translateY(0);
+  }
 
-    0%,
-    20%,
-    50%,
-    80%,
-    100% {
-        transform: translateY(0);
-    }
+  40% {
+    transform: translateY(-30px);
+  }
 
-    40% {
-        transform: translateY(-30px);
-    }
-
-    60% {
-        transform: translateY(-15px);
-    }
+  60% {
+    transform: translateY(-15px);
+  }
 }
