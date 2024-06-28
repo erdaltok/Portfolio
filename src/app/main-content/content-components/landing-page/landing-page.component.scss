@@ -5,21 +5,12 @@
   max-width: 1920px;
   position: relative;
   min-height: 100vh;
-  // margin: 122px 0px 40px 0px;
   padding-bottom: 61px;
   padding-top: 83px;
 
   &-left-side {
     @include dFlex;
     max-width: 40%;
-    // margin-left: 80px;
-    // margin: -100px 0 0 80px;
-
-    // img {
-    // max-width: 880px;
-    // position: relative;
-    // top: 81px;
-    // }
   }
 
   &-right-side {
@@ -138,7 +129,7 @@
   }
 
   .shape-landing-page-section {
-    top: 477px;
+    top: 539px;
 
     img {
       height: 539px;

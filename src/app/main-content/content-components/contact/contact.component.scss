@@ -14,8 +14,8 @@
 
 .contacts-headline {
   @include dFlex($jc: null, $ai: center, $g: 40px);
-  margin-bottom: 59px;
-  padding-top: 100px;
+  // margin-bottom: 59px;
+  padding-top: 83px;
 
   .small-line-contact {
     width: 5%;
@@ -86,7 +86,9 @@ textarea:valid {
 
 input:-webkit-autofill,
 input:-webkit-autofill:focus {
-  transition: background-color 0s 600000s, color 0s 600000s !important;
+  transition:
+    background-color 0s 600000s,
+    color 0s 600000s !important;
 }
 
 textarea:focus,
@@ -192,9 +194,9 @@ input[type="checkbox"]:checked::before {
   border-radius: 10px;
   border: 0;
   font-size: 28px;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   cursor: pointer;
-  margin-left: 150px;
+  // margin-left: 150px;
   margin-top: 25px;
   transition: all 125ms ease-out;
 }
@@ -233,4 +235,28 @@ input[type="checkbox"]:checked::before {
   right: 80px;
   z-index: 99;
   cursor: pointer;
+}
+
+// RESPONSIVE
+
+@media (max-width: 1353px) {
+  .contacts-headline {
+    margin-bottom: -28px;
+  }
+
+  .contacts-wrapper[_ngcontent-ng-c140310030] {
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+  }
+
+  .contacts-left-side {
+    width: 61%;
+    margin-left: 0;
+  }
+
+  .contacts-right-side[_ngcontent-ng-c140310030] {
+    width: 61%;
+    margin-right: 0;
+}
 }

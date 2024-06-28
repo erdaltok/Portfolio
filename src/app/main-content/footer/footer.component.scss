@@ -44,3 +44,33 @@
     }
   }
 }
+
+// RESPONSIVE
+
+@media (max-width: 845px) {
+  .footer-section {
+    justify-content: center;
+    flex-direction: column;
+    padding: 40px 80px;
+  }
+
+  .logo-imprint-div {
+    img {
+      width: 300px;
+    }
+
+    .references-wrapper {
+      position: relative;
+      bottom: 18px;
+    }
+  }
+
+  .imprint-link {
+     a {
+      position: relative;
+      bottom: -66px;
+    }
+  }
+
+  
+}

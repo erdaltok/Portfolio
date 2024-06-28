@@ -129,6 +129,20 @@
 
   .skills-left-side {
     max-width: 63%;
-    top: -100px;
+    padding-bottom: 100px;
   }
+}
+
+@media (max-width: 802px) {
+  .skills-right-side {
+    h2 {
+      font-size: 84px;
+    }
+  }
+  
+  .skills-left-side {
+    max-width: 81%;
+
+  }
+  
 }

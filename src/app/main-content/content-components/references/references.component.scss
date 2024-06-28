@@ -62,3 +62,11 @@ div {
     transform: translateY(-15px);
   }
 }
+
+// RESPONSIVE 
+
+@media (max-width: 810px) {
+  .references-mail-link {
+    display: none;
+  }
+}
