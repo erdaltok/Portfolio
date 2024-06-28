@@ -25,7 +25,7 @@
 }
 
 .about-me-left-side {
-  margin-right: 115px;
+  // margin-right: 115px;
   margin-left: 80px;
   max-width: 40%;
   @include dFlex(flex-start, flex-start);
@@ -56,7 +56,6 @@
 
 .about-me-right-side {
   @include dFlex(center, center);
-  max-width: 50%;
 
   .circle {
     display: inline-block;
@@ -79,4 +78,38 @@
     width: 267px;
     margin: 0;
   }
+}
+
+// RESPONSIVE
+
+@media (max-width: 1453px) {
+  .about-me-line-icon {
+    display: none;
+  }
+
+  .about-me-right-side {
+    margin-right: 80px;
+  }
+
+  .about-me-right-side {
+    .circle {
+      width: 400px;
+      height: 400px;
+    }
+  }
+}
+
+
+@media (max-width: 1147px) {
+  .about-me-right-side {
+    .circle {
+      display: none;
+    }
+  }
+
+  .about-me-left-side {
+    max-width: 100%;
+    align-items: center;
+  }
+
 }

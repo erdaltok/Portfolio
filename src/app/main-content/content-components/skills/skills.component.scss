@@ -102,3 +102,33 @@
   height: 4px;
   margin-left: 30px;
 }
+
+// RESPONSIVE
+
+@media (max-width: 1453px) {
+  .skills-line {
+    display: none;
+  }
+
+  .skills-right-side {
+    h2 {
+      font-size: 104px;
+    }
+  }
+}
+
+@media (max-width: 1147px) {
+  .skills-wrapper {
+    flex-direction: column-reverse;
+    padding-top: 420px;
+  }
+
+  .skills-right-side {
+    max-width: 57%;
+  }
+
+  .skills-left-side {
+    max-width: 63%;
+    top: -100px;
+  }
+}

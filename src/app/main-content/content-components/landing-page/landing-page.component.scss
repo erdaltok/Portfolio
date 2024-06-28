@@ -5,13 +5,21 @@
   max-width: 1920px;
   position: relative;
   min-height: 100vh;
-  margin: 122px 0px 40px 0px;
-
+  // margin: 122px 0px 40px 0px;
+  padding-bottom: 61px;
+  padding-top: 83px;
 
   &-left-side {
     @include dFlex;
     max-width: 40%;
-    margin: -100px 0 0 80px;
+    // margin-left: 80px;
+    // margin: -100px 0 0 80px;
+
+    // img {
+    // max-width: 880px;
+    // position: relative;
+    // top: 81px;
+    // }
   }
 
   &-right-side {
@@ -28,7 +36,7 @@
 
   &-title-center {
     @include dFlex;
-    width: 910px;
+    width: 773px;
   }
 
   h3 {
@@ -45,7 +53,7 @@
   }
 
   h2 {
-    @include heading(400, 58px, 69.6px, $primary-color);
+    @include heading(400, 55px, 69.6px, $primary-color);
     margin: 0;
     height: 70px;
   }
@@ -55,7 +63,9 @@
     width: 100%;
     white-space: nowrap;
     overflow: hidden;
-    animation: typing 2s steps(18), cursor 0.4s step-end infinite alternate;
+    animation:
+      typing 2s steps(18),
+      cursor 0.4s step-end infinite alternate;
   }
 
   @keyframes cursor {
@@ -95,4 +105,56 @@
     height: 578px;
     max-width: 1920px;
   }
+}
+
+// RESPONSIVE
+
+@media (max-width: 1453px) {
+  .me-section {
+    flex-direction: column;
+    padding-top: 0;
+
+    h3 {
+      font-size: 43px;
+      position: relative;
+      top: -6px;
+      right: -10px;
+    }
+
+    h1 {
+      font-size: 75px;
+      margin-bottom: -26px;
+      position: relative;
+      top: 6px;
+    }
+
+    h2 {
+      font-size: 38px;
+    }
+
+    button {
+      margin-top: 0;
+    }
+  }
+
+  .shape-landing-page-section {
+    top: 477px;
+
+    img {
+      height: 539px;
+    }
+  }
+
+  .me-section-right-side {
+    position: relative;
+    top: 100px;  
+  }
+
+  .me-section-left-side {
+
+  .picture-of-me {
+    max-width: 500px;
+    top: -75px;
+  } 
+}
 }

@@ -72,6 +72,8 @@ h2 {
     max-width: 500px;
     @include dFlex(flex-start, flex-start);
     flex-direction: column;
+    position: relative;
+    top: -44px;
     
 
     .shadow-portfolio {
