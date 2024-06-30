@@ -258,5 +258,13 @@ input[type="checkbox"]:checked::before {
   .contacts-right-side[_ngcontent-ng-c140310030] {
     width: 61%;
     margin-right: 0;
+  }
 }
+
+@media (max-width: 736px) {
+  .contacts-headline {
+    h2 {
+      font-size: 43px;
+    }
+  }
 }

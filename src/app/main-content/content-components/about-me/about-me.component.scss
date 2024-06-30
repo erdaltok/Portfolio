@@ -112,4 +112,37 @@
     align-items: center;
   }
 
+  .about-me-wrapper {
+    justify-content: center;
+  }
+
 }
+
+@media (max-width: 736px) {
+    .about-me-left-side {
+      h1 {
+        font-size: 43px;
+      }
+    }
+}
+
+@media (max-width: 736px) {
+    .about-me-left-side {
+      margin-left: 30px;
+    }
+
+    .about-me-right-side {
+      margin-right: 30px;
+    }
+}
+
+@media (max-width: 500px) {
+    .about-me-soft-skills {
+      img {
+        width: 39px;
+      height: 39px;
+      }
+    }
+}
+
+

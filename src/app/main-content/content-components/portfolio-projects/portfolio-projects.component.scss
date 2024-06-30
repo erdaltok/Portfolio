@@ -86,7 +86,7 @@ h2 {
 
     .shadow-portfolio-left {
       position: absolute;
-      bottom: -1611px;
+      bottom: -1354px;
       z-index: -20;
       left: -486px;
     }
@@ -167,4 +167,10 @@ h2 {
   .shadow-portfolio-left {
    display: none;
   }
+}
+
+@media (max-width: 736px) {
+    h2 {
+      font-size: 43px;
+    }
 }

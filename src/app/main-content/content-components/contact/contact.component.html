@@ -24,6 +24,7 @@
                  #name="ngModel" 
                 [(ngModel)]="contactData.name"
                 type="text" class="form-control" id="name" name="name-contact"
+                autocomplete="off"
                 placeholder="Your name"
                 minlength="3" required 
                 [ngClass]="{'negative' : !name.valid && name.touched}">

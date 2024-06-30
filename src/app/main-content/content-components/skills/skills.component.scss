@@ -131,6 +131,10 @@
     max-width: 63%;
     padding-bottom: 100px;
   }
+
+  .skills-section {
+    margin-bottom: 154px;
+  }
 }
 
 @media (max-width: 802px) {
@@ -139,10 +143,28 @@
       font-size: 84px;
     }
   }
-  
+
   .skills-left-side {
     max-width: 81%;
-
   }
-  
+}
+
+@media (max-width: 736px) {
+  .skills-right-side {
+    h2 {
+      font-size: 43px;
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  .skills-right-side {
+    max-width: 81%;
+  }
+  .skill-logos {
+    img {
+      width: 30px !important;
+      
+    }
+  }
 }

@@ -70,3 +70,19 @@ div {
     display: none;
   }
 }
+
+@media (max-width: 555px) {
+  .references-wrapper {
+    margin-left: 30px;
+
+    .small-line-references {
+      display: none;
+    }
+  }
+
+    .scroll-down-icon {
+      margin-right: 0;
+    }
+  
+  
+}

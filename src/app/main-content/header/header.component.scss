@@ -6,8 +6,8 @@ nav {
   width: 100%;
   max-width: 1920px;
   position: fixed;
-    z-index: 99;
-    top: 0;
+  z-index: 99;
+  top: 0;
 
   a {
     @include dFlex;
@@ -38,7 +38,7 @@ nav {
 }
 
 .nav-links {
-  @include dFlex($g:24px);
+  @include dFlex($g: 24px);
   font-size: 23px;
   margin-right: 80px;
   position: relative;
@@ -47,7 +47,7 @@ nav {
   a {
     color: $font-color;
     text-decoration: none;
-    padding-bottom: 3px;        
+    padding-bottom: 3px;
 
     &:hover {
       color: $secondary-color;
@@ -59,7 +59,7 @@ nav {
   }
 
   .active::before {
-    content: '';
+    content: "";
     height: 2px;
     width: 60%;
     background-color: $secondary-color;
@@ -114,5 +114,29 @@ nav {
 
   .select-language {
     align-items: baseline;
+  }
+}
+
+// RESPONSIVE
+
+@media (max-width: 1000px) {
+  nav {
+    img {
+      margin-left: 12px;
+    }
+  }
+
+  .burger-icon {
+    margin-right: 12px;
+    padding: 0;
+  }
+}
+
+@media (max-width: 500px) {
+  nav {
+    img {
+      width: 173px;
+      
+    }
   }
 }
