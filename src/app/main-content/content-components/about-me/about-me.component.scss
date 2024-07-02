@@ -87,11 +87,12 @@
     display: none;
   }
 
-  .about-me-right-side {
-    margin-right: 80px;
+  .about-me-left-side {
+    max-width: 50%;
   }
 
   .about-me-right-side {
+    margin-right: 80px;
     .circle {
       width: 400px;
       height: 400px;
@@ -99,50 +100,84 @@
   }
 }
 
-
 @media (max-width: 1147px) {
   .about-me-right-side {
+    margin-right: 0;
     .circle {
       display: none;
     }
   }
 
   .about-me-left-side {
-    max-width: 100%;
+    max-width: 58%; //81%
     align-items: center;
+    margin-left: 80px;
+    margin-right: 80px;
   }
 
   .about-me-wrapper {
     justify-content: center;
   }
-
 }
 
-@media (max-width: 736px) {
-    .about-me-left-side {
-      h1 {
-        font-size: 43px;
-      }
+@media (max-width: 757px) {
+  .about-me-left-side {
+    margin-left: 30px;
+    margin-right: 30px;
+    max-width: 81%;
+    h1 {
+      font-size: 70px;
     }
+  }
+
+  .about-me-right-side {
+    margin-right: 30px;
+  }
+
+  .about-me-wrapper {
+    margin-right: -30px;
+    // margin-left: 30px;
+  }
 }
 
-@media (max-width: 736px) {
-    .about-me-left-side {
-      margin-left: 30px;
-    }
+// @media (max-width: 736px) {
+//     .about-me-left-side {
+//       margin-left: 30px;
+//     }
 
-    .about-me-right-side {
-      margin-right: 30px;
-    }
-}
+// }
 
 @media (max-width: 500px) {
-    .about-me-soft-skills {
-      img {
-        width: 39px;
+  .about-me-soft-skills {
+    img {
+      width: 39px;
       height: 39px;
-      }
     }
+  }
 }
 
+@media (max-width: 414px) {
+  .about-me-left-side {
+    h1 {
+      font-size: 50px;
+    }
+  }
 
+  .about-me-wrapper {
+    margin-top: 159px;
+  }
+}
+
+@media (max-width: 377px) {
+  .about-me-soft-skills {
+    p {
+      font-size: 12px;
+    }
+  }
+
+  .about-me-left-side {
+    span {
+      font-size: 14px;
+    }
+  }
+}

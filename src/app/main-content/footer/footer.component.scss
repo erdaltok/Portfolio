@@ -7,7 +7,7 @@
   height: 235px;
   padding: 0 80px;
   border-top: 1px solid $secondary-color;
-  margin-top: 50px;
+  margin-top: 100px;
 
   span {
     @include heading(400, 24px, normal, $font-color);
@@ -66,11 +66,23 @@
   }
 
   .imprint-link {
-     a {
+    a {
       position: relative;
-      bottom: -66px;
+      bottom: -78px;
+    }
+  }
+}
+
+@media (max-width: 412px) {
+  .footer-section {
+    span {
+      font-size: 18px;
     }
   }
 
-  
+  .logo-imprint-div {
+    img {
+      width: 255px;
+    }
+  }
 }

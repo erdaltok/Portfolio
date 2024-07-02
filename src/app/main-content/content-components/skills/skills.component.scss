@@ -120,16 +120,18 @@
 @media (max-width: 1147px) {
   .skills-wrapper {
     flex-direction: column-reverse;
-    padding-top: 420px;
+    padding-top: 0;
+    margin-top: 366px;
   }
 
   .skills-right-side {
-    max-width: 57%;
+    max-width: 81%;
   }
 
   .skills-left-side {
-    max-width: 63%;
+    max-width: 81%;
     padding-bottom: 100px;
+    height: 322px;
   }
 
   .skills-section {
@@ -140,19 +142,20 @@
 @media (max-width: 802px) {
   .skills-right-side {
     h2 {
-      font-size: 84px;
+      font-size: 70px;
     }
   }
 
   .skills-left-side {
-    max-width: 81%;
+    max-width: 89%;
+    margin-bottom: 100px;
   }
 }
 
-@media (max-width: 736px) {
+@media (max-width: 540px) {
   .skills-right-side {
     h2 {
-      font-size: 43px;
+      font-size: 70px;
     }
   }
 }
@@ -164,7 +167,14 @@
   .skill-logos {
     img {
       width: 30px !important;
-      
+    }
+  }
+}
+
+@media (max-width: 414px) {
+  .skills-right-side {
+    h2 {
+      font-size: 50px;
     }
   }
 }

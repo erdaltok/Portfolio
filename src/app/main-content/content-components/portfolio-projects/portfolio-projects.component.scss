@@ -165,12 +165,81 @@ h2 {
   }
 
   .shadow-portfolio-left {
-   display: none;
+    display: none;
   }
 }
 
+@media (max-width: 1147px) {
+}
+
 @media (max-width: 736px) {
+  .portfolio-section {
     h2 {
-      font-size: 43px;
+      font-size: 70px;
     }
+    p {
+      margin-left: 30px;
+      margin-right: 30px;
+    }
+  }
+
+  .portfolio-wrapper {
+    .projects-left-side {
+      img {
+        width: 400px;
+        height: 400px;
+      }
+    }
+    .projects-right-side {
+      max-width: 361px;
+      right: 0;
+      justify-content: center;
+      align-items: center;
+    }
+    .projects-right-side-buttons {
+      gap: 40px;
+
+      button {
+        width: 150px;
+      }
+    }
+
+    .shadow-portfolio {
+      top: 650px;
+      width: 700px;
+    }
+  }
+}
+
+@media (max-width: 412px) {
+  .portfolio-section {
+    h2 {
+      font-size: 50px;
+    }
+  }
+
+  .portfolio-wrapper {
+    .projects-right-side {
+      max-width: 264px;
+      span {
+        text-align: center;
+        p {
+          text-align: center;
+        }
+      }
+    }
+    .projects-left-side {
+      img {
+        width: 300px;
+        height: 300px;
+      }
+    }
+    .projects-right-side-buttons {
+      gap: 20px;
+      button {
+        width: 138px;
+        padding: 15px 24px;
+      }
+    }
+  }
 }

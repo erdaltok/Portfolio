@@ -99,7 +99,6 @@ nav {
       display: block;
       text-align: left;
       font-size: 48px;
-      margin-bottom: 50px;
     }
   }
 
@@ -127,7 +126,7 @@ nav {
   }
 
   .burger-icon {
-    margin-right: 12px;
+    margin-right: 18px;
     padding: 0;
   }
 }
@@ -136,7 +135,30 @@ nav {
   nav {
     img {
       width: 173px;
-      
     }
   }
+
+  .nav-links {
+    top: 60px;
+    a {
+      margin-bottom: 0px;
+    }
+  }
+}
+
+/* ----------- iPhone SE ----------- */
+/* Portrait */
+@media only screen and (min-width: 375px){
+  
+  .nav-links {
+    a {
+      font-size: 33px;
+    }
+  }
+
+.burger-icon {
+  img {
+    width: 24px;
+  }
+}
 }
