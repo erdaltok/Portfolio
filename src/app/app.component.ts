@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
 import { MainContentComponent } from './main-content/main-content.component';
@@ -6,6 +6,8 @@ import { HeaderComponent } from './main-content/header/header.component';
 import { FooterComponent } from './main-content/footer/footer.component';
 import { PrivacyComponent } from './main-content/privacy/privacy.component';
 import { ImprintComponent } from './main-content/imprint/imprint.component';
+import AOS from 'aos';
+
 
 @Component({
   selector: 'app-root',
@@ -16,4 +18,10 @@ import { ImprintComponent } from './main-content/imprint/imprint.component';
 })
 export class AppComponent {
   title = 'portfolio';
+
+  ngOnInit(): void {
+    //Called after the constructor, initializing input properties, and the first call to ngOnChanges.
+    //Add 'implements OnInit' to the class.
+    AOS.init();
+  }
 }

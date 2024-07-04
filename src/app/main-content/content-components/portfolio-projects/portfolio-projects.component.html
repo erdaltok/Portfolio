@@ -18,7 +18,11 @@
 
     <div *ngFor="let project of projects; let i = index" 
      [ngStyle]="{'flex-direction': i % 2 === 0 ? 'row' : 'row-reverse', 'gap': i % 2 !== 0 ? '0px' : '163px'}"
-     class="portfolio-wrapper ">
+     class="portfolio-wrapper "
+     data-aos="fade-up"
+     data-aos-duration="3000"
+     
+     >
 
         <div class="projects-left-side">
             <img src="{{ project.image }}" alt="">

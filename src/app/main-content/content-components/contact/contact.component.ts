@@ -100,9 +100,12 @@ onSubmit(ngForm: NgForm) {
           });
       } else if (ngForm.form.valid && this.mailTest) {
 
-        
-        this.toastr.success('Your message is on its way.', 'Success!');
+        setTimeout(() => {
+           this.toastr.success('Your message is on its way.', 'Success!');
           // this.showSuccessMailMessage = true;
+        }, 1500);
+        
+       
   
         ngForm.resetForm();
       }

@@ -58,6 +58,7 @@
     animation:
       typing 2s steps(18),
       cursor 0.4s step-end infinite alternate;
+      animation-delay: 500ms;
   }
 
   @keyframes cursor {

@@ -2,7 +2,11 @@
 
     <div class="skills-wrapper">
 
-        <div class="skills-left-side">
+        <div class="skills-left-side"
+            data-aos="flip-left"
+     data-aos-easing="ease-out-cubic"
+     data-aos-duration="2000"
+            >
 
             <div *ngFor="let logo of logos" class="skill-logos">
                 <img [src]="logo.path" alt="skill-logos">
@@ -11,7 +15,11 @@
             <img class="shadow-skills-section" src="../../../../assets/img/shadows/green-shadow-skills.png" alt="">
         </div>
 
-        <div class="skills-right-side">
+        <div class="skills-right-side"
+         data-aos="fade-down"
+        data-aos-easing="linear"
+        data-aos-duration="1500"
+        data-aos-delay="300">
 
             <h2>My skills</h2>
             <span>I have grown my frontend developments skills that have allowed me to create different real projects.</span>
