@@ -138,7 +138,7 @@ onSubmit(ngForm: NgForm) {
     this.router.navigate(['/privacy']); 
   }
     
-  checkCheckBoxvalue(event: any) {
+  checkCheckBoxValue(event: any) {
     this.isChecked = event.target.checked;
     if (this.isChecked) {
       this.showPrivacyWarning = false;

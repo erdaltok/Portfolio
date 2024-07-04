@@ -120,6 +120,12 @@
   }
 }
 
+@media (max-width: 820px) {
+  .about-me-left-side {
+    max-width: 68%;
+  }
+}
+
 @media (max-width: 757px) {
   .about-me-left-side {
     margin-left: 30px;
@@ -164,7 +170,7 @@
   }
 
   .about-me-wrapper {
-    margin-top: 159px;
+    margin-top: 10px;
   }
 }
 
@@ -179,5 +185,9 @@
     span {
       font-size: 14px;
     }
+  }
+
+   .about-me-wrapper {
+    margin-top: -59px;
   }
 }

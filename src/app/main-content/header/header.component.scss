@@ -82,7 +82,7 @@ nav {
   }
 }
 
-@media screen and (min-width: 128px) and (max-width: 1100px) {
+@media screen and (min-width: 128px) and (max-width: 1187px) {
   .nav-links {
     position: fixed;
     right: -100%;
@@ -146,9 +146,16 @@ nav {
   }
 }
 
+@media (max-width: 1024px) {
+    .nav-links
+     a {
+        font-size: 64px;
+    }
+    }
+
 /* ----------- iPhone SE ----------- */
 /* Portrait */
-@media only screen and (min-width: 375px){
+@media only screen and (max-width: 375px){
   
   .nav-links {
     a {

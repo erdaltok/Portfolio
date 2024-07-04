@@ -26,7 +26,7 @@
                 type="text" class="form-control" id="name" name="name-contact"
                 autocomplete="off"
                 placeholder="Your name"
-                minlength="3" required 
+                minlength="2" required 
                 [ngClass]="{'negative' : !name.valid && name.touched}">
                 @if (!name.valid && name.touched && !name.disabled) {
                     <img class="not-valid-img" src="../../../../assets/img/icons/not-valid-img.png" alt="">
@@ -54,7 +54,7 @@
                     [(ngModel)]="contactData.message" 
                     class="form-control" name="message-contact" 
                     placeholder="Your message" 
-                    minlength="3" rows="10" required
+                    minlength="2" rows="10" required
                     [ngClass]="{'negative': !message.valid && message.touched}">                    
                 </textarea>
                 @if (!message.valid && message.touched && !message.disabled) {                    
@@ -64,7 +64,7 @@
             </div>
            
             <div class="privacy-check-info">
-                <input (change)="checkCheckBoxvalue($event)" #myCheckbox class="checkbox" type="checkbox" name="my-checkbox"
+                <input (change)="checkCheckBoxValue($event)" #myCheckbox class="checkbox" type="checkbox" name="my-checkbox"
                     id="checkboxId" ngModel required />
                 <label for="checkboxId">I've read the <a (click)="scrollToTopPrivacy()" href="privacy">privacy policy</a> and agree to
                     the processing of my data as outlined.</label>
