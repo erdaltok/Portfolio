@@ -1,17 +1,39 @@
-@import '../../../styles.scss';
-
+@import "../../../styles.scss";
 
 .content {
     max-width: 1920px;
     margin: 80px;
     margin-top: 200px;
+     a {
+        text-decoration: none;
+        color: $secondary-color;
+        &:hover {
+        color: $primary-color;
+        text-decoration: underline;
+        }
+    }
 }
 
 .go-back-btn {
     rotate: -90deg;
+    position: relative;
+    top: -50px;
 }
 
 .go-up-btn-headline-space-between {
     display: flex;
     justify-content: space-between;
+}
+
+@media (max-width: 600px) {
+    .content {
+        margin-left: 30px;
+        margin-right: 30px;
+    }
+
+    h1 {
+        font-size: 22px;
+    }
+
+   
 }
