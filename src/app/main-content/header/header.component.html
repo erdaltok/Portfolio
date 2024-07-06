@@ -10,16 +10,16 @@
 
         <div class="nav-links" [class.mobile-menu]="menuValue">
             <div>
-                <a (click)="closeMenu()" [class.active]="currentSection === 'aboutMe'" href="#aboutMe">About me</a>
+                <a (click)="closeMenu()" [class.active]="currentSection === 'aboutMe'" href="#aboutMe">{{ 'navLinks.aboutMe' | translate }}</a>
             </div>
             <div>
-                <a (click)="closeMenu()" [class.active]="currentSection === 'skills'" href="#skills">Skills</a>
+                <a (click)="closeMenu()" [class.active]="currentSection === 'skills'" href="#skills">{{ 'navLinks.skills' | translate }}</a>
             </div>
             <div>
-                <a (click)="closeMenu()" [class.active]="currentSection === 'portfolio'" href="#portfolio">Portfolio</a>
+                <a (click)="closeMenu()" [class.active]="currentSection === 'portfolio'" href="#portfolio">{{ 'navLinks.portfolio' | translate}}</a>
             </div>
             <div>
-                <a (click)="closeMenu()" [class.active]="currentSection === 'contact'" href="#contact">Contact</a>
+                <a (click)="closeMenu()" [class.active]="currentSection === 'contact'" href="#contact">{{ 'navLinks.contact' | translate}}</a>
             </div>
 
 

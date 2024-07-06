@@ -1,0 +1,16 @@
+{
+    "navLinks": {
+        "aboutMe": "Über mich",
+        "skills": "Skills",
+        "portfolio": "Portfolio",
+        "contact": "Kontakt"
+    },
+
+      "landingTitle": {
+        "h1": "Erdal Tok",
+        "h2": "SOFTWARE ENTWICKLER",
+        "h3": "Ich bin"
+
+    }
+
+}

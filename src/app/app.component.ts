@@ -7,12 +7,13 @@ import { FooterComponent } from './main-content/footer/footer.component';
 import { PrivacyComponent } from './main-content/privacy/privacy.component';
 import { ImprintComponent } from './main-content/imprint/imprint.component';
 import AOS from 'aos';
+import { TranslateModule, TranslateService } from '@ngx-translate/core';
 
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CommonModule, RouterOutlet, MainContentComponent, HeaderComponent, FooterComponent, PrivacyComponent, ImprintComponent],
+  imports: [CommonModule, RouterOutlet, MainContentComponent, HeaderComponent, FooterComponent, PrivacyComponent, ImprintComponent, TranslateModule],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
@@ -23,5 +24,9 @@ export class AppComponent {
     //Called after the constructor, initializing input properties, and the first call to ngOnChanges.
     //Add 'implements OnInit' to the class.
     AOS.init();
+  }
+
+   constructor(public translate: TranslateService) {
+    translate.setDefaultLang('en');
   }
 }

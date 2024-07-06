@@ -1,19 +1,36 @@
 import { Component, AfterViewInit, HostListener } from '@angular/core';
 
+import { TranslateModule, TranslateService } from '@ngx-translate/core';
+import { HttpClientModule } from '@angular/common/http';
+import { CommonModule } from '@angular/common';
+
 @Component({
   selector: 'app-header',
   standalone: true,
+  imports: [CommonModule, TranslateModule, HttpClientModule],
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss']
 })
+  
+  
 export class HeaderComponent implements AfterViewInit {
   menuValue: boolean = false;
   currentImgSrc: string = '../../../assets/img/icons/burger-icon-open.png';
   currentSection: string = '';
   currentLanguage: string = 'EN'; // Default language
 
+   constructor(public translateService: TranslateService) { }
+
+
+
+
   changeLanguage(language: string) {
     this.currentLanguage = language;
+    if (this.currentLanguage === 'DE') {
+      this.translateService.setDefaultLang('de')
+    } else {
+      this.translateService.setDefaultLang('en')
+    }
     // here logic for choosing language... for later.... 
   }
 
