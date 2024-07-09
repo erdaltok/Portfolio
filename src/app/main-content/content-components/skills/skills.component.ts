@@ -1,23 +1,25 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+
+import { TranslateModule, TranslateService } from '@ngx-translate/core';
+import { HttpClientModule } from '@angular/common/http';
 
 @Component({
   selector: 'app-skills',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, TranslateModule, HttpClientModule],
   templateUrl: './skills.component.html',
   styleUrl: './skills.component.scss'
 })
 export class SkillsComponent {
 
-ngOnInit(): void {
+  constructor(public translateService: TranslateService) { }
   
-   
+  // @Input() currentLanguage: string = 'EN';
+
+  ngOnInit(): void {
+  
   } 
-
-
-
-
 
 logos = [
   {
@@ -61,11 +63,6 @@ logos = [
     path: '../../../../assets/img/icons/Material-design.png'
   }
 ]
-
-
-
-
-
 
 
 }

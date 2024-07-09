@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { LandingPageComponent } from './landing-page/landing-page.component';
 import { ReferencesComponent } from './references/references.component';
 import { AboutMeComponent } from './about-me/about-me.component';
@@ -16,7 +16,7 @@ import { ContactComponent } from './contact/contact.component';
 })
 export class ContentComponentsComponent  {
 
-   
+   @Input() currentLanguage: string = 'EN';
 }
 
 

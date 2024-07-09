@@ -9,8 +9,31 @@
       "landingTitle": {
         "h1": "Erdal Tok",
         "h2": "SOFTWARE ENTWICKLER",
-        "h3": "Ich bin"
+        "h3": "Ich bin",
+        "btn": "Lass uns reden!"
+    },
+    
+        "aboutMe": {
+            "title": "Über mich",
+            "intro": "Hallo und herzlich Willkommen auf meiner Webseite! Ich bin ein leidenschaftlicher Frontend-Entwickler aus München, der es liebt, kreative und benutzerfreundliche digitale Erlebnisse zu gestalten. Es freut mich sehr, dass Sie hier sind, um mehr über mich und meine Arbeit zu erfahren.",
+            "softSkill_1": "Kreativität und Problemlösung sowie Detailorientierung und Struktur:  Ich genieße es, innovative Lösungen zu finden, die sowohl ästhetisch ansprechend als auch funktional sind. Durch die Arbeit an zahlreichen Projekten konnte ich täglich neue Herausforderungen annehmen und kreative Ansätze entwickeln. Mein logisches Verständnis und meine disziplinierte Arbeitsweise ermöglichen es mir, auch komplexe Probleme effizient zu lösen. Ich lege großen Wert auf sauberen und übersichtlichen Code, der leicht wartbar und erweiterbar ist.",
+            "softSkill_2": "Teamfähigkeit, Kommunikation sowie Kundenorientierung und Zielstrebigkeit: Ich arbeite gerne im Team und schätze den Austausch von Ideen und Feedback. Gute Kommunikation ist für mich der Schlüssel zu erfolgreichen Projekten und zufriedenen Kunden. Ihre Zufriedenheit steht für mich an erster Stelle. Ich setze alles daran, Ihre Vision in die Realität umzusetzen und Ihre Erwartungen zu übertreffen. Dabei verfolge ich stets einen zielorientierten Ansatz, um optimale Ergebnisse zu erzielen.",
+            "ending": "Sehen Sie sich gerne einen Abriss von meinen Projekten an, um einen Eindruck von meiner Arbeit zu bekommen. Ich freue mich darauf, gemeinsam mit Ihnen spannende Projekte zu realisieren!"
+        },
+
+          "mySkills": {
+            "title": "Skills",
+            "intro": "Durch die kontinuierliche Weiterentwicklung meiner Frontend-Fähigkeiten konnte ich verschiedene reale Projekte erfolgreich umsetzen.",
+            "btn": "Kontakt aufnehmen"
+    },
+
+        "portfolio": {
+        "title": "Portfolio",
+        "intro": "Entdecken Sie hier eine Auswahl meiner Arbeiten - interagieren Sie mit Projekten, um meine Fähigkeiten in Aktion zu sehen.",
+        "decription_join": "Aufgabenmanager inspiriert vom Kanban-System. Erstellen und organisieren Sie Aufgaben mit Drag & Drop-Funktionen, weisen Sie Benutzer und Kategorien zu."
 
     }
+
+    
 
 }

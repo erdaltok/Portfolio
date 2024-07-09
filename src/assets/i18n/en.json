@@ -5,12 +5,32 @@
         "portfolio": "Portfolio",
         "contact": "Contact"
     },
-    
+
     "landingTitle": {
         "h1": "Erdal Tok",
         "h2": "FRONTEND DEVELOPER",
-        "h3": "I am"
+        "h3": "I am",
+        "btn": "Let`s Talk!"
+    },
 
+   "aboutMe": {
+        "title": "About me",
+        "intro": "Hello and welcome to my website! I am a passionate frontend developer from Munich who loves creating creative and user-friendly digital experiences. I am delighted that you are here to learn more about me and my work.",
+        "softSkill_1": "Creativity and Problem Solving, along with Attention to Detail and Structure: I enjoy finding innovative solutions that are both aesthetically pleasing and functional. Through working on numerous projects, I have been able to take on new challenges daily and develop creative approaches. My logical understanding and disciplined work ethic enable me to efficiently solve complex problems. I place great importance on clean and organized code that is easy to maintain and expand.",
+        "softSkill_2": "Teamwork, Communication, as well as Customer Orientation and Goal Orientation: I enjoy working in a team and value the exchange of ideas and feedback. Good communication is key to successful projects and satisfied clients. Your satisfaction is my top priority. I strive to bring your vision to life and exceed your expectations. I always take a goal-oriented approach to achieve optimal results.",
+        "ending": "Feel free to review a selection of my projects to get an impression of my work. I look forward to collaborating with you on exciting projects!"
+    },
+
+    "mySkills": {
+        "title": "My skills",
+        "intro": "I have grown my frontend developments skills that have allowed me to create different real projects.",
+        "btn": "Get in touch"
+    },
+
+    "portfolio": {
+        "title": "Portfolio",
+        "intro": "Explore a selection of my work here - Interact with projects to see my skills in action.",
+        "decription_join": "Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories."
     }
 
 

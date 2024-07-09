@@ -6,7 +6,7 @@
             <div class="small-line"></div>
         </div>
         <div class="portfolio-titel">
-            <h2>Portfolio</h2>
+            <h2>{{ "portfolio.title" | translate }}</h2>
         </div>
         <div class="portfolio-big-line-right-side">
             <div class="big-line"></div>
@@ -14,7 +14,7 @@
             
     </div>
 
-    <p>Explore a selection of my work here - Interact with projects to see my skills in action.</p>
+    <p>{{ "portfolio.intro" | translate }}</p>
 
     <div *ngFor="let project of projects; let i = index" 
      [ngStyle]="{'flex-direction': i % 2 === 0 ? 'row' : 'row-reverse', 'gap': i % 2 !== 0 ? '0px' : '163px'}"
@@ -35,7 +35,7 @@
                  alt="">
             <h3>{{ project.name }}</h3>
             <span>{{ project.skills }}</span>
-            <p>{{ project.description }}</p>
+            <p>{{ (project.description | translate) }}</p>
 
                 <div class="projects-right-side-buttons">
                     <button (click)="openLiveTestProject(project.liveTestLink)" class="button-live-test">Live test</button>

@@ -1,14 +1,21 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 
+import { TranslateModule, TranslateService } from '@ngx-translate/core';
+import { HttpClientModule } from '@angular/common/http';
+
+
+
 @Component({
   selector: 'app-portfolio-projects',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, TranslateModule, HttpClientModule],
   templateUrl: './portfolio-projects.component.html',
   styleUrl: './portfolio-projects.component.scss'
 })
 export class PortfolioProjectsComponent {
+
+  constructor(public translateService: TranslateService) {}
 
 
   projects = [

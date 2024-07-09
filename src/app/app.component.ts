@@ -8,25 +8,34 @@ import { PrivacyComponent } from './main-content/privacy/privacy.component';
 import { ImprintComponent } from './main-content/imprint/imprint.component';
 import AOS from 'aos';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
+import { LandingPageComponent } from './main-content/content-components/landing-page/landing-page.component';
+
 
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CommonModule, RouterOutlet, MainContentComponent, HeaderComponent, FooterComponent, PrivacyComponent, ImprintComponent, TranslateModule],
+  imports: [CommonModule, RouterOutlet, MainContentComponent, HeaderComponent, FooterComponent, PrivacyComponent, ImprintComponent, TranslateModule, LandingPageComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
   title = 'portfolio';
+  currentLanguage: string = 'EN';
 
   ngOnInit(): void {
-    //Called after the constructor, initializing input properties, and the first call to ngOnChanges.
-    //Add 'implements OnInit' to the class.
     AOS.init();
   }
 
-   constructor(public translate: TranslateService) {
-    translate.setDefaultLang('en');
+   constructor(public translate: TranslateService ) {
+     translate.setDefaultLang('en');
+     
+   }
+  
+  
+  
+  onLanguageChanged(language: string) {
+    this.currentLanguage = language;
+    console.log(`Language changed in AppComponent to: ${this.currentLanguage}`);
   }
 }

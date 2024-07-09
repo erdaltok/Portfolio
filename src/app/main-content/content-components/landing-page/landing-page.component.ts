@@ -1,6 +1,6 @@
 import { CommonModule, NgOptimizedImage } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
-import { Component } from '@angular/core';
+import { Component, Input, OnChanges, SimpleChanges } from '@angular/core';
 
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
 
@@ -12,10 +12,21 @@ import { TranslateModule, TranslateService } from '@ngx-translate/core';
   templateUrl: './landing-page.component.html',
   styleUrl: './landing-page.component.scss'
 })
-export class LandingPageComponent {
+export class LandingPageComponent implements OnChanges{
 
-  constructor(public translateService: TranslateService) { }
+  @Input() currentLanguage: string = 'EN';
+  
+  constructor(public translateService: TranslateService) {}
+  
+  
+  ngOnChanges(changes: SimpleChanges) {
+    if (changes['currentLanguage']) {
+      console.log(`Language changed to: ${this.currentLanguage}`);
+    }
+  }
 
 
+
+ 
 
 }

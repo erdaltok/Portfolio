@@ -29,6 +29,7 @@
   &-title-center {
     @include dFlex;
     width: 773px;
+    height: 120px;
   }
 
   h3 {
@@ -36,6 +37,9 @@
     rotate: -90deg;
     margin: 0;
     height: 63px;
+    position: relative;
+    right: -26px;
+    // outline: 2px solid yellow;
   }
 
   h1 {
@@ -82,11 +86,17 @@
   button {
     @include button-style;
     margin-top: 25px;
+    width: auto !important;
   }
 }
 
-// .styleHeaderGerman {
-//     font-size: 24px !important
+.styleHeaderGerman {
+  font-size: 40px !important;
+}
+
+// .widthBtnGerman {
+//   width: 240px !important;
+//   padding: 15px 0px !important;
 // }
 
 .shape-landing-page-section {
@@ -157,6 +167,11 @@
   .me-section-title-center {
     width: 537px;
   }
+
+  .styleHeaderGerman {
+    font-size: 29px !important;
+    height: 39px !important;
+}
 }
 
 /* ----------- iPad Pro ----------- */

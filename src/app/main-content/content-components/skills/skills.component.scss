@@ -88,10 +88,14 @@
 
   button {
     @include button-style;
-    width: 191px;
+    width: auto !important;
     height: 58px;
     margin-top: 25px;
   }
+}
+
+.widthBtnGerman {
+  width: auto !important;
 }
 
 .skills-line {
@@ -169,6 +173,14 @@
       width: 30px !important;
     }
   }
+
+  // .skills-wrapper {
+  //   margin-top: 71px;
+  // }
+
+  .skills-section {
+   
+  }
 }
 
 @media (max-width: 414px) {
@@ -190,7 +202,7 @@
     }
   }
 
-      .skills-left-side {
-        max-width: 96%;
-      }
+  .skills-left-side {
+    max-width: 96%;
+  }
 }
