@@ -24,11 +24,12 @@ export class HeaderComponent implements AfterViewInit {
 
   constructor(public translateService: TranslateService, private cdr: ChangeDetectorRef) { }
 
-
-
-  changeLanguage(language: string) {
+  
+changeLanguage(language: string) {
+    console.log(`Changing language to: ${language}`);
     this.currentLanguage = language;
     this.languageChanged.emit(language);
+    console.log(`Language emitted: ${language}`);
 
     if (this.currentLanguage === 'DE') {
       this.translateService.setDefaultLang('de');
@@ -37,7 +38,6 @@ export class HeaderComponent implements AfterViewInit {
     }
     this.cdr.detectChanges(); 
   }
-
 
   openMenu() {
     this.menuValue = !this.menuValue;

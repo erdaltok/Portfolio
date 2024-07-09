@@ -10,6 +10,9 @@ import AOS from 'aos';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
 import { LandingPageComponent } from './main-content/content-components/landing-page/landing-page.component';
 
+import { LanguageService } from './language.service';
+
+
 
 
 @Component({
@@ -27,15 +30,12 @@ export class AppComponent implements OnInit {
     AOS.init();
   }
 
-   constructor(public translate: TranslateService ) {
-     translate.setDefaultLang('en');
-     
-   }
-  
-  
-  
+    constructor(public translate: TranslateService, private languageService: LanguageService) {
+    translate.setDefaultLang('en');
+  }
+
   onLanguageChanged(language: string) {
-    this.currentLanguage = language;
-    console.log(`Language changed in AppComponent to: ${this.currentLanguage}`);
+    this.languageService.setLanguage(language);
+    console.log(`Language changed in AppComponent to: ${language}`);
   }
 }
