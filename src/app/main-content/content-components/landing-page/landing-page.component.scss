@@ -163,7 +163,7 @@
     width: 537px;
   }
 
-  .styleHeaderGerman {
+  .styleGerman {
     font-size: 29px !important;
     height: 39px !important;
 }
@@ -274,6 +274,10 @@
       }
     }
   }
+  .styleGerman {
+  font-size: 16px !important;
+  height: auto !important;
+}
 }
 
 @media (max-width: 500px) {
@@ -303,6 +307,9 @@
 
   .me-section {
     min-height: 82vh;
+    button {
+      width: 225px !important;
+    }
   }
 }
 
@@ -310,6 +317,10 @@
   .picture-of-me {
     width: 318px;
     top: -22px !important;
+  }
+
+  .me-section {
+    top: -10px;
   }
 }
 
