@@ -23,12 +23,17 @@ export class ContactComponent {
 
   isChecked: boolean = false;
   showPrivacyWarning: boolean = false;
-  // showSuccessMailMessage: boolean = false;
+  
+   toastrAudio: HTMLAudioElement;
 
-  constructor(private router: Router, public translateService: TranslateService) {}
+  constructor(private router: Router, public translateService: TranslateService) {
+    this.toastrAudio = new Audio('../../../../assets/audio/toastr-success.mp3');
+  }
 
    ngOnInit() {
-    this.goUpBtn = document.getElementById("goUpBtn");
+     this.goUpBtn = document.getElementById("goUpBtn");
+     
+     
   }
 
   http = inject(HttpClient);
@@ -107,7 +112,7 @@ onSubmit(ngForm: NgForm) {
             this.toastr.success(toastrMessageSecond, toastrMessageFirst);
           });
         });
-
+          this.toastrAudio.play();
           // this.showSuccessMailMessage = true;
         }, 1500);
         
