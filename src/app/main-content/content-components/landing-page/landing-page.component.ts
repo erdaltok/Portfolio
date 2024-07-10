@@ -20,21 +20,17 @@ export class LandingPageComponent implements OnChanges{
    
   ngOnChanges(changes: SimpleChanges) {
     if (changes['language']) {
-      console.log(`Language input changed: ${changes['language'].currentValue}`);
       this.updateLanguageStyle();
     }
   }
 
   updateLanguageStyle() {
-    console.log(`Updating language style for: ${this.language}`);
     const h3Element = document.querySelector('h3');
     if (h3Element) {
       if (this.language === 'DE') {
         h3Element.classList.add('styleGerman');
-        console.log('Added class: styleGerman');
       } else {
         h3Element.classList.remove('styleGerman');
-        console.log('Removed class: styleGerman');
       }
     }
   } 

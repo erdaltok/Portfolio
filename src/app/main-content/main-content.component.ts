@@ -7,13 +7,14 @@ import { ImprintComponent } from './imprint/imprint.component';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
 import { HttpClientModule } from '@angular/common/http';
 import { LanguageService } from '../language.service';
+import { PrivacyComponent } from './privacy/privacy.component';
 
 
 
 @Component({
   selector: 'app-main-content',
   standalone: true,
-  imports: [CommonModule, ContentComponentsComponent, ImprintComponent, TranslateModule, HttpClientModule],
+  imports: [CommonModule, ContentComponentsComponent, ImprintComponent, TranslateModule, HttpClientModule, PrivacyComponent],
   templateUrl: './main-content.component.html',
   styleUrl: './main-content.component.scss'
 })
@@ -27,7 +28,6 @@ export class MainContentComponent implements OnInit {
     ngOnInit() {
       this.languageService.language$.subscribe(language => {
         this.currentLanguage = language;
-        console.log(`Language received in MainContentComponent: ${this.currentLanguage}`);
       });
     }
   }

@@ -20,20 +20,16 @@ export class ContactComponent {
 
   goUpBtn: HTMLElement | null = null;
   currentImgSrc = "../../../../assets/img/icons/go-up-btn-white.png";
-
   isChecked: boolean = false;
-  showPrivacyWarning: boolean = false;
-  
-   toastrAudio: HTMLAudioElement;
+  showPrivacyWarning: boolean = false;  
+  toastrAudio: HTMLAudioElement;
 
   constructor(private router: Router, public translateService: TranslateService) {
     this.toastrAudio = new Audio('../../../../assets/audio/toastr-success.mp3');
   }
 
    ngOnInit() {
-     this.goUpBtn = document.getElementById("goUpBtn");
-     
-     
+     this.goUpBtn = document.getElementById("goUpBtn");     
   }
 
   http = inject(HttpClient);
@@ -84,13 +80,10 @@ export class ContactComponent {
   // }
 
 onSubmit(ngForm: NgForm) {
-    // Checkbox privacy policy activated?
     if (!this.isChecked) {
       this.showPrivacyWarning = true; 
     } else {
       this.showPrivacyWarning = false;
-
-      // logic, if form-submit activated after checkbox is checked
       if (ngForm.form.valid && !this.mailTest) {
         this.http.post(this.post.endPoint, this.post.body(this.contactData))
           .subscribe({
@@ -113,11 +106,7 @@ onSubmit(ngForm: NgForm) {
           });
         });
           this.toastrAudio.play();
-          // this.showSuccessMailMessage = true;
         }, 1500);
-        
-       
-  
         ngForm.resetForm();
       }
     }

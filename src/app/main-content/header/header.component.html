@@ -24,9 +24,9 @@
 
 
             <div class="select-language">
-                <a (click)="changeLanguage('EN')" [class.color-current-language]="currentLanguage === 'EN'" href="#">EN</a>
+                <a (click)="onLanguageChange('EN')" [class.color-current-language]="currentLanguage === 'EN'" >EN</a>
                 <p>|</p>
-                <a (click)="changeLanguage('DE')" [class.color-current-language]="currentLanguage === 'DE'" href="#">DE</a>
+                <a (click)="onLanguageChange('DE')" [class.color-current-language]="currentLanguage === 'DE'" >DE</a>
             </div>
         </div>
     </nav>

@@ -6,6 +6,8 @@ import { TranslateModule, TranslateService } from '@ngx-translate/core';
 
 import { HttpClientModule } from '@angular/common/http';
 
+import { LanguageService } from '../../language.service';
+
 @Component({
   selector: 'app-privacy',
   standalone: true,
@@ -15,7 +17,7 @@ import { HttpClientModule } from '@angular/common/http';
 })
 export class PrivacyComponent {
 
-   constructor(public translateService: TranslateService) { }
+   constructor(public translateService: TranslateService, private languageService: LanguageService) { }
 
   currentImgSrc = "../../../../assets/img/icons/go-up-btn-white.png";
 

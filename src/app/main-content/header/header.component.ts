@@ -1,14 +1,16 @@
-import { Component, AfterViewInit, HostListener, Output, EventEmitter, ChangeDetectorRef } from '@angular/core';
-
+import { Component, AfterViewInit, HostListener, Output, EventEmitter, ChangeDetectorRef} from '@angular/core';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
-
 import { HttpClientModule } from '@angular/common/http';
 import { CommonModule } from '@angular/common';
+import { RouterModule } from '@angular/router';
+import { LanguageService } from '../../language.service';
+
+
 
 @Component({
   selector: 'app-header',
   standalone: true,
-  imports: [CommonModule, TranslateModule, HttpClientModule],
+  imports: [CommonModule, TranslateModule, HttpClientModule, RouterModule],
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss']
 })
@@ -22,23 +24,13 @@ export class HeaderComponent implements AfterViewInit {
 
   @Output() languageChanged = new EventEmitter<string>();
 
-  constructor(public translateService: TranslateService, private cdr: ChangeDetectorRef) { }
+  constructor(public translateService: TranslateService, private cdr: ChangeDetectorRef, private languageService: LanguageService
+  ) {}
 
-  
-  changeLanguage(language: string) {
-     const currentScrollPosition = window.pageYOffset; // Speichern der aktuellen Scrollposition
-    console.log(`Changing language to: ${language}`);
+  onLanguageChange(language: string) {
+    this.languageService.changeLanguage(language);
     this.currentLanguage = language;
-    this.languageChanged.emit(language);
-    console.log(`Language emitted: ${language}`);
-
-    if (this.currentLanguage === 'DE') {
-      this.translateService.setDefaultLang('de');
-    } else {
-      this.translateService.setDefaultLang('en');
-    }
-    this.cdr.detectChanges(); 
-     window.scrollTo(0, currentScrollPosition); // Wiederherstellen der Scrollposition
+    this.cdr.detectChanges();
   }
 
   openMenu() {
