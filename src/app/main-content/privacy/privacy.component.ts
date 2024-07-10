@@ -2,14 +2,20 @@ import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { RouterLink, RouterLinkActive } from '@angular/router';
 
+import { TranslateModule, TranslateService } from '@ngx-translate/core';
+
+import { HttpClientModule } from '@angular/common/http';
+
 @Component({
   selector: 'app-privacy',
   standalone: true,
-  imports: [CommonModule, RouterLink, RouterLinkActive],
+  imports: [CommonModule, RouterLink, RouterLinkActive, TranslateModule, HttpClientModule],
   templateUrl: './privacy.component.html',
   styleUrl: './privacy.component.scss'
 })
 export class PrivacyComponent {
+
+   constructor(public translateService: TranslateService) { }
 
   currentImgSrc = "../../../../assets/img/icons/go-up-btn-white.png";
 

@@ -1,4 +1,4 @@
-<div class="content">
+<!-- <div class="content">
     <div class="go-up-btn-headline-space-between">
         <h1>Datenschutzerklärung</h1>
         <a routerLink="/" routerLinkActive="active">
@@ -285,4 +285,127 @@
     
 
 
+ -->
 
+
+<div class="content">
+    <div class="go-up-btn-headline-space-between">
+        <h1>{{ 'privacy.title' | translate }}</h1>
+        <a routerLink="/" routerLinkActive="active">
+            <img [src]="currentImgSrc" (mouseenter)="onMouseEnter()" (mouseleave)="onMouseLeave()" class="go-back-btn"
+                alt="">
+        </a>
+    </div>
+
+    <h3>{{ 'privacy.overview' | translate }}</h3>
+    <h4>{{ 'privacy.general_info' | translate }}</h4>
+    <p>{{ 'privacy.general_info_text' | translate }}</p>
+
+    <h4>{{ 'privacy.data_collection' | translate }}</h4>
+    <p>
+        <strong>{{ 'privacy.responsible_party' | translate }}</strong><br>
+        <br>{{ 'privacy.responsible_party_text' | translate }}
+    </p>
+    <p>
+        <strong>{{ 'privacy.data_collection_methods' | translate }}</strong><br>
+        <br>{{ 'privacy.data_collection_methods_text' | translate }}
+    </p>
+    <p>
+        <strong>{{ 'privacy.data_usage' | translate }}</strong><br>
+        <br>{{ 'privacy.data_usage_text' | translate }}
+    </p>
+    <p>
+        <strong>{{ 'privacy.data_rights' | translate }}</strong><br>
+        <br>{{ 'privacy.data_rights_text' | translate }}
+    </p>
+
+    <h3>{{ 'privacy.hosting' | translate }}</h3>
+    <p>
+        <strong>{{ 'privacy.hosting_provider' | translate }}</strong><br>
+        <strong>All-Inkl</strong><br>
+        <br>{{ 'privacy.hosting_provider_info' | translate }}
+    </p>
+    <p>{{ 'privacy.hosting_legal_basis' | translate }}</p>
+    <p>
+        <strong>{{ 'privacy.data_processing_agreement' | translate }}</strong><br>
+        <br>{{ 'privacy.data_processing_agreement_text' | translate }}
+    </p>
+
+    <h3>{{ 'privacy.general_info_obligations' | translate }}</h3>
+    <p>
+        <strong>{{ 'privacy.data_protection' | translate }}</strong><br>
+        <br>{{ 'privacy.data_protection_text' | translate }}
+    </p>
+    <p>{{ 'privacy.personal_data' | translate }}</p>
+    <p>{{ 'privacy.internet_security' | translate }}</p>
+    <p>
+        <strong>{{ 'privacy.responsible_party_notice' | translate }}</strong><br>
+        <br>{{ 'privacy.responsible_party_contact' | translate }}
+    </p>
+    <p>{{ 'privacy.responsible_party_definition' | translate }}</p>
+    <p>
+        <strong>{{ 'privacy.data_storage_duration' | translate }}</strong><br>
+        <br>{{ 'privacy.data_storage_duration_text' | translate }}
+    </p>
+    <p>
+        <strong>{{ 'privacy.legal_basis' | translate }}</strong><br>
+        <br>{{ 'privacy.legal_basis_text' | translate }}
+    </p>
+    <p>
+        <strong>{{ 'privacy.recipients' | translate }}</strong><br>
+        <br>{{ 'privacy.recipients_text' | translate }}
+    </p>
+    <p>
+        <strong>{{ 'privacy.revocation' | translate }}</strong><br>
+        <br>{{ 'privacy.revocation_text' | translate }}
+    </p>
+    <p>
+        <strong>{{ 'privacy.objection' | translate }}</strong><br>
+        <br>{{ 'privacy.objection_text' | translate }}
+    </p>
+    <p>
+        <strong>{{ 'privacy.complaint_right' | translate }}</strong><br>
+        <br>{{ 'privacy.complaint_right_text' | translate }}
+    </p>
+    <p>
+        <strong>{{ 'privacy.data_transfer_right' | translate }}</strong><br>
+        <br>{{ 'privacy.data_transfer_right_text' | translate }}
+    </p>
+    <p>
+        <strong>{{ 'privacy.access_correction_deletion' | translate }}</strong><br>
+        <br>{{ 'privacy.access_correction_deletion_text' | translate }}
+    </p>
+    <p>
+        <strong>{{ 'privacy.restriction_of_processing' | translate }}</strong><br>
+        <br>{{ 'privacy.restriction_of_processing_text' | translate }}
+    </p>
+    <ul>
+        <li>{{ 'privacy.restriction_cases' | translate }}</li>
+        <li>{{ 'privacy.restriction_cases' | translate }}</li>
+        <li>{{ 'privacy.restriction_cases' | translate }}</li>
+        <li>{{ 'privacy.restriction_cases' | translate }}</li>
+    </ul>
+    <p>{{ 'privacy.restriction_note' | translate }}</p>
+    <p>
+        <strong>{{ 'privacy.ssl_tls_encryption' | translate }}</strong><br>
+        <br>{{ 'privacy.ssl_tls_encryption_text' | translate }}
+    </p>
+    <h4>{{ 'privacy.data_collection' | translate }}</h4>
+    <p>
+        <strong>{{ 'privacy.contact_form' | translate }}</strong><br>
+        <br>{{ 'privacy.contact_form_text' | translate }}
+    </p>
+    <p>
+        <strong>{{ 'privacy.request_via_email_phone_fax' | translate }}</strong><br>
+        <br>{{ 'privacy.request_via_email_phone_fax_text' | translate }}
+    </p>
+    <h4>{{ 'privacy.plugins_tools' | translate }}</h4><br>
+    <strong>{{ 'privacy.google_fonts' | translate }}</strong><br>
+    <br>
+    <p>{{ 'privacy.google_fonts_text' | translate }}</p>
+    <br>
+    
+    
+    <p>{{ 'privacy.source' | translate }} <a href="https://www.e-recht24.de" target="_blank">https://www.e-recht24.de</a></p>
+    
+    <p>{{ 'privacy.copyright' | translate }}</p>

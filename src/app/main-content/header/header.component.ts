@@ -25,7 +25,8 @@ export class HeaderComponent implements AfterViewInit {
   constructor(public translateService: TranslateService, private cdr: ChangeDetectorRef) { }
 
   
-changeLanguage(language: string) {
+  changeLanguage(language: string) {
+     const currentScrollPosition = window.pageYOffset; // Speichern der aktuellen Scrollposition
     console.log(`Changing language to: ${language}`);
     this.currentLanguage = language;
     this.languageChanged.emit(language);
@@ -37,6 +38,7 @@ changeLanguage(language: string) {
       this.translateService.setDefaultLang('en');
     }
     this.cdr.detectChanges(); 
+     window.scrollTo(0, currentScrollPosition); // Wiederherstellen der Scrollposition
   }
 
   openMenu() {
