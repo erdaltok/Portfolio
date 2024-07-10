@@ -30,7 +30,32 @@
         "portfolio": {
         "title": "Portfolio",
         "intro": "Entdecken Sie hier eine Auswahl meiner Arbeiten - interagieren Sie mit Projekten, um meine Fähigkeiten in Aktion zu sehen.",
-        "decription_join": "Aufgabenmanager inspiriert vom Kanban-System. Erstellen und organisieren Sie Aufgaben mit Drag & Drop-Funktionen, weisen Sie Benutzer und Kategorien zu."
+        "description_join": "Aufgabenmanager inspiriert vom Kanban-System. Erstellen und organisieren Sie Aufgaben mit Drag & Drop-Funktionen, weisen Sie Benutzer und Kategorien zu.",
+        "description_el_pollo_loco": "Ein einfaches Jump-and-Run-Spiel basierend auf einem objektorientierten Ansatz. Helfen Sie Pepe, Münzen und Giftflaschen zu finden, um gegen die Killerhühner zu kämpfen."
+
+    },
+
+     "contact": {
+        "title": "Kontakt",
+        "subTitle": "Haben Sie ein Problem zu lösen?",
+        "content": "Kontaktieren Sie mich über dieses Formular. Ich freue mich darauf, von Ihnen zu hören, Ihre Ideen kennenzulernen und mit meiner Arbeit zu Ihren Projekten beizutragen.",
+        "ending": "Sie brauchen einen Software Entwickler? Kontaktieren Sie mich!",
+        "placeholder_name": "Ihr Name",
+        "placeholder_name_required": "Ihr Name ist erforderlich",
+        
+        "placeholder_mail": "Ihre E-Mail",
+        "placeholder_mail_required": "Ihre E-Mail ist erforderlich",
+
+        "placeholder_message": "Ihre Nachricht",
+        "placeholder_message_required": "Ihre Nachricht ist leer",
+        "policyFirst": "Ich habe die",
+        "policyLink": "Datenschutzbestimmungen",
+        "policySecond": "gelesen und erkläre mich mit der Verarbeitung meiner Daten wie beschrieben einverstanden.",
+        "policy_required": "Bitte akzeptieren Sie die Datenschutzbestimmungen",
+        "btn": "Nachricht senden ;)",
+        "toastr_messageFirst": "Erfolgreich!",
+        "toastr_messageSecond": "Ihre Nachricht ist unterwegs."
+
 
     }
 

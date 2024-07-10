@@ -30,7 +30,34 @@
     "portfolio": {
         "title": "Portfolio",
         "intro": "Explore a selection of my work here - Interact with projects to see my skills in action.",
-        "decription_join": "Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories."
+        "description_join": "Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories.",
+        "description_el_pollo_loco": "A simple Jump-and-Run game based on an object-oriented approach. Help Pepe to find coins and poison bottles to fight against the killer chicken."
+    },
+      "contact": {
+        "title": "Contact",
+        "subTitle": "Got a problem to solve?",
+        "content": "Contact me through this form, I am interested in hearing from you, knowing your ideas and contributing to your projects with my work.",
+        "ending": "Need a Frontend developer? Contact me!",
+        "placeholder_name": "Your name",
+        "placeholder_name_required": "Your name is required",
+        "placeholder_mail": "Your email",
+        "placeholder_mail_required": "Your email is required",
+
+        "placeholder_message": "Your message",
+        "placeholder_message_required": "Your message is empty",
+
+        "policyFirst": "I've read the",
+        "policyLink": "privacy policy",
+        "policySecond": "and agree to the processing of my data as outlined.",
+        "policy_required": "Please accept the privacy policy",
+        "btn": "Send message ;)",
+        "toastr_messageFirst": "Success!",
+        "toastr_messageSecond": "Your message is on its way."
+
+
+
+
+
     }
 
 

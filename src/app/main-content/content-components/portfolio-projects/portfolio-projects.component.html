@@ -35,7 +35,7 @@
                  alt="">
             <h3>{{ project.name }}</h3>
             <span>{{ project.skills }}</span>
-            <p>{{ (project.description | translate) }}</p>
+            <p>{{ project.descriptionKey | translate }}</p>
 
                 <div class="projects-right-side-buttons">
                     <button (click)="openLiveTestProject(project.liveTestLink)" class="button-live-test">Live test</button>

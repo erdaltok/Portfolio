@@ -1,7 +1,7 @@
 import { ApplicationConfig, importProvidersFrom } from '@angular/core';
 import { provideRouter, withViewTransitions } from '@angular/router';
 import { provideToastr } from 'ngx-toastr';
-import { provideAnimations } from '@angular/platform-browser/animations';
+import { BrowserAnimationsModule, provideAnimations } from '@angular/platform-browser/animations';
 
 import { routes } from './app.routes';
 import { HttpClient, provideHttpClient } from '@angular/common/http';
@@ -12,7 +12,7 @@ import { BrowserModule } from '@angular/platform-browser';
 
 
 export function HttpLoaderFactory(http: HttpClient) {
-  return new TranslateHttpLoader(http);
+  return new TranslateHttpLoader(http, './assets/i18n/', '.json');
 }
 
 const translateModuleConfig: TranslateModuleConfig = {
@@ -34,7 +34,8 @@ export const appConfig: ApplicationConfig = {
     provideAnimations(),
     importProvidersFrom(
       BrowserModule,
-      TranslateModule.forRoot(translateModuleConfig)
+      TranslateModule.forRoot(translateModuleConfig),
+      BrowserAnimationsModule
     )
   
   ]

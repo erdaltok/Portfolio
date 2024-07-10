@@ -2,7 +2,7 @@
 
 <div class="contacts-headline" >
     <div class="small-line-contact"></div>
-    <h2>Contact</h2>
+    <h2>{{ "contact.title" | translate }}</h2>
 </div>
 
 <div class="contacts-wrapper" >
@@ -12,12 +12,11 @@
      data-aos-offset="300"
      data-aos-easing="ease-in-sine"
         >
-            <h3>Got a problem to solve?</h3>
+            <h3>{{ "contact.subTitle" | translate }}</h3>
             <br>
-            <span>Contact me through this form, I am interested in hearing from you, knowing your ideas and contributing to your projects
-            with my work.</span><br>
+            <span>{{ "contact.content" | translate }}</span><br>
             <br>
-            <span>Need a Frontend developer? Contact me!</span>
+            <span>{{ "contact.ending" | translate }}</span>
     </div>
 
     <div class="contacts-right-side" >
@@ -29,12 +28,12 @@
                 [(ngModel)]="contactData.name"
                 type="text" class="form-control" id="name" name="name-contact"
                 autocomplete="off"
-                placeholder="Your name"
+                placeholder="{{ 'contact.placeholder_name' | translate }}"
                 minlength="2" required 
                 [ngClass]="{'negative' : !name.valid && name.touched}">
                 @if (!name.valid && name.touched && !name.disabled) {
                     <img class="not-valid-img" src="../../../../assets/img/icons/not-valid-img.png" alt="">
-                    <span>Your name is required</span>
+                    <span>{{ 'contact.placeholder_name_required' | translate }}</span>
                 }
             </div>
         
@@ -43,11 +42,11 @@
                 #email="ngModel"
                 [(ngModel)]="contactData.email"
                 type="email" class="form-control" id="email" name="email_contact"
-                placeholder="Your email" required pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$"
+                placeholder="{{ 'contact.placeholder_mail' | translate }}" required pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$"
                 [ngClass]="{'negative' : !email.valid && email.touched}"
                 >
                 @if (!email.valid && email.touched && !email.disabled) {
-                <span>Your email is required</span>
+                <span>{{ 'contact.placeholder_mail_required' | translate }}</span>
                 <img class="not-valid-img" src="../../../../assets/img/icons/not-valid-img.png" alt="">
                 }
             </div>
@@ -57,12 +56,12 @@
                 #message="ngModel"
                     [(ngModel)]="contactData.message" 
                     class="form-control" name="message-contact" 
-                    placeholder="Your message" 
+                    placeholder="{{ 'contact.placeholder_message' | translate }}" 
                     minlength="2" rows="10" required
                     [ngClass]="{'negative': !message.valid && message.touched}">                    
                 </textarea>
                 @if (!message.valid && message.touched && !message.disabled) {                    
-                    <span>Your message is empty</span>
+                    <span>{{ 'contact.placeholder_message_required' | translate }}</span>
                     <img class="not-valid-img" src="../../../../assets/img/icons/not-valid-img.png" alt="">                    
                 }
             </div>
@@ -70,17 +69,16 @@
             <div class="privacy-check-info">
                 <input (change)="checkCheckBoxValue($event)" #myCheckbox class="checkbox" type="checkbox" name="my-checkbox"
                     id="checkboxId" ngModel required />
-                <label for="checkboxId">I've read the <a (click)="scrollToTopPrivacy()" href="privacy">privacy policy</a> and agree to
-                    the processing of my data as outlined.</label>
+                <label for="checkboxId">{{ "contact.policyFirst" | translate }} <a (click)="scrollToTopPrivacy()" href="privacy">{{ "contact.policyLink" | translate }}</a> {{ "contact.policySecond" | translate }}</label>
             </div>
 
-            <span *ngIf="showPrivacyWarning" id="privacyRequest" class="privacy-request">Please accept the privacy policy</span>
+            <span *ngIf="showPrivacyWarning" id="privacyRequest" class="privacy-request">{{ "contact.policy_required" | translate }}</span>
 
             <button type="submit" [ngClass]="{
                     'inactive-button': !contactForm.valid || !isChecked,
                     'active-button': contactForm.valid && isChecked
                     }" (click)="onSubmit(contactForm)">
-                    Send message
+                    {{ "contact.btn" | translate }}
             </button>
 
                   <!-- <div *ngIf="showSuccessMailMessage" class="show-success-mail-message">

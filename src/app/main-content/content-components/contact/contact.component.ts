@@ -5,13 +5,14 @@ import { FormsModule, NgForm} from '@angular/forms';
 import { Router } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
 
-
+import { TranslateModule, TranslateService } from '@ngx-translate/core';
+import { HttpClientModule } from '@angular/common/http';
 
 
 @Component({
   selector: 'app-contact',
   standalone: true,
-  imports: [CommonModule, FormsModule],
+  imports: [CommonModule, FormsModule, TranslateModule, HttpClientModule],
   templateUrl: './contact.component.html',
   styleUrl: './contact.component.scss'
 })
@@ -24,7 +25,7 @@ export class ContactComponent {
   showPrivacyWarning: boolean = false;
   // showSuccessMailMessage: boolean = false;
 
-  constructor(private router: Router) {}
+  constructor(private router: Router, public translateService: TranslateService) {}
 
    ngOnInit() {
     this.goUpBtn = document.getElementById("goUpBtn");
@@ -101,7 +102,12 @@ onSubmit(ngForm: NgForm) {
       } else if (ngForm.form.valid && this.mailTest) {
 
         setTimeout(() => {
-           this.toastr.success('Your message is on its way.', 'Success!');
+          this.translateService.get('contact.toastr_messageFirst').subscribe((toastrMessageFirst: string) => {
+          this.translateService.get('contact.toastr_messageSecond').subscribe((toastrMessageSecond: string) => {
+            this.toastr.success(toastrMessageSecond, toastrMessageFirst);
+          });
+        });
+
           // this.showSuccessMailMessage = true;
         }, 1500);
         

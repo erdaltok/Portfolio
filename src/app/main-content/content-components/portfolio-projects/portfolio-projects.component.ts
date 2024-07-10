@@ -17,27 +17,24 @@ export class PortfolioProjectsComponent {
 
   constructor(public translateService: TranslateService) {}
 
-
-  projects = [
+projects = [
     {
       name: 'Join',
       skills: 'JavaScript | HTML | CSS | Git',
-      description: 'Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories.',
+      descriptionKey: 'portfolio.description_join',
       image: '../../../../assets/img/project-images/join-img2.png',
       liveTestLink: '',
       gitLink: 'https://github.com/erdaltok/Join-753'
     },
-
     {
       name: 'El Pollo Loco',
       skills: 'JavaScript | HTML | CSS | Git',
-      description: 'A simple Jump-and-Run game based on an object-oriented approach. Help Pepe to find coins and poison bottles to fight against the killer chicken.',
+      descriptionKey: 'portfolio.description_el_pollo_loco',
       image: '../../../../assets/img/project-images/el-pollo-loco-img.png',
       liveTestLink: '',
       gitLink: 'https://github.com/erdaltok/El-pollo-loco'
     }
-    
-  ]
+  ];
   
 
 openLiveTestProject(url:string) {
