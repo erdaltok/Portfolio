@@ -11,7 +11,6 @@
   &-left-side {
     @include dFlex;
     max-width: 100%;
-    // overflow: hidden;
   }
 
   &-right-side {
@@ -20,10 +19,13 @@
     z-index: 5;
     margin-top: -320px;
     max-width: 50%;
+    left: -100px;
+    position: relative;
   }
 
   .picture-of-me {
     position: absolute;
+    top: -120px;
   }
 
   &-title-center {
@@ -39,7 +41,19 @@
     height: 63px;
     position: relative;
     right: -26px;
-    // outline: 2px solid yellow;
+    }
+    @keyframes custom-fade-left {
+      from {
+        opacity: 0;
+        transform: translateX(300%);
+      }
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+    .aos-animate.custom-fade-left {
+      animation: custom-fade-left 1s ease-in-out forwards;
   }
 
   h1 {
@@ -52,17 +66,19 @@
     @include heading(400, 55px, 69.6px, $primary-color);
     margin: 0;
     height: 70px;
+    overflow: hidden;
+    // outline: 2px solid yellow;
   }
 
   .animation-h2 {
     border-right: 2px solid;
-    width: 100%;
+    width: 0.1%;
     white-space: nowrap;
     overflow: hidden;
     animation:
-      typing 2s steps(18),
-      cursor 0.4s step-end infinite alternate;
-    animation-delay: 500ms;
+      typing 2.8s steps(18) 1.5s infinite alternate,
+      cursor 0.4s step-end infinite alternate 1s;
+    
   }
 
   @keyframes cursor {
@@ -72,8 +88,15 @@
   }
 
   @keyframes typing {
-    from {
-      width: 0;
+    0% {
+      width: 0.1%;
+    }
+
+    50% {
+      width: 100%;
+    }
+    100% {
+      width: 100%;
     }
   }
 
@@ -85,7 +108,7 @@
 
   button {
     @include button-style;
-    margin-top: 25px;
+    margin-top: 40px;
     width: auto !important;
   }
 }
@@ -100,7 +123,6 @@
   max-width: 1920px;
   width: 100%;
   z-index: 1;
-  // overflow-y: hidden;
 
   img {
     width: 100%;
@@ -111,11 +133,22 @@
 
 // RESPONSIVE
 
+
+// @media (max-width: 2560px) and (max-height: 2148px) {
+//   .me-section {
+//     min-height: 64vh;
+//   }
+
+//   .shape-landing-page-section {
+//     top: 751px;
+//   }
+// }
+
 @media (max-width: 1453px) {
   .me-section {
     flex-direction: column;
     padding-top: 0;
-    min-height: 85vh; // NEU
+    min-height: 85vh; 
 
     h3 {
       font-size: 43px;
@@ -151,12 +184,13 @@
   .me-section-right-side {
     position: relative;
     top: 100px;
+    left: 0;
   }
 
   .me-section-left-side {
     .picture-of-me {
       max-width: 500px;
-      top: -75px;
+      top: -97px; // AA
     }
   }
   .me-section-title-center {
@@ -166,7 +200,7 @@
   .styleGerman {
     font-size: 29px !important;
     height: 39px !important;
-}
+  }
 }
 
 /* ----------- iPad Pro ----------- */
@@ -176,18 +210,11 @@
     min-height: 87vh;
   }
 
-  // .me-section-left-side {
-  //   .picture-of-me {
-  //     max-width: 700px;
-  //   }
-  // }
-
   .me-section-right-side {
     top: 161px;
   }
 
   .shape-landing-page-section {
-    // top: 665px;
     top: 550px;
     img {
       height: 500px;
@@ -195,22 +222,8 @@
   }
 }
 
-// @media (max-width: 1024px) {
-//   .me-section {
-//     min-height: 87vh;
-//   }
-
-//   .shape-landing-page-section {
-//     img {
-//       // height: 500px;
-//       height: 800px;
-//     }
-//   }
-// }
-
 @media (max-height: 952px) {
   .shape-landing-page-section {
-    // top: 512px;
     top: 451px;
   }
   .me-section {
@@ -228,7 +241,6 @@
   .shape-landing-page-section {
     top: 467px;
     img {
-      // height: 550px;
       height: 662px;
     }
   }
@@ -238,6 +250,17 @@
   }
 }
 
+
+// @media (max-width: 768px) and (max-height: 762px) {
+//   .me-section {
+   
+//   }
+
+//   .shape-landing-page-section {
+  
+//   }
+// }
+
 @media (max-width: 550px) {
   .me-section {
     min-height: 85vh;
@@ -245,15 +268,18 @@
       font-size: 49px;
       margin-bottom: -5px;
       height: 70px;
-      top: 24px;
+      // top: 24px;
     }
 
     h2 {
       font-size: 23px;
+      height: auto;
+      line-height: normal;
+      
     }
 
     .animation-h2 {
-      border-right: 5px solid;
+      border-right: 2px solid;
     }
 
     h3 {
@@ -275,22 +301,19 @@
     }
   }
   .styleGerman {
-  font-size: 16px !important;
-  height: auto !important;
-}
+    font-size: 16px !important;
+    height: auto !important;
+  }
 }
 
 @media (max-width: 500px) {
   .picture-of-me {
     width: 350px;
-    top: 31px;
+    top: -54px !important;
   }
 
   .shape-landing-page-section {
     top: 340px;
-    // img {
-    //   height: 850px;
-    // }
   }
 
   .shape-desktop {

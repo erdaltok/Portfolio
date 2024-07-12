@@ -102,7 +102,7 @@ onSubmit(ngForm: NgForm) {
         setTimeout(() => {
           this.translateService.get('contact.toastr_messageFirst').subscribe((toastrMessageFirst: string) => {
           this.translateService.get('contact.toastr_messageSecond').subscribe((toastrMessageSecond: string) => {
-            this.toastr.success(toastrMessageSecond, toastrMessageFirst);
+            this.toastr.success(toastrMessageSecond, toastrMessageFirst, {closeButton: true});
           });
         });
           this.toastrAudio.play();
