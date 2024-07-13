@@ -130,7 +130,6 @@ nav {
 
   .burger-icon {
     margin-right: 18px;
-    // padding: 0;
     padding-top: 8px;
   }
 }
@@ -158,26 +157,24 @@ nav {
 }
 
 @media (max-width: 1024px) {
-    .nav-links
-     a {
-        font-size: 64px;
-    }
-    }
+  .nav-links a {
+    font-size: 64px;
+  }
+}
 
 /* ----------- iPhone SE ----------- */
 /* Portrait */
-@media only screen and (max-width: 375px){
-  
+@media only screen and (max-width: 375px) {
   .nav-links {
+    top: 34px;
     a {
       font-size: 33px;
-      top: 37px;
     }
   }
 
-.burger-icon {
-  img {
-    width: 20px;
+  .burger-icon {
+    img {
+      width: 20px;
+    }
   }
-}
 }
