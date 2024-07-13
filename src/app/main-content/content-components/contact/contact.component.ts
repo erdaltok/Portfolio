@@ -41,10 +41,11 @@ export class ContactComponent {
     message: "",
   }
 
-  mailTest = true;
+  mailTest = false; // Set to false for production
+  isSubmitting = false;  // Prevents duplicate submissions
 
   post = {
-    endPoint: 'https://deineDomain.de/sendMail.php',
+    endPoint: 'https://erdal.dev/sendMail.php',
     body: (payload: any) => JSON.stringify(payload),
     options: {
       headers: {
@@ -54,65 +55,40 @@ export class ContactComponent {
     },
   };
 
-  // showSuccess() {
-  //   this.toastr.success('Hello world!', 'Toastr fun!');
-  // }
-
-  // ORIGINAL
-  // onSubmit(ngForm: NgForm) {
-  //   if (ngForm.submitted && ngForm.form.valid && !this.mailTest) {
-  //     this.http.post(this.post.endPoint, this.post.body(this.contactData))
-  //       .subscribe({
-  //         next: (response) => {
-  //           // here place what ever you want
-  //           ngForm.resetForm();
-  //         },
-  //         error: (error) => {
-  //           console.error(error);
-  //         },
-  //         complete: () => console.info('send post complete'),
-  //       });
-  //   } else if (ngForm.submitted && ngForm.form.valid && this.mailTest) {
-
-  //     // here place what ever you want for testing
-  //     ngForm.resetForm();
-  //   }
-  // }
-
-onSubmit(ngForm: NgForm) {
+ 
+ onSubmit(ngForm: NgForm) {
     if (!this.isChecked) {
       this.showPrivacyWarning = true; 
     } else {
       this.showPrivacyWarning = false;
-      if (ngForm.form.valid && !this.mailTest) {
+      if (ngForm.form.valid && !this.isSubmitting) {
+        this.isSubmitting = true;
         this.http.post(this.post.endPoint, this.post.body(this.contactData))
           .subscribe({
-            next: (response) => {
-             
-              // here code of your choise, what should be happen after...
+            next: (response: any) => {
+              this.showSuccessMessage();
               ngForm.resetForm();
+              this.isSubmitting = false;
             },
             error: (error) => {
               console.error(error);
+              this.isSubmitting = false;
             },
             complete: () => console.info('send post complete'),
           });
-      } else if (ngForm.form.valid && this.mailTest) {
-
-        setTimeout(() => {
-          this.translateService.get('contact.toastr_messageFirst').subscribe((toastrMessageFirst: string) => {
-          this.translateService.get('contact.toastr_messageSecond').subscribe((toastrMessageSecond: string) => {
-            this.toastr.success(toastrMessageSecond, toastrMessageFirst, {closeButton: true});
-          });
-        });
-          this.toastrAudio.play();
-        }, 1500);
-        ngForm.resetForm();
       }
     }
   }
 
-
+  showSuccessMessage() {
+    setTimeout(() => {
+      this.translateService.get(['contact.toastr_messageFirst', 'contact.toastr_messageSecond']).subscribe(translations => {
+        this.toastr.success(translations['contact.toastr_messageSecond'], translations['contact.toastr_messageFirst'], { closeButton: true });
+      });
+      this.toastrAudio.play();
+    }, 1500);
+  }
+  
   scrollUpPage() {
   document.body.scrollTop = 0; // For Safari
   document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera

@@ -8,6 +8,8 @@ nav {
   position: fixed;
   z-index: 99;
   top: 0;
+  padding-top: 10px;
+  padding-bottom: 10px;
 
   a {
     @include dFlex;
@@ -137,12 +139,12 @@ nav {
 @media (max-width: 500px) {
   nav {
     img {
-      width: 173px;
+      width: 184px;
     }
   }
 
   .nav-links {
-    top: 60px;
+    top: 50px;
     a {
       margin-bottom: 0px;
       font-size: 45px !important;
@@ -166,7 +168,7 @@ nav {
 /* Portrait */
 @media only screen and (max-width: 375px) {
   .nav-links {
-    top: 34px;
+    top: 50px;
     a {
       font-size: 33px;
     }
