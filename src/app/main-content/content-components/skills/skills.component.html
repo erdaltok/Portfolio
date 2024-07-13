@@ -2,11 +2,11 @@
 
     <div class="skills-wrapper">
 
-        <div class="skills-left-side"
+        <div 
+            class="skills-left-side"
             data-aos="flip-left"
-     data-aos-easing="ease-out-cubic"
-     data-aos-duration="2000"
-            >
+            data-aos-easing="ease-out-cubic"
+            data-aos-duration="2000">
 
             <div *ngFor="let logo of logos" class="skill-logos">
                 <img [src]="logo.path" alt="skill-logos">
@@ -15,16 +15,17 @@
             <img class="shadow-skills-section" src="../../../../assets/img/shadows/green-shadow-skills.png" alt="">
         </div>
 
-        <div class="skills-right-side"
-         data-aos="fade-left"
-        data-aos-easing="linear"
-        data-aos-duration="1500"
-        data-aos-delay="300">
+        <div
+            class="skills-right-side"
+            data-aos="fade-left"
+            data-aos-easing="linear"
+            data-aos-duration="1500"
+            data-aos-delay="300">
 
             <h2>{{ "mySkills.title" | translate }}</h2>
             <span>{{ "mySkills.intro" | translate }}</span>
             <a href="#contact"><button >{{ "mySkills.btn" | translate }}</button></a>
-            <img class="skills-line" src="../../../../assets/img/dividing-lines/dividing-line-skills.png" alt="">
+            <!-- <img class="skills-line" src="../../../../assets/img/dividing-lines/dividing-line-skills.png" alt=""> -->
         </div>      
     </div>
 
