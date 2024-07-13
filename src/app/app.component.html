@@ -1,9 +1,20 @@
+<div class="landscape-screen">
+
 
 <app-header (languageChanged)="onLanguageChanged($event)"></app-header>
 <router-outlet></router-outlet>
 <app-footer></app-footer>
 
+</div>
 
+<div class="landscape-overlay">
+    <img class="landscape-logo" src="../assets/img/logo-portfolio-name.png" alt="">
+    <div class="landscape-content">
+        <h2>Please rotate your phone</h2>
+        <img class="rotate-phone-img" src="../assets/img/icons/rotate-phone-icon.png" alt="">
+    </div>
+    
+</div>
 
 
 
