@@ -41,26 +41,41 @@
     height: 63px;
     position: relative;
     right: -26px;
-    }
-    @keyframes custom-fade-left {
-      from {
-        opacity: 0;
-        transform: translateX(300%);
-      }
-      to {
-        opacity: 1;
-        transform: translateX(0);
-      }
-    }
-    .aos-animate.custom-fade-left {
-      animation: custom-fade-left 1s ease-in-out forwards;
   }
+
+  // @keyframes custom-fade-left {
+  //     from {
+  //       opacity: 0;
+  //       transform: translateX(500%); // von 300 auf 500
+  //     }
+  //     to {
+  //       opacity: 1;
+  //       transform: translateX(0);
+  //     }
+  //   }
+  //   .aos-animate.custom-fade-left {
+  //     animation: custom-fade-left 1s ease-in-out forwards;
+  // }
 
   h1 {
     @include heading(700, 90px);
     margin: 0;
     height: 108px;
   }
+
+  // @keyframes custom-fade-right {
+  //   from {
+  //     opacity: 0;
+  //     transform: translateX(500%); // von 300 auf 500
+  //   }
+  //   to {
+  //     opacity: 1;
+  //     transform: translateX(0);
+  //   }
+  // }
+  // .aos-animate.custom-fade-right {
+  //   animation: custom-fade-right 1s ease-in-out forwards;
+  // }
 
   h2 {
     @include heading(400, 55px, 69.6px, $primary-color);
@@ -78,7 +93,6 @@
     animation:
       typing 2.8s steps(18) 1.5s infinite alternate,
       cursor 0.4s step-end infinite alternate 1s;
-    
   }
 
   @keyframes cursor {
@@ -113,6 +127,7 @@
   }
 }
 
+
 .styleGerman {
   font-size: 40px !important;
 }
@@ -133,7 +148,6 @@
 
 // RESPONSIVE
 
-
 // @media (max-width: 2560px) and (max-height: 2148px) {
 //   .me-section {
 //     min-height: 64vh;
@@ -148,7 +162,7 @@
   .me-section {
     flex-direction: column;
     padding-top: 0;
-    min-height: 85vh; 
+    min-height: 85vh;
 
     h3 {
       font-size: 43px;
@@ -224,7 +238,7 @@
 
 @media (max-height: 952px) {
   .shape-landing-page-section {
-    top: 451px;
+    top: 531px;
   }
   .me-section {
     top: -2px;
@@ -250,16 +264,41 @@
   }
 }
 
-
 // @media (max-width: 768px) and (max-height: 762px) {
 //   .me-section {
-   
+
 //   }
 
 //   .shape-landing-page-section {
-  
+
 //   }
 // }
+
+
+@media only screen 
+and (min-device-height : 768px) 
+and (max-device-width : 1024px) 
+and (orientation : landscape) { 
+    .me-section {
+      min-height: 100vh;
+    }
+
+    .picture-of-me {
+      top: -129px;
+      max-width: 441px !important;
+    }
+
+    .me-section-right-side {
+      top: 35px;
+    }
+
+    .shape-landing-page-section {
+      top: 369px;
+      img {
+        height: 520px;
+      }
+    }
+  }
 
 @media (max-width: 550px) {
   .me-section {
@@ -275,7 +314,6 @@
       font-size: 23px;
       height: auto;
       line-height: normal;
-      
     }
 
     .animation-h2 {

@@ -69,7 +69,7 @@
             <div class="privacy-check-info">
                 <input (change)="checkCheckBoxValue($event)" #myCheckbox class="checkbox" type="checkbox" name="my-checkbox"
                     id="checkboxId" ngModel required />
-                <label for="checkboxId">{{ "contact.policyFirst" | translate }} <a (click)="scrollToTopPrivacy()" href="privacy">{{ "contact.policyLink" | translate }}</a> {{ "contact.policySecond" | translate }}</label>
+                <label for="checkboxId">{{ "contact.policyFirst" | translate }} <a (click)="scrollToTopPrivacy()" >{{ "contact.policyLink" | translate }}</a> {{ "contact.policySecond" | translate }}</label>
             </div>
 
             <span *ngIf="showPrivacyWarning" id="privacyRequest" class="privacy-request">{{ "contact.policy_required" | translate }}</span>

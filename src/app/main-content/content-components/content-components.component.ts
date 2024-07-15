@@ -19,6 +19,8 @@ export class ContentComponentsComponent  {
 
   @Input() currentLanguage: string = 'EN';
 
+  
+
 }
 
 

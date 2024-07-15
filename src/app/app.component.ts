@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Renderer2 } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
 import { MainContentComponent } from './main-content/main-content.component';
@@ -22,9 +22,35 @@ export class AppComponent implements OnInit {
 
   ngOnInit(): void {
     AOS.init();
+    this.renderer.listen('window', 'load', () => {
+      this.fadeOutPreloader();
+    });
+
+     // Fallback
+    setTimeout(() => {
+      this.hidePreloader();
+    }, 1000);
   }
 
-    constructor(public translate: TranslateService, private languageService: LanguageService) {
+  fadeOutPreloader() {
+    const preloader = document.getElementById('preloader');
+    if (preloader) {
+      preloader.style.opacity = '0';
+      setTimeout(() => {
+        preloader.style.display = 'none';
+      }, 1000); // Die Dauer muss mit der Übergangszeit in CSS übereinstimmen
+    }
+  }
+
+
+ hidePreloader() {
+    const preloader = document.getElementById('preloader');
+    if (preloader) {
+      preloader.style.display = 'none';
+    }
+  }
+
+    constructor(public translate: TranslateService, private languageService: LanguageService, private renderer: Renderer2) {
     translate.setDefaultLang('en');
   }
 

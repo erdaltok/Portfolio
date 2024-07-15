@@ -1,25 +1,25 @@
-@import 'ngx-toastr/toastr';
+@import "ngx-toastr/toastr";
 
 // colors
 $primary-color: #4b47ff;
 $secondary-color: #00bee8;
-$background-color: #141D2F;
+$background-color: #141d2f;
 $font-color: whitesmoke;
 
 // fonts
 @font-face {
   font-display: swap;
-  font-family: 'Poppins';
+  font-family: "Poppins";
   font-style: normal;
   font-weight: 400;
-  src: url('./assets/fonts/poppins-v21-latin-regular.woff2') format('woff2');
+  src: url("./assets/fonts/poppins-v21-latin-regular.woff2") format("woff2");
 }
 @font-face {
   font-display: swap;
-  font-family: 'Poppins';
+  font-family: "Poppins";
   font-style: normal;
   font-weight: 700;
-  src: url('./assets/fonts/poppins-v21-latin-700.woff2') format('woff2');
+  src: url("./assets/fonts/poppins-v21-latin-700.woff2") format("woff2");
 }
 
 // Mixins
@@ -59,18 +59,32 @@ $font-color: whitesmoke;
 // Globale Stile
 html {
   scroll-behavior: smooth;
+  display: flex;
+  justify-content: center;
 }
 
 body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   background-color: $background-color;
   color: $font-color;
   overflow-x: hidden;
-  display: flex;
-  justify-content: center;    
+  max-width: 1920px;
+  width: 100%;
+  animation: fadeInAnimation ease 3s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+@keyframes fadeInAnimation {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
 }
 
 app-root {
@@ -80,7 +94,39 @@ app-root {
 
 body::-webkit-scrollbar {
   display: none;
-  -ms-overflow-style: none;  /* IE and Edge */
-  scrollbar-width: none;  /* Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
 }
 
+#preloader {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 9999;
+  background-color: $background-color;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 1s ease-out;
+  opacity: 1;
+}
+
+.loader {
+  border: 16px solid #f3f3f3; /* Light grey */
+  border-top: 16px solid #3498db; /* Blue */
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

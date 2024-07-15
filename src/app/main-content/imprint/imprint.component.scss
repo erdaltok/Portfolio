@@ -1,6 +1,7 @@
 @import '../../../styles.scss';
 
 
+
 .content {
     max-width: 1920px;
     margin: 200px 80px 0px 80px;
@@ -34,5 +35,32 @@ a {
     color: whitesmoke;
     &:hover {
         text-decoration: underline;
+    }
+}
+
+@media (max-width: 660px) {
+    .content {
+        margin: 200px 40px 0px 40px;
+    }
+
+    h1 {
+        font-size: 63px;
+}
+}
+
+
+@media (max-width: 476px) {
+    a {
+        font-size: 12px;
+    }
+    p {
+        font-size: 15px;
+    }
+
+    h1 {
+        font-size: 43px;
+    }
+     .content {
+        margin: 150px 40px 0px 40px;
     }
 }

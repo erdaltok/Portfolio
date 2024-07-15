@@ -159,6 +159,7 @@ input[type="checkbox"]:checked::before {
 
     &:hover {
       text-decoration: underline;
+      cursor: pointer;
     }
   }
 
@@ -268,9 +269,21 @@ input[type="checkbox"]:checked::before {
 
 @media (max-width: 1024px) {
   .contacts-headline {
-    padding-top: 100px;
+    padding-top: 60px;
   }
 }
+
+
+
+@media only screen 
+and (min-device-width : 820px) 
+and (max-device-width : 1180px) 
+and (orientation : landscape) { 
+    .contact-section {
+      padding-bottom: 100px;
+    }
+  }
+
 
 @media (max-width: 736px) {
   .contact-section {

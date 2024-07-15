@@ -1,5 +1,10 @@
 @import "../../../styles.scss";
 
+header {
+  display: flex;
+  justify-content: center;
+}
+
 nav {
   @include dFlex(space-between);
   background-color: $background-color;
@@ -136,6 +141,18 @@ nav {
   }
 }
 
+
+
+@media only screen 
+and (min-device-width : 820px) 
+and (max-device-width : 1180px) 
+and (orientation : landscape) { 
+    .burger-icon {
+      padding-right: 80px;
+    }
+  }
+
+
 @media (max-width: 500px) {
   nav {
     img {
@@ -164,8 +181,6 @@ nav {
   }
 }
 
-/* ----------- iPhone SE ----------- */
-/* Portrait */
 @media only screen and (max-width: 375px) {
   .nav-links {
     top: 50px;

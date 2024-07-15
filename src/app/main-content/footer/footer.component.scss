@@ -1,5 +1,6 @@
 @import "../../../styles.scss";
 
+
 .footer-section {
   max-width: 1920px;
   @include dFlex(space-between, center);
@@ -28,6 +29,7 @@
 
     &:hover {
       text-decoration: underline;
+      cursor: pointer
     }
   }
 }

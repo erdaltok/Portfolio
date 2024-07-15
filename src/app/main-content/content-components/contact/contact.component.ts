@@ -2,7 +2,7 @@ import { CommonModule } from '@angular/common';
 import { HttpClient } from '@angular/common/http';
 import { Component, inject, HostListener} from '@angular/core';
 import { FormsModule, NgForm} from '@angular/forms';
-import { Router } from '@angular/router';
+import { Router, RouterLink } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
 
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
@@ -12,7 +12,7 @@ import { HttpClientModule } from '@angular/common/http';
 @Component({
   selector: 'app-contact',
   standalone: true,
-  imports: [CommonModule, FormsModule, TranslateModule, HttpClientModule],
+  imports: [CommonModule, FormsModule, TranslateModule, HttpClientModule, RouterLink],
   templateUrl: './contact.component.html',
   styleUrl: './contact.component.scss'
 })
@@ -114,7 +114,9 @@ export class ContactComponent {
   }
 
   scrollToTopPrivacy(){ 
-    this.router.navigate(['/privacy']); 
+    this.router.navigateByUrl('/privacy').then(() => {
+      window.scrollTo(0, 0);
+    }); 
   }
     
   checkCheckBoxValue(event: any) {
