@@ -86,9 +86,9 @@ h2 {
 
     .shadow-portfolio-left {
       position: absolute;
-      bottom: -1354px;
+      bottom: -1248px;
       z-index: -20;
-      left: -486px;
+      left: -556px;
     }
 
     h3 {
@@ -178,15 +178,13 @@ h2 {
   }
   .portfolio-wrapper {
     flex-direction: row !important;
-    margin-top: 0px !important; 
+    margin-top: 0px !important;
     align-items: center !important;
   }
   .projects-left-side {
-
     img {
-    width: 400px !important;
-    height: 400px !important;
-    
+      width: 400px !important;
+      height: 400px !important;
     }
   }
   .projects-right-side {

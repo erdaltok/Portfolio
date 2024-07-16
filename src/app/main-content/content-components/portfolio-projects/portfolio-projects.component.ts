@@ -31,7 +31,7 @@ projects = [
       skills: 'JavaScript | HTML | CSS | Git',
       descriptionKey: 'portfolio.description_el_pollo_loco',
       image: '../../../../assets/img/project-images/el-pollo-loco-img.png',
-      liveTestLink: '',
+      liveTestLink: 'https://polloloco.erdal.dev/',
       gitLink: 'https://github.com/erdaltok/El-pollo-loco'
     }
   ];

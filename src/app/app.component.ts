@@ -29,7 +29,7 @@ export class AppComponent implements OnInit {
      // Fallback
     setTimeout(() => {
       this.hidePreloader();
-    }, 1000);
+    }, 1500);
   }
 
   fadeOutPreloader() {
@@ -38,7 +38,7 @@ export class AppComponent implements OnInit {
       preloader.style.opacity = '0';
       setTimeout(() => {
         preloader.style.display = 'none';
-      }, 1000); // Die Dauer muss mit der Übergangszeit in CSS übereinstimmen
+      }, 1000); 
     }
   }
 
