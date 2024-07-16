@@ -5,7 +5,7 @@
 .content {
     max-width: 1920px;
     margin: 200px 80px 0px 80px;
-    height: calc(100vh - 250px);
+    // height: calc(100vh - 250px);
     font-size: 24px;
      a {
         text-decoration: none;
@@ -35,6 +35,15 @@ a {
     color: whitesmoke;
     &:hover {
         text-decoration: underline;
+    }
+}
+
+// RESPONSIVE
+
+
+@media only screen and (min-device-height: 631px) and (max-device-width: 1150px) and (orientation: landscape) {
+    h1 {
+        font-size: 70px;
     }
 }
 

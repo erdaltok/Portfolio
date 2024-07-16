@@ -169,7 +169,29 @@ h2 {
   }
 }
 
-@media (max-width: 1147px) {
+@media only screen and (min-device-height: 631px) and (max-device-width: 1150px) and (orientation: landscape) {
+  h2 {
+    font-size: 70px;
+  }
+  .portfolio-headline {
+    margin-top: 55px;
+  }
+  .portfolio-wrapper {
+    flex-direction: row !important;
+    margin-top: 0px !important; 
+    align-items: center !important;
+  }
+  .projects-left-side {
+
+    img {
+    width: 400px !important;
+    height: 400px !important;
+    
+    }
+  }
+  .projects-right-side {
+    top: -20px !important;
+  }
 }
 
 @media (max-width: 736px) {

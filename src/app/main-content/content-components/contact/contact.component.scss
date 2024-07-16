@@ -4,7 +4,7 @@
   max-width: 1920px;
   width: 100%;
   position: relative;
-  height: 100vh;
+  // height: 100vh;
   padding-bottom: 20px;
 }
 
@@ -198,7 +198,6 @@ input[type="checkbox"]:checked::before {
   font-size: 28px;
   font-family: "Poppins", sans-serif;
   cursor: pointer;
-  // margin-left: 150px;
   margin-top: 25px;
   transition: all 125ms ease-out;
 }
@@ -273,17 +272,20 @@ input[type="checkbox"]:checked::before {
   }
 }
 
+@media only screen and (min-device-width: 820px) and (max-device-width: 1180px) and (orientation: landscape) {
+  .contact-section {
+    padding-bottom: 100px;
+  }
+}
 
+@media only screen and (min-device-height: 631px) and (max-device-width: 1150px) and (orientation: landscape) {
+  .contacts-headline {
 
-@media only screen 
-and (min-device-width : 820px) 
-and (max-device-width : 1180px) 
-and (orientation : landscape) { 
-    .contact-section {
-      padding-bottom: 100px;
+    h2 {
+      font-size: 70px;
     }
   }
-
+}
 
 @media (max-width: 736px) {
   .contact-section {
@@ -320,5 +322,3 @@ and (orientation : landscape) {
     margin-bottom: 400px;
   }
 }
-
-

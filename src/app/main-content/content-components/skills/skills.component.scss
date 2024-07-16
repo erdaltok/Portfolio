@@ -143,6 +143,25 @@
   }
 }
 
+@media only screen and (min-device-height: 631px) and (max-device-width: 1150px) and (orientation: landscape) {
+  h2 {
+    font-size: 70px !important;
+  }
+
+  .skill-logos {
+
+    img {
+      width: 43px !important;
+    }
+  }
+  .skills-left-side  {
+    max-width: 45%;
+}
+  .skills-wrapper {
+    padding-top: 249px;
+  }
+}
+
 @media (max-width: 802px) {
   .skills-right-side {
     h2 {
@@ -173,10 +192,6 @@
       width: 30px !important;
     }
   }
-
-  // .skills-wrapper {
-  //   margin-top: 71px;
-  // }
 
   .skills-section {
    padding-bottom: 200px;

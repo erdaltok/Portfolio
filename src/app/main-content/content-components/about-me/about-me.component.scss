@@ -5,7 +5,6 @@
   @include dFlex(center, center);
   position: relative;
   overflow-x: clip;
-  // height: 80vh;
   padding-top: 30px;
 }
 
@@ -25,9 +24,8 @@
 }
 
 .about-me-left-side {
-  // margin-right: 115px;
   margin-left: 80px;
-  max-width: 40%;
+  max-width: 45%;
   @include dFlex(flex-start, flex-start);
   flex-direction: column;
 
@@ -66,10 +64,14 @@
     border: 2px solid $secondary-color;
 
     .circle-border {
-      width: 674px;
+      // width: 674px;
+      // position: relative;
+      // left: -58px;
+      // top: -26px;
+      width: 612px;
       position: relative;
-      left: -58px;
-      top: -26px;
+      left: -1px;
+      top: 27px;
     }
   }
 
@@ -149,12 +151,39 @@
   }
 }
 
-// @media (max-width: 736px) {
-//     .about-me-left-side {
-//       margin-left: 30px;
-//     }
+@media only screen and (min-device-height: 631px) and (max-device-width: 1150px) and (orientation: landscape) {
+  .circle {
+    width: 350px !important;
+    height: 350px !important;
+  }
+  .circle-border {
+    width: 520px !important;
+  }
+  .about-me-right-side {
+    margin-right: 40px;
+  }
 
-// }
+  .about-me-left-side {
+    max-width: 59%;
+    margin-left: 40px;
+    h1 {
+      font-size: 70px;
+      margin-bottom: 20px;
+    }
+  }
+
+  .about-me-wrapper {
+    padding-top: 25px;
+  }
+  .about-me-soft-skills {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+  span {
+    margin-top: 0px !important;
+  }
+}
 
 @media (max-width: 500px) {
   .about-me-soft-skills {
@@ -173,7 +202,6 @@
     padding-top: 0;
     padding-bottom: 200px;
   }
-
 }
 
 @media (max-width: 414px) {
@@ -201,7 +229,7 @@
     }
   }
 
-   .about-me-wrapper {
+  .about-me-wrapper {
     margin-top: -59px;
   }
 }

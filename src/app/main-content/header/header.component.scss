@@ -141,17 +141,11 @@ nav {
   }
 }
 
-
-
-@media only screen 
-and (min-device-width : 820px) 
-and (max-device-width : 1180px) 
-and (orientation : landscape) { 
-    .burger-icon {
-      padding-right: 80px;
-    }
+@media only screen and (min-device-width: 820px) and (max-device-width: 1180px) and (orientation: landscape) {
+  .burger-icon {
+    padding-right: 80px;
   }
-
+}
 
 @media (max-width: 500px) {
   nav {
@@ -192,6 +186,15 @@ and (orientation : landscape) {
   .burger-icon {
     img {
       width: 20px;
+    }
+  }
+}
+
+@media only screen and (min-device-height: 631px) and (max-device-width: 1150px) and (orientation: landscape) {
+  .nav-links {
+    top: 68px;
+    a {
+      font-size: 38px;
     }
   }
 }
