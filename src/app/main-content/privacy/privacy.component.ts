@@ -17,15 +17,16 @@ import { LanguageService } from '../../language.service';
 })
 export class PrivacyComponent {
 
-   constructor(public translateService: TranslateService, private languageService: LanguageService) { }
+  constructor(public translateService: TranslateService, private languageService: LanguageService) { }
 
   currentImgSrc = "../../../../assets/img/icons/go-up-btn-white.png";
 
-    onMouseEnter() {
+  onMouseEnter() {
     this.currentImgSrc = "../../../../assets/img/icons/go-up-btn-green.png";
   }
 
   onMouseLeave() {
     this.currentImgSrc = "../../../../assets/img/icons/go-up-btn-white.png";
   }
+
 }

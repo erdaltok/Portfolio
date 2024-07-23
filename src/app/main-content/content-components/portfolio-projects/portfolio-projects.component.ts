@@ -23,7 +23,7 @@ projects = [
       skills: 'JavaScript | HTML | CSS | Git',
       descriptionKey: 'portfolio.description_join',
       image: '../../../../assets/img/project-images/join-img2.png',
-      liveTestLink: '',
+      liveTestLink: 'https://join.erdal.dev/',
       gitLink: 'https://github.com/erdaltok/Join-753'
     },
     {
