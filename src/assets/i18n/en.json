@@ -120,7 +120,15 @@
         "google_fonts_text": "This site uses Google Fonts, provided by Google, for the uniform representation of fonts. Google Fonts are locally installed. There is no connection to Google servers. Further information on Google Fonts can be found at https://developers.google.com/fonts/faq and in Google’s privacy policy: https://policies.google.com/privacy?hl=en.",
         "source": "Source:",
         "copyright": "© Erdal Tok 2024"
+    },
+     "footer": {
+        "title": "Imprint"
+       },
 
-    }
+       "imprint": {
+        "title": "Imprint",
+        "contact": "Contact",
+        "source": "Source"
+       }
 
     }

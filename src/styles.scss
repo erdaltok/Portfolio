@@ -59,8 +59,8 @@ $font-color: whitesmoke;
 // Globale Stile
 html {
   scroll-behavior: smooth;
-  display: flex;
-  justify-content: center;
+  display: flex; // NEU
+  justify-content: center; // NEU
 }
 
 body {

@@ -122,7 +122,16 @@
         "google_fonts_text": "Diese Seite nutzt zur einheitlichen Darstellung von Schriftarten sogenannte Google Fonts, die von Google bereitgestellt werden. Die Google Fonts sind lokal installiert. Eine Verbindung zu Servern von Google findet dabei nicht statt. Weitere Informationen zu Google Fonts finden Sie unter https://developers.google.com/fonts/faq und in der Datenschutzerklärung von Google: https://policies.google.com/privacy?hl=de.",
         "source": "Quelle:",
         "copyright": "© Erdal Tok 2024"
+       },
 
+       "footer": {
+        "title": "Impressum"
+       },
+
+       "imprint": {
+        "title": "Impressum",
+        "contact": "Kontakt",
+        "source": "Quelle"
        }
 
 }

@@ -1,18 +1,27 @@
 @import "../../../styles.scss";
 
-
 .footer-section {
   max-width: 1920px;
   @include dFlex(space-between, center);
   background-color: $background-color;
   height: 235px;
   padding: 0 80px;
-  border-top: 1px solid $secondary-color;
-  margin-top: 100px;
+  // border-top: 1px solid $secondary-color;
+  // margin-top: 100px;
+  position: relative;
 
   span {
     @include heading(400, 24px, normal, $font-color);
   }
+}
+
+.divider {
+  height: 1px;
+  background: $secondary-color;
+  width: 100vw;
+  position: absolute;
+  left: 0;
+  z-index: 9999;
 }
 
 .logo-imprint-div {
@@ -29,7 +38,7 @@
 
     &:hover {
       text-decoration: underline;
-      cursor: pointer
+      cursor: pointer;
     }
   }
 }

@@ -5,7 +5,7 @@
   width: 100%;
   position: relative;
   // height: 100vh;
-  padding-bottom: 20px;
+  padding-bottom: 120px;
 }
 
 .contacts-wrapper {
@@ -231,11 +231,17 @@ input[type="checkbox"]:checked::before {
 }
 
 .go-up-btn {
-  position: fixed;
-  bottom: 23px;
-  right: 80px;
-  z-index: 16;
-  cursor: pointer;
+  // position: fixed;
+  // bottom: 23px;
+  // right: 80px;
+  // z-index: 16;
+  // cursor: pointer;
+    position: absolute;
+    bottom: 51px;
+    right: 19px;
+    z-index: 16;
+    cursor: pointer;
+  
 }
 
 // RESPONSIVE
@@ -311,6 +317,13 @@ input[type="checkbox"]:checked::before {
   }
 }
 
+@media (max-width: 430px) {
+  .contacts-headline {
+    margin-top: 0px;
+    padding-top: 0px;
+  }  
+}
+
 @media (max-width: 412px) {
   .contacts-headline {
     h2 {
@@ -319,6 +332,6 @@ input[type="checkbox"]:checked::before {
   }
 
   .contact-section {
-    margin-bottom: 400px;
+    margin-bottom: 40px;
   }
 }
