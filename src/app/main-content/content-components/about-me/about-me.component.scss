@@ -1,31 +1,49 @@
 @import "../../../../styles.scss";
 
+.flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .about-me-section {
-  max-width: 1920px;
   @include dFlex(center, center);
   position: relative;
   overflow-x: clip;
-  padding-top: 30px;
+  padding-left: 80px;
+  min-height: 100vh;
+  padding-top: 50px;
+  top: -200px;
 }
 
 .shadow-about-me {
   position: absolute;
   right: -399px;
   margin-top: -120px;
-  top: 12px;
+  top: 163px;
   max-width: 100vw;
   z-index: -10;
 }
 
+.empty-line {
+  flex: 1;
+}
+
+.line {
+  min-width: 150px;
+  height: 3px;
+  background-color: $secondary-color;
+  flex: 1;
+}
+
 .about-me-wrapper {
-  @include dFlex(space-between, center);
+  @include dFlex(space-between, center, $g: 20px);
   z-index: 15 !important;
-  padding-top: 150px;
+  max-width: 1920px;
 }
 
 .about-me-left-side {
-  margin-left: 80px;
-  max-width: 45%;
+  max-width: 59%;
   @include dFlex(flex-start, flex-start);
   flex-direction: column;
 
@@ -61,13 +79,10 @@
     overflow: hidden;
     height: 500px;
     width: 500px;
-    border: 2px solid $secondary-color;
+    border: 3px solid $secondary-color;
+    background: $background-color;
 
     .circle-border {
-      // width: 674px;
-      // position: relative;
-      // left: -58px;
-      // top: -26px;
       width: 612px;
       position: relative;
       left: -1px;
@@ -77,12 +92,19 @@
 
   .about-me-line-icon {
     height: 2px;
-    width: 267px;
+    width: 165px;
     margin: 0;
   }
 }
 
 // RESPONSIVE
+
+@media (min-width: 1921px) {
+  
+  .shadow-line {
+    display: none;
+  }
+}
 
 @media (max-width: 1453px) {
   .about-me-line-icon {
@@ -90,11 +112,11 @@
   }
 
   .about-me-left-side {
-    max-width: 50%;
+    max-width: 62%;
   }
 
   .about-me-right-side {
-    margin-right: 80px;
+  
     .circle {
       width: 400px;
       height: 400px;
@@ -102,87 +124,54 @@
   }
 }
 
+@media (max-width: 1270px) {
+  .line {
+    display: none;
+  }
+  .about-me-right-side {
+    padding-right: 80px;
+  }
+}
+
 @media (max-width: 1147px) {
   .about-me-right-side {
     margin-right: 0;
+    padding-right: 0;
     .circle {
       display: none;
     }
   }
 
   .about-me-left-side {
-    max-width: 58%; //81%
+    max-width: 100%;
     align-items: center;
-    margin-left: 80px;
-    margin-right: 80px;
   }
 
   .about-me-wrapper {
     justify-content: center;
-  }
-}
-
-@media (max-width: 820px) {
-  .about-me-left-side {
-    max-width: 68%;
-  }
-}
-
-@media (max-width: 757px) {
-  .about-me-left-side {
-    margin-left: 30px;
-    margin-right: 30px;
-    max-width: 81%;
-    h1 {
-      font-size: 70px;
-    }
+    gap: 0;
   }
 
-  .about-me-right-side {
-    margin-right: 30px;
-  }
-
-  .about-me-wrapper {
-    margin-right: -30px;
-    // margin-left: 30px;
-  }
   .about-me-section {
-    padding-top: 271px;
+    padding-right: 80px;
   }
 }
 
-@media only screen and (min-device-height: 631px) and (max-device-width: 1150px) and (orientation: landscape) {
-  .circle {
-    width: 350px !important;
-    height: 350px !important;
-  }
-  .circle-border {
-    width: 520px !important;
-  }
-  .about-me-right-side {
-    margin-right: 40px;
-  }
-
+@media (max-width: 710px) {
   .about-me-left-side {
-    max-width: 59%;
-    margin-left: 40px;
+    padding-left: 30px;
+    padding-right: 30px;
+  
     h1 {
       font-size: 70px;
-      margin-bottom: 20px;
     }
   }
 
-  .about-me-wrapper {
-    padding-top: 25px;
-  }
-  .about-me-soft-skills {
-    margin-top: 20px;
-    margin-bottom: 20px;
+  .about-me-section {
+    padding-right: 0;
+    padding-left: 0;
   }
 
-  span {
-    margin-top: 0px !important;
-  }
 }
 
 @media (max-width: 500px) {
@@ -199,7 +188,7 @@
   }
 
   .about-me-section {
-    padding-top: 0;
+    padding-top: 40px;
     padding-bottom: 20px;
   }
 }
@@ -224,6 +213,8 @@
   }
 
   .about-me-left-side {
+    padding-left: 10px;
+    padding-right: 10px;
     span {
       font-size: 14px;
     }

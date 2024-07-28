@@ -15,7 +15,6 @@ export class SkillsComponent {
 
   constructor(public translateService: TranslateService) { }
   
-  // @Input() currentLanguage: string = 'EN';
 
   ngOnInit(): void {
   

@@ -1,5 +1,8 @@
 <div class="skills-section">
 
+ <img class="shadow-skills-section" src="../../../../assets/img/shadows/green-shadow-skills.png" alt="">
+   
+
     <div class="skills-wrapper">
 
         <div 
@@ -12,7 +15,7 @@
                 <img [src]="logo.path" alt="skill-logos">
                 <p>{{ logo.name }}</p>
             </div>             
-            <img class="shadow-skills-section" src="../../../../assets/img/shadows/green-shadow-skills.png" alt="">
+           
         </div>
 
         <div
@@ -22,12 +25,33 @@
             data-aos-duration="1500"
             data-aos-delay="300">
 
-            <h2>{{ "mySkills.title" | translate }}</h2>
-            <span>{{ "mySkills.intro" | translate }}</span>
+        <div class="skills-right-side-content">
+
+            <div class="headline">
+                <div class="empty-box">
+                    <div class="empty-line"></div>
+                </div>
+                <div>
+                    <h2>{{ "mySkills.title" | translate }}</h2>
+                </div>
+            
+                <div class="right-line">
+                    <div class="line"></div>
+                </div>
+            </div>
+
+            
+      
+
+            </div>
+      <span>{{ "mySkills.intro" | translate }}</span>
+
             <a href="#contact"><button >{{ "mySkills.btn" | translate }}</button></a>
-            <!-- <img class="skills-line" src="../../../../assets/img/dividing-lines/dividing-line-skills.png" alt=""> -->
+            
         </div>      
     </div>
+
+    
 
 </div>
 

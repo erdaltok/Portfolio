@@ -1,13 +1,13 @@
 @import "../../../../styles.scss";
 
 .portfolio-section {
-  padding-top: 34px;
-  max-width: 1920px;
+  padding-top: 134px;
   width: 100%;
   @include dFlex(center, center);
   flex-direction: column;
   position: relative;
   overflow-x: clip;
+  top: -380px;
 
   p {
     @include heading(400, 16px, 19.2px, $font-color);
@@ -15,40 +15,35 @@
   }
 }
 
-.portfolio-headline {
-  @include dFlex(center, center);
-  height: 100px;
-  width: 100%;
-  margin-top: 100px;
-}
+.headline {
+  @include dFlex($g: 16px);
+  width: 100vw;
 
-h2 {
-  @include heading(700, 90px, 108px, $font-color);
-  margin: 0;
-  padding-left: 40px;
-  padding-right: 40px;
-}
+  h2 {
+    font-size: 90px;
+    font-weight: 700;
+    margin: 0;
+  }
 
-.portfolio-big-line-right-side {
-  @include dFlex(center, center);
-}
+  .empty-box {
+    @include dFlex;
+    flex: 1;
 
-.big-line,
-.small-line {
-  height: 4px;
-  background-color: $primary-color;
-  flex: 1;
-  position: absolute;
-}
+    .empty-line {
+      width: 100%;
+    }
+  }
 
-.big-line {
-  width: 35%;
-  right: 0;
-}
+  .right-line {
+    @include dFlex;
+    flex: 1;
 
-.small-line {
-  width: 10%;
-  left: 369px;
+    .line {
+      min-width: 100%;
+      height: 3px;
+      background-color: $primary-color;
+    }
+  }
 }
 
 .portfolio-wrapper {
@@ -78,7 +73,7 @@ h2 {
 
     .shadow-portfolio {
       position: absolute;
-      right: -303px;
+      right: -198px;
       bottom: -824px;
       z-index: -20;
       rotate: -90deg;
@@ -92,7 +87,7 @@ h2 {
     }
 
     h3 {
-      @include heading(700, 32px, 38.4px, $primary-color);
+      @include heading(700, 45px, 38.4px, $primary-color);
       margin-bottom: 16px;
     }
 
@@ -127,6 +122,15 @@ h2 {
 
 // RESPONSIVE
 
+@media (min-width: 1921px) {
+  .portfolio-section {
+    overflow-x: unset;
+  }
+  .portfolio-wrapper .projects-right-side .shadow-portfolio-left {
+    bottom: -1198px;
+  }
+}
+
 @media (max-width: 1470px) {
   .small-line {
     display: none;
@@ -141,8 +145,8 @@ h2 {
   }
 
   .shadow-portfolio-left {
-    bottom: -1497px !important;
-    left: -642px !important;
+    bottom: -1300px !important;
+    left: -462px !important;
   }
 }
 
@@ -157,12 +161,18 @@ h2 {
 
   .projects-right-side {
     top: -86px !important;
-    right: -60px;
+    justify-content: center !important;
+    align-items: center !important;
+    p {
+      text-align: center !important;
+    }
   }
 
-  .big-line {
-    width: 10%;
-  }
+  .portfolio-wrapper .projects-left-side img {
+   
+    width: 532px;
+    height: 600px;
+}
 
   .shadow-portfolio-left {
     display: none;
@@ -176,19 +186,11 @@ h2 {
   .portfolio-headline {
     margin-top: 55px;
   }
-  .portfolio-wrapper {
-    flex-direction: row !important;
-    margin-top: 0px !important;
-    align-items: center !important;
-  }
-  .projects-left-side {
-    img {
-      width: 400px !important;
-      height: 400px !important;
-    }
-  }
+
   .projects-right-side {
-    top: -20px !important;
+    top: -150px !important;
+    position: relative;
+    
   }
 }
 
@@ -240,7 +242,7 @@ h2 {
 
 @media (max-width: 412px) {
   .portfolio-section {
-    // margin-top: 440px;
+  
     h2 {
       font-size: 50px;
     }
@@ -251,9 +253,13 @@ h2 {
       max-width: 264px;
       span {
         text-align: center;
+        font-size: 18px;
         p {
           text-align: center;
         }
+      }
+      h3 {
+        font-size: 42px;
       }
     }
     .projects-left-side {

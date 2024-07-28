@@ -1,9 +1,19 @@
-<div class="contact-section" id="contact">
+
+<div class="contact-section-position">
 
 <div class="contacts-headline" >
-    <div class="small-line-contact"></div>
-    <h2>{{ "contact.title" | translate }}</h2>
+    <div class="line-box">
+        <div class="small-line-contact"></div>
+    </div>
+    <div class="hedline-box">
+        <h2>{{ "contact.title" | translate }}</h2>
+    </div>
 </div>
+
+
+<div class="flex">
+
+<div class="contact-section" id="contact">
 
 <div class="contacts-wrapper" >
 
@@ -19,9 +29,14 @@
             <span>{{ "contact.ending" | translate }}</span>
     </div>
 
-    <div class="contacts-right-side" >
+    <div class="contacts-right-side"
+     data-aos="fade-left"
+    
+     data-aos-offset="300"
+     data-aos-easing="ease-in-sine" >
 
-        <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm" autocomplete="off">
+        <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm" autocomplete="off"
+       >
             <div class="form-group">               
                 <input
                  #name="ngModel" 
@@ -88,6 +103,10 @@
                 <img [src]="currentImgSrc" alt="">
             </div>
     </div>
+
+</div>
+
+</div>
 
 </div>
 

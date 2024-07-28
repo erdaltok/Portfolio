@@ -1,14 +1,7 @@
 @import "./../../../../styles.scss";
 
-// #landingPage {
-//   display: flex;
-//     justify-content: center;
-//     width: 100vw;
-// }
-
 .me-section {
   @include dFlex;
-  max-width: 1920px;
   position: relative;
   min-height: 100vh;
   padding-bottom: 61px;
@@ -23,7 +16,7 @@
     @include dFlex;
     flex-direction: column;
     z-index: 5;
-    margin-top: -320px;
+    margin-top: -145px;
     max-width: 50%;
     left: -100px;
     position: relative;
@@ -31,7 +24,8 @@
 
   .picture-of-me {
     position: absolute;
-    top: -120px;
+    top: -85px;
+    width: 601px;
   }
 
   &-title-center {
@@ -49,46 +43,17 @@
     right: -26px;
   }
 
-  // @keyframes custom-fade-left {
-  //     from {
-  //       opacity: 0;
-  //       transform: translateX(500%); // von 300 auf 500
-  //     }
-  //     to {
-  //       opacity: 1;
-  //       transform: translateX(0);
-  //     }
-  //   }
-  //   .aos-animate.custom-fade-left {
-  //     animation: custom-fade-left 1s ease-in-out forwards;
-  // }
-
   h1 {
     @include heading(700, 90px);
     margin: 0;
     height: 108px;
   }
 
-  // @keyframes custom-fade-right {
-  //   from {
-  //     opacity: 0;
-  //     transform: translateX(500%); // von 300 auf 500
-  //   }
-  //   to {
-  //     opacity: 1;
-  //     transform: translateX(0);
-  //   }
-  // }
-  // .aos-animate.custom-fade-right {
-  //   animation: custom-fade-right 1s ease-in-out forwards;
-  // }
-
   h2 {
     @include heading(400, 55px, 69.6px, $primary-color);
     margin: 0;
     height: 70px;
     overflow: hidden;
-    // outline: 2px solid yellow;
   }
 
   .animation-h2 {
@@ -139,8 +104,7 @@
 
 .shape-landing-page-section {
   position: absolute;
-  top: 642px;
-  // max-width: 1920px;
+  top: 605px;
   width: 100%;
   z-index: 1;
   left: 0;
@@ -148,18 +112,30 @@
   img {
     width: 100%;
     height: 578px;
-    // max-width: 1920px;
   }
 }
 
 // RESPONSIVE
 
+@media (max-height: 910px) {
+  .shape-landing-page-section {
+    top: 562px;
+  }
+  .me-section {
+    .picture-of-me {
+      width: 547px;
+    }
+  }
+
+  .me-section-left-side {
+    .shadow-behind-me {
+      top: 20px;
+    }
+  }
+}
 
 @media (max-width: 1453px) {
   .me-section {
-    flex-direction: column;
-    padding-top: 0;
-    min-height: 85vh;
 
     h3 {
       font-size: 43px;
@@ -194,14 +170,18 @@
 
   .me-section-right-side {
     position: relative;
-    top: 100px;
-    left: 0;
+    left: -100px;
+    top: -50px;
   }
 
   .me-section-left-side {
+    img {
+      position: relative;
+      top: -20px;
+    }
     .picture-of-me {
       max-width: 500px;
-      top: -97px; // AA
+      top: -69px; 
     }
   }
   .me-section-title-center {
@@ -214,31 +194,24 @@
   }
 }
 
-/* ----------- iPad Pro ----------- */
-/* Portrait */
-@media (max-width: 1024px) {
+@media (max-width: 1188px) {
   .me-section {
-    min-height: 87vh;
+    flex-direction: column;
+    padding-top: 0;
+    top: -50px;
   }
 
   .me-section-right-side {
-    top: 161px;
+    position: relative;
+    left: 0px;
+    top: -30px;
   }
 
   .shape-landing-page-section {
-    top: 550px;
+    top: 402px;
     img {
-      height: 500px;
+      height: 492px;
     }
-  }
-}
-
-@media (max-height: 952px) {
-  .shape-landing-page-section {
-    top: 531px;
-  }
-  .me-section {
-    top: -2px;
   }
 }
 
@@ -248,83 +221,13 @@
   }
 }
 
-@media (max-width: 820px) {
-  .shape-landing-page-section {
-    top: 467px;
-    img {
-      height: 662px;
-    }
-  }
-
-  .me-section {
-    min-height: 87vh;
-  }
-}
-
-
-@media only screen and (min-device-height: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
-  .me-section {
-    min-height: 100vh;
-  }
-
-  .picture-of-me {
-    top: -129px;
-    max-width: 441px !important;
-  }
-
-  .me-section-right-side {
-    top: 35px;
-  }
-
-  .shape-landing-page-section {
-    top: 369px;
-    img {
-      height: 520px;
-    }
-  }
-  .shadow-behind-me {
-    top: -35px !important;
-    position: relative;
-    width: 675px;
-  }
-}
-
-@media only screen and (min-device-height: 631px) and (max-device-width: 1150px) and (orientation: landscape) {
-  .picture-of-me {
-    max-width: 356px !important;
-    top: -54px !important;
-  }
-  .shadow-behind-me {
-    top: 35px;
-    position: relative;
-    width: 675px;
-  }
-
-  .shape-landing-page-section{
-    top: 325px;
-    img {
-      height: 416px;
-    }
-    
-  }
-
-  .me-section-right-side {
-    top: 73px;
-  }
-
-  .me-section {
-    top: -18px;
-  }
-}
-
-@media (max-width: 550px) {
+@media (max-width: 600px) {
   .me-section {
     min-height: 85vh;
     h1 {
       font-size: 49px;
       margin-bottom: -5px;
       height: 70px;
-      // top: 24px;
     }
 
     h2 {
@@ -361,14 +264,14 @@
   }
 }
 
-@media (max-width: 500px) {
+@media (max-width: 600px) {
   .picture-of-me {
-    width: 350px;
+    width: 350px !important;
     top: -54px !important;
   }
 
   .shape-landing-page-section {
-    top: 340px;
+    top: 417px;
   }
 
   .shape-desktop {
@@ -380,113 +283,48 @@
   }
 
   .me-section-right-side {
-    top: -13px;
+    top: -200px;
   }
 
   .me-section {
     min-height: 82vh;
+    top: 40px;
     button {
       width: 225px !important;
     }
   }
+
+  .me-section-left-side .shadow-behind-me {
+    top: 7px;
+  }
 }
 
-@media (max-width: 412px) {
-  .picture-of-me {
-    width: 318px;
-    top: -22px !important;
+@media (max-width: 430px) {
+  .me-section-right-side {
+    top: -231px;
   }
+  .shape-landing-page-section {
+    top: 389px;
+  }
+}
 
+@media (max-width: 375px) {
   .me-section {
-    top: -10px;
+    top: -6px;
+  }
+
+  .shape-landing-page-section {
+    top: 378px;
+  }
+
+  .me-section-right-side {
+    top: -197px;
   }
 }
 
-// /* ----------- iPhone SE ----------- */
-// /* Portrait */
-// @media only screen and (min-width: 375px) and (max-height: 667px) and (-webkit-min-device-pixel-ratio: 1.5) {
-//   .me-section {
-//     min-height: 90vh;
-//   }
-//   .shape-landing-page-section{
-//     top: 332px;
-//   }
+@media (min-height: 1366px) and (min-width: 1024px) {
+  .shape-landing-page-section[_ngcontent-ng-c3286700654] {
+    top: 506px;
+  }
+}
 
-//   .me-section-right-side {
-//     top: -28px;
-//   }
-
-//   .me-section-left-side {
-//     .picture-of-me {
-//       max-width: 311px;
-//       top: -49px;
-//       overflow: hidden;
-//     }
-//   }
-
-//   .nav-links {
-//     a {
-//       font-size: 33px;
-//     }
-//   }
-// }
-
-// /* ----------- iPhone 12 Pro  ----------- */
-// /* Portrait */
-// @media only screen and (min-width: 390px) and (max-height: 844px) and (-webkit-min-device-pixel-ratio: 1.5) {
-//   .me-section {
-//     min-height: 81vh;
-//   }
-//   .shape-landing-page-section {
-//     top: 332px;
-//   }
-
-//   .me-section-right-side {
-//     top: -28px;
-//   }
-// }
-
-// /* ----------- Samsung Galaxy GS20 Ultra----------- */
-// /* Portrait */
-// @media only screen and (min-width: 412px) and (max-height: 915px) and (-webkit-min-device-pixel-ratio: 1.5) {
-//   .me-section {
-//     min-height: 82vh;
-//   }
-//   .shape-landing-page-section {
-//     top: 332px;
-//   }
-
-//   .me-section-right-side {
-//     top: -28px;
-//   }
-// }
-
-// /* ----------- iPhone XR ----------- */
-// /* Portrait */
-// @media only screen and (min-width: 414px) and (max-height: 896px) and (-webkit-min-device-pixel-ratio: 1.5) {
-//   .me-section {
-//     min-height: 82vh;
-//   }
-//   .shape-landing-page-section {
-//     top: 332px;
-//   }
-
-//   .me-section-right-side {
-//     top: -28px;
-//   }
-// }
-
-// /* ----------- iPhone 14 Pro Max ----------- */
-// /* Portrait */
-// @media only screen and (min-width: 430px) and (max-height: 932px) and (-webkit-min-device-pixel-ratio: 1.5) {
-//   .me-section {
-//     min-height: 82vh;
-//   }
-//   .shape-landing-page-section {
-//     top: 332px;
-//   }
-
-//   .me-section-right-side {
-//     top: -28px;
-//   }
-// }

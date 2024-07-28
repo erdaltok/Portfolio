@@ -1,19 +1,29 @@
-@import '../../../../styles.scss';
+@import "../../../../styles.scss";
 
-div {
-  min-height: 100px;
-  z-index: 10;
+.flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   position: relative;
+  top: -205px;
+}
+
+.line {
+  background-color: $primary-color;
+  min-width: 100px;
+  height: 3px;
+  flex: 1;
   width: 100vw;
-  margin: 0;
-  left: 0;
-  right: 0;
-  top: 0px;
-  max-width: 1920px;
+  z-index: 1;
+}
+
+.empty-line {
+  flex: 1;
 }
 
 .references-wrapper {
   @include dFlex(flex-start, center, 40px);
+  padding-left: 20px;
 
   a {
     transition: transform 125ms ease-in-out;
@@ -36,12 +46,18 @@ div {
 
 .space-between {
   @include dFlex(space-between);
+  width: 100vw;
+  max-width: 1920px;
+  z-index: 10;
+  position: relative;
 }
 
 .scroll-down-icon {
   height: 234px;
   margin-right: 40px;
   margin-top: -247px;
+  position: relative;
+  top: 150px;
   animation: jump 2s ease infinite;
 }
 
@@ -63,7 +79,19 @@ div {
   }
 }
 
-// RESPONSIVE 
+// RESPONSIVE
+
+@media (max-width: 1453px) {
+  .flex {
+    top: -224px;
+  }
+}
+
+@media (max-width: 1188px) {
+  .flex {
+    top: -130px;
+  }
+}
 
 @media (max-width: 810px) {
   .references-mail-link {
@@ -80,16 +108,31 @@ div {
     }
   }
 
-    .scroll-down-icon {
-      margin-right: 0;
-      margin-top: -100px;
-    }
-  
-  
+  .scroll-down-icon {
+    margin-right: 0;
+    margin-top: 0px;
+    top: -123px;
+    height: 159px;
+  }
 }
 
-@media only screen and (min-device-height: 631px) and (max-device-width: 1150px) and (orientation: landscape) {
-  .space-between {
-    top: 60px;
+@media (max-width: 430px) {
+  .line {
+    min-width: 30px;
+  }
+
+  .references-wrapper {
+    gap: 20px;
+    margin-left: 5px;
+  }
+
+  .flex {
+    top: -178px;
+  }
+}
+
+@media (max-width: 375px) {
+  .line {
+    min-width: 25px;
   }
 }

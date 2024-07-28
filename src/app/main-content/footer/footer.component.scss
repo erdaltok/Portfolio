@@ -1,14 +1,20 @@
 @import "../../../styles.scss";
 
+
+.flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .footer-section {
   max-width: 1920px;
   @include dFlex(space-between, center);
   background-color: $background-color;
   height: 235px;
   padding: 0 80px;
-  // border-top: 1px solid $secondary-color;
-  // margin-top: 100px;
   position: relative;
+  width: 100vw;
 
   span {
     @include heading(400, 24px, normal, $font-color);
@@ -62,7 +68,7 @@
   .footer-section {
     justify-content: center;
     flex-direction: column;
-    padding: 40px 80px;
+    padding: 40px 50px;
   }
 
   .logo-imprint-div {
