@@ -46,7 +46,7 @@ export class HeaderComponent implements AfterViewInit {
   closeMenu() {
     this.menuValue = false;
     this.currentImgSrc = '../../../assets/img/icons/burger-icon-open.png';
-    document.body.style.overflow = 'auto';
+    document.body.style.overflow = 'hidden';
     this.cdr.detectChanges();
 
   }

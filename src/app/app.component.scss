@@ -26,9 +26,13 @@
             width: 100px;
         }
     }
+
+    h2 {
+        font-size: medium;
+    }
 }
 
-@media (max-height: 500px) and (orientation: landscape) {
+@media (max-height: 600px) and (orientation: landscape) {
     .landscape-screen {
         display: none;
     }

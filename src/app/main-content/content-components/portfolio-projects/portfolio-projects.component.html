@@ -2,7 +2,10 @@
 
 <div class="portfolio-section">
 
-    <div class="portfolio-headline">
+    <div class="portfolio-headline"
+     data-aos="fade-left"
+     data-aos-delay="300"
+     data-aos-duration="1000">
         
         <div class="headline">
             <div class="empty-box">
@@ -16,10 +19,10 @@
                 <div class="line"></div>
             </div>
         </div>
-            
+            <p>{{ "portfolio.intro" | translate }}</p>
     </div>
 
-    <p>{{ "portfolio.intro" | translate }}</p>
+    
 
     <div *ngFor="let project of projects; let i = index" 
      [ngStyle]="{'flex-direction': i % 2 === 0 ? 'row' : 'row-reverse', 'gap': i % 2 !== 0 ? '0px' : '163px'}"

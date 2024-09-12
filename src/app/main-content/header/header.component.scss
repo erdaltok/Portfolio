@@ -3,6 +3,7 @@
 header {
   display: flex;
   justify-content: center;
+  // height: 100px;
 }
 
 nav {
@@ -13,8 +14,10 @@ nav {
   position: fixed;
   z-index: 99;
   top: 0;
-  padding-top: 10px;
-  padding-bottom: 10px;
+  // padding-top: 10px;
+  // padding-bottom: 10px;
+  // border: 1px solid red;
+  // height: 100px;
 
   a {
     @include dFlex;
@@ -128,19 +131,19 @@ nav {
 
 // RESPONSIVE
 
-@media (min-width: 1921px) {
-  header {
-    display: flex;
-    justify-content: center;
-    background: $background-color;
-    width: 100vw;
+// @media (min-width: 1921px) {
+//   header {
+//     display: flex;
+//     justify-content: center;
+//     background: $background-color;
+//     width: 100vw;
 
-    height: 120px;
-    position: fixed;
-    left: 0;
-    z-index: 99;
-  }
-}
+//     height: 120px;
+//     position: fixed;
+//     left: 0;
+//     z-index: 99;
+//   }
+// }
 
 @media (max-width: 500px) {
   nav {
@@ -170,11 +173,25 @@ nav {
   }
 }
 
+
+@media (max-width: 430px) {
+  header {
+    height: 50px;
+
+    nav {
+      height: 50px;
+    }
+  } 
+  
+}
+
+
+
 @media (max-width: 375px) {
   .nav-links {
     top: 50px;
     a {
-      font-size: 33px;
+      font-size: 33px !important;
     }
   }
 
@@ -187,9 +204,19 @@ nav {
   }
 
   nav {
+    height: 50px;
     img {
       padding-left: 20px;
     }
+  }
+
+  header {
+    height: 50px;
+  }
+
+  .select-language {
+    position: relative;
+    top: -20px;
   }
 }
 
