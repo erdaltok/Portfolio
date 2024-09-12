@@ -23,7 +23,7 @@
 
     "mySkills": {
         "title": "My skills",
-        "intro": "I have grown my frontend developments skills that have allowed me to create different real projects.",
+        "intro": "I have grown my frontend development skills that have allowed me to create different real projects.",
         "btn": "Get in touch"
     },
 
@@ -36,7 +36,7 @@
       "contact": {
         "title": "Contact",
         "subTitle": "Got a problem to solve?",
-        "content": "Contact me through this form, I am interested in hearing from you, knowing your ideas and contributing to your projects with my work.",
+        "content": "Contact me through this form. I am interested in hearing from you, knowing your ideas and contributing to your projects with my work.",
         "ending": "Need a Frontend developer? Contact me!",
         "placeholder_name": "Your name",
         "placeholder_name_required": "Your name is required",

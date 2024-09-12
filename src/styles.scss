@@ -69,7 +69,7 @@ body {
   font-family: "Poppins", sans-serif;
   background-color: $background-color;
   color: $font-color;
-  overflow-x: hidden;
+  overflow: hidden;
   width: 100%;
   animation: fadeInAnimation ease 3s;
   animation-iteration-count: 1;
