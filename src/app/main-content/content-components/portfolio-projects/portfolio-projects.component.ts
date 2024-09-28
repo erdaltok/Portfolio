@@ -20,10 +20,10 @@ export class PortfolioProjectsComponent {
 projects = [
     {
       name: 'Join',
-      skills: 'JavaScript | HTML | CSS | Git',
+      skills: 'JavaScript | HTML | CSS | Firebase | Git',
       descriptionKey: 'portfolio.description_join',
       image: '../../../../assets/img/project-images/join-img2.png',
-      liveTestLink: 'https://join.erdal.dev/',
+      liveTestLink: 'https://join.erdal.dev/',  
       gitLink: 'https://github.com/erdaltok/Join-753'
     },
     {

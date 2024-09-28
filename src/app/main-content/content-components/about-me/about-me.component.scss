@@ -199,6 +199,18 @@
   }
 }
 
+@media (max-width: 430px) {
+  .about-me-section {
+    margin-bottom: 100px !important;
+    padding-bottom: 100px;
+  }
+  .about-me-left-side {
+    h1 {
+      font-size: 68px;
+    }
+  }
+}
+
 @media (max-width: 414px) {
   .about-me-left-side {
     h1 {
@@ -208,14 +220,6 @@
 
   .about-me-wrapper {
     margin-top: 10px;
-  }
-}
-
-
-@media (max-width: 430px) {
-  .about-me-section {
-    margin-bottom: 100px !important;
-    padding-bottom: 100px;
   }
 }
 

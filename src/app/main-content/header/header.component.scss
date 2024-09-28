@@ -4,6 +4,14 @@ header {
   display: flex;
   justify-content: center;
   // height: 100px;
+  // border: 2px solid yellow;
+  /* min-height: fit-content; */
+  height: 100px;
+  background-color: #141d2f;
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  z-index: 999;
 }
 
 nav {
@@ -93,7 +101,7 @@ nav {
   }
 }
 
-@media screen and (min-width: 128px) and (max-width: 1187px) {
+@media screen and (min-width: 128px) and (max-width: 1280px) {
   .nav-links {
     position: fixed;
     right: -100%;
@@ -131,19 +139,35 @@ nav {
 
 // RESPONSIVE
 
-// @media (min-width: 1921px) {
-//   header {
-//     display: flex;
-//     justify-content: center;
-//     background: $background-color;
-//     width: 100vw;
+@media (max-width: 995px) {
+  header {
+    height: 50px;
+  }
 
-//     height: 120px;
-//     position: fixed;
-//     left: 0;
-//     z-index: 99;
-//   }
-// }
+  nav {
+    height: 50px;
+  }
+
+  .nav-links {
+    top: 49px;
+  }
+}
+
+@media (max-width: 903px) {
+  .nav-links {
+    top: 48px;
+    a {
+      font-size: 38px;
+    }
+  }
+    
+}
+
+@media (max-width: 820px) {
+  .nav-links {
+    top: 58px;
+  }
+}
 
 @media (max-width: 500px) {
   nav {
@@ -153,7 +177,7 @@ nav {
   }
 
   .nav-links {
-    top: 50px;
+    top: 39px;
     a {
       margin-bottom: 0px;
       font-size: 45px !important;
@@ -167,29 +191,23 @@ nav {
   }
 }
 
+@media (max-width: 430px) {
+  .nav-links {
+    a {
+      font-size: 34px !important;
+    }
+  }
+}
+
 @media (max-width: 1024px) {
   .nav-links a {
     font-size: 64px;
   }
 }
 
-
-@media (max-width: 430px) {
-  header {
-    height: 50px;
-
-    nav {
-      height: 50px;
-    }
-  } 
-  
-}
-
-
-
 @media (max-width: 375px) {
   .nav-links {
-    top: 50px;
+    top: 45px;
     a {
       font-size: 33px !important;
     }
@@ -204,14 +222,10 @@ nav {
   }
 
   nav {
-    height: 50px;
+    // height: 50px;
     img {
       padding-left: 20px;
     }
-  }
-
-  header {
-    height: 50px;
   }
 
   .select-language {
@@ -220,9 +234,18 @@ nav {
   }
 }
 
+@media (max-width: 320px) {
+  .nav-links {
+    a {
+      font-size: 22px !important;
+    }
+  }
+}
+
 @media only screen and (min-device-height: 631px) and (max-device-width: 1150px) and (orientation: landscape) {
   .nav-links {
-    top: 68px;
+    // top: 68px;
+    top: 52px;
     a {
       font-size: 38px;
     }

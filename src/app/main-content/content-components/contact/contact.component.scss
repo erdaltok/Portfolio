@@ -251,7 +251,32 @@ input[type="checkbox"]:checked::before {
   right: 19px;
   z-index: 16;
   cursor: pointer;
+  animation: goUpBtnAnimation .5s infinite;
 }
+
+  @keyframes goUpBtnAnimation {
+                0% {
+                    bottom: -37px
+                }
+
+                25% {
+                    bottom: -39px
+                }
+
+                50% {
+                    bottom: -42px
+                }
+
+                75% {
+                    bottom: -39px
+                }
+
+                to {
+                    bottom: -37px
+                }
+            }
+
+
 
 // RESPONSIVE
 
@@ -332,7 +357,11 @@ input[type="checkbox"]:checked::before {
 
   .contact-section-position {
     padding-top: 0px;
+    padding-bottom: 3px;
+  }
 
+  .go-up-btn {
+    bottom: -113px !important;
   }
 }
 
@@ -348,7 +377,7 @@ input[type="checkbox"]:checked::before {
   }
 
   .contact-section {
-    margin-bottom: 0px;
+    margin-bottom: 150px;
     margin-top: 0px;
   }
 

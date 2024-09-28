@@ -216,6 +216,9 @@
       right: 0;
       justify-content: center;
       align-items: center;
+      span {
+        text-align: center;
+      }
     }
     .projects-right-side-buttons {
       gap: 40px;
